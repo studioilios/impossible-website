@@ -60,7 +60,7 @@ import { AnimatePresence } from 'framer-motion';
 const HERO_STATS = [
   { value: '50M+', label: 'Global Athletes', icon: Globe },
   { value: '3B+', label: 'Activities Tracked', icon: Activity },
-  { value: '195', label: 'Countries', icon: MapPin },
+  { value: '18', label: 'Countries', icon: MapPin },
   { value: '99.9%', label: 'Accuracy', icon: Target }
 ];
 
