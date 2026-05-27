@@ -188,7 +188,7 @@ const PRICING_TIERS = [
   },
   {
     name: 'Pro',
-    price: '$9.99',
+    price: '$0.99',
     period: '/month',
     description: 'For serious athletes',
     features: [
@@ -204,7 +204,7 @@ const PRICING_TIERS = [
   },
   {
     name: 'Elite',
-    price: '$19.99',
+    price: '$1.99',
     period: '/month',
     description: 'Maximum performance',
     features: [
