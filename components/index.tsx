@@ -53,7 +53,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white pb-20">
+    <div className={`min-h-screen bg-black text-white ${activeScreen === 'landing' ? '' : 'pb-20'}`}>
       {activeScreen === 'home' && <Home onNavigate={handleNavigate} />}
       {activeScreen === 'activity' && <Activity />}
       {activeScreen === 'ai' && <AICoach />}
