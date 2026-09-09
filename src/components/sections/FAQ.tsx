@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import SectionHeading from "@/components/ui/SectionHeading";
 
 const faqs = [
     {
@@ -56,14 +55,19 @@ const FAQItem = ({ q, a, index }: { q: string; a: string; index: number }) => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.4, delay: (index % 6) * 0.04 }}
-            className="overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03]"
+            className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm transition-colors duration-300 hover:border-primary/30"
         >
             <button
                 type="button"
                 onClick={() => setOpen((v) => !v)}
                 className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left focus:outline-none sm:px-6 sm:py-5"
             >
-                <span className="font-display text-sm font-semibold text-white sm:text-base">{q}</span>
+                <span className="flex items-baseline gap-3">
+                    <span className="font-mono text-[11px] font-semibold text-neutral-300">
+                        {String(index + 1).padStart(2, "0")}
+                    </span>
+                    <span className="font-display text-sm font-semibold text-neutral-950 sm:text-base">{q}</span>
+                </span>
                 <motion.svg
                     animate={{ rotate: open ? 45 : 0 }}
                     transition={{ duration: 0.25 }}
@@ -84,7 +88,7 @@ const FAQItem = ({ q, a, index }: { q: string; a: string; index: number }) => {
                         transition={{ duration: 0.3, ease: "easeInOut" }}
                         className="overflow-hidden"
                     >
-                        <p className="px-5 pb-5 font-sans text-sm leading-6 text-white/60 sm:px-6">{a}</p>
+                        <p className="px-5 pb-5 pl-[3.25rem] font-sans text-sm leading-6 text-neutral-600 sm:px-6 sm:pl-[3.75rem]">{a}</p>
                     </motion.div>
                 )}
             </AnimatePresence>
@@ -94,11 +98,56 @@ const FAQItem = ({ q, a, index }: { q: string; a: string; index: number }) => {
 
 const FAQ = () => {
     return (
-        <section className="relative overflow-hidden border-t border-white/5 bg-black px-6 py-12 sm:px-8 sm:py-16 lg:px-12 xl:px-16">
-            <div className="relative mx-auto max-w-4xl">
-                <SectionHeading eyebrow="FAQ" title="Common" accent="Questions" align="center" />
+        <section className="relative overflow-hidden border-t border-black/10 bg-white px-6 py-14 sm:px-8 sm:py-20 lg:px-12 xl:px-16">
+            <div className="relative mx-auto grid max-w-7xl gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)] lg:gap-16">
+                <div className="lg:sticky lg:top-24 lg:self-start">
+                    <motion.div
+                        initial={{ opacity: 0, y: 12 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, margin: "-80px" }}
+                        transition={{ duration: 0.5 }}
+                    >
+                        <span className="inline-block bg-black px-2 py-1 font-mono text-[11px] font-semibold tracking-widest text-white">
+                            FAQ
+                        </span>
+                    </motion.div>
 
-                <div className="mt-12 space-y-3 sm:mt-14">
+                    <motion.h2
+                        initial={{ opacity: 0, y: 16 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, margin: "-80px" }}
+                        transition={{ duration: 0.55, delay: 0.05 }}
+                        className="mt-4 font-display text-3xl font-bold tracking-tight text-neutral-950 sm:text-5xl"
+                    >
+                        Common <span className="font-serif italic font-normal text-primary">Questions</span>
+                    </motion.h2>
+
+                    <motion.p
+                        initial={{ opacity: 0, y: 16 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, margin: "-80px" }}
+                        transition={{ duration: 0.55, delay: 0.1 }}
+                        className="mt-4 max-w-sm font-sans text-sm leading-6 text-neutral-600 sm:text-base sm:leading-7"
+                    >
+                        Everything you need to know about the platform. Can&apos;t find your answer?
+                    </motion.p>
+
+                    <motion.a
+                        initial={{ opacity: 0, y: 16 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, margin: "-80px" }}
+                        transition={{ duration: 0.55, delay: 0.15 }}
+                        href="#"
+                        className="mt-6 inline-flex items-center gap-2 rounded-full border-2 border-black/15 bg-white px-5 py-2.5 font-display text-xs font-bold uppercase tracking-widest text-neutral-800 transition-all hover:border-primary hover:text-primary"
+                    >
+                        Contact Us
+                        <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h14M13 5l7 7-7 7" />
+                        </svg>
+                    </motion.a>
+                </div>
+
+                <div className="space-y-3">
                     {faqs.map((f, i) => (
                         <FAQItem key={f.q} q={f.q} a={f.a} index={i} />
                     ))}

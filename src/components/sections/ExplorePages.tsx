@@ -45,7 +45,9 @@ const pages = [
 
 const ExplorePages = () => {
     return (
-        <section className="relative overflow-hidden border-t border-white/5 bg-black px-6 py-12 sm:px-8 sm:py-16 lg:px-12 xl:px-16">
+        <section className="relative overflow-hidden border-t border-black/10 bg-[#f3f3f1] px-6 py-14 sm:px-8 sm:py-20 lg:px-12 xl:px-16">
+            <div className="pointer-events-none absolute inset-0 bg-grid-light opacity-30" />
+
             <div className="relative mx-auto max-w-7xl">
                 <SectionHeading
                     eyebrow="Explore"
@@ -66,16 +68,23 @@ const ExplorePages = () => {
                         >
                             <Link
                                 href={p.href}
-                                className="group flex h-full flex-col rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.04] to-transparent p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40"
+                                className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-black/10 bg-white pl-7 pr-6 py-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg"
                             >
+                                <span className="absolute inset-y-0 left-0 w-1 origin-top scale-y-0 bg-primary transition-transform duration-300 group-hover:scale-y-100" />
+
                                 <div className="flex items-center justify-between">
-                                    <span className="text-3xl">{p.icon}</span>
-                                    <svg className="h-4 w-4 text-white/30 transition-all group-hover:translate-x-1 group-hover:text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <div className="flex items-center gap-3">
+                                        <span className="inline-flex bg-black px-1.5 py-0.5 font-mono text-[10px] font-semibold text-white">
+                                            {String(i + 1).padStart(2, "0")}
+                                        </span>
+                                        <span className="text-2xl">{p.icon}</span>
+                                    </div>
+                                    <svg className="h-4 w-4 text-neutral-300 transition-all group-hover:translate-x-1 group-hover:text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 12h14M13 5l7 7-7 7" />
                                     </svg>
                                 </div>
-                                <h3 className="mt-4 font-display text-lg font-bold text-white">{p.title}</h3>
-                                <p className="mt-2 font-sans text-sm leading-6 text-white/55">{p.description}</p>
+                                <h3 className="mt-4 font-display text-lg font-bold text-neutral-950">{p.title}</h3>
+                                <p className="mt-2 font-sans text-sm leading-6 text-neutral-600">{p.description}</p>
                             </Link>
                         </motion.div>
                     ))}

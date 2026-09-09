@@ -1,224 +1,176 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { navLinks } from "@/lib/nav";
 
 const Hero = () => {
+    const [menuOpen, setMenuOpen] = useState(false);
+
     return (
-        <div className="relative flex flex-col min-h-screen overflow-hidden bg-black">
-            <div className="absolute inset-0">
-                <div className="absolute top-[10%] right-[4%] bottom-[4%] w-[56%]">
-                    <img className="object-contain object-right w-full h-full" src="/hero.png" alt="" />
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/55 to-black/85" />
-            </div>
+        <section className="relative isolate flex min-h-screen w-full flex-col overflow-hidden bg-[#e9e9e6] text-neutral-950">
+            {/* Grid backdrop */}
+            <div
+                className="pointer-events-none absolute inset-0 opacity-[0.5]"
+                style={{
+                    backgroundImage:
+                        "linear-gradient(to right, rgba(0,0,0,0.07) 1px, transparent 1px), linear-gradient(to bottom, rgba(0,0,0,0.07) 1px, transparent 1px)",
+                    backgroundSize: "90px 90px",
+                }}
+            />
 
-            <header className="relative z-10 flex-shrink-0 border-b border-white/10">
-                <div className="w-full px-6 py-4 sm:px-8 lg:px-12 xl:px-16">
-                    <div className="flex items-center justify-between">
-                        <Link href="/" title="Impossible AI" className="flex flex-col leading-none rounded-md flex-shrink-0 focus:outline-none">
-                            <span className="font-display text-xl font-bold tracking-widest text-white sm:text-2xl">Impossible AI</span>
-                            <span className="hidden sm:block mt-1 font-display text-[10px] font-semibold tracking-[0.2em] uppercase text-primary">India&apos;s AI Fitness Platform</span>
-                        </Link>
+            {/* Concentric circles */}
+            <div className="pointer-events-none absolute left-1/2 top-[38%] z-0 aspect-square w-[34vw] min-w-[280px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-black/10" />
+            <div className="pointer-events-none absolute left-1/2 top-[38%] z-0 aspect-square w-[58vw] min-w-[480px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-black/10" />
+            <div className="pointer-events-none absolute left-[8%] top-[8%] z-0 aspect-square w-[26vw] min-w-[220px] rounded-full border border-black/10" />
+            <div className="pointer-events-none absolute right-[6%] top-[52%] z-0 aspect-square w-[22vw] min-w-[200px] rounded-full border border-black/10" />
 
-                        <nav className="items-center hidden space-x-8 xl:flex">
-                            {navLinks.map((link) => (
-                                <Link
-                                    key={link.href}
-                                    href={link.href}
-                                    title=""
-                                    className="font-display text-xs font-semibold tracking-widest uppercase transition-all duration-200 rounded text-white/70 hover:text-white focus:outline-none"
+            {/* Accent ring */}
+            <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1 }}
+                className="pointer-events-none absolute left-1/2 top-[34%] z-0 aspect-square w-[48vw] min-w-[420px] max-w-[720px] -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-primary/70"
+            />
+
+            {/* Nav */}
+            <header className="relative z-30 flex items-center justify-between px-5 pt-6 sm:px-10 sm:pt-8">
+                <Link
+                    href="/"
+                    title="Impossible AI"
+                    className="flex items-center gap-2 rounded-full bg-white px-4 py-2 shadow-sm ring-1 ring-black/5 focus:outline-none"
+                >
+                    <span className="font-serif text-base italic font-normal tracking-wide text-neutral-950">
+                        Impossible <span className="text-primary">AI</span>
+                    </span>
+                </Link>
+
+                <div className="relative flex items-center gap-3">
+                    <button
+                        type="button"
+                        onClick={() => setMenuOpen((v) => !v)}
+                        aria-expanded={menuOpen}
+                        className="inline-flex items-center gap-1.5 rounded-full bg-white px-4 py-2 font-display text-xs font-semibold uppercase tracking-widest text-neutral-800 shadow-sm ring-1 ring-black/5 focus:outline-none"
+                    >
+                        <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        Menu
+                    </button>
+                    <a
+                        href="#"
+                        title=""
+                        className="inline-flex items-center justify-center rounded-full bg-black px-5 py-2 font-display text-xs font-semibold uppercase tracking-widest text-white transition-colors hover:bg-neutral-800 focus:outline-none"
+                    >
+                        Get the App
+                    </a>
+
+                    <AnimatePresence>
+                        {menuOpen && (
+                            <>
+                                <button
+                                    type="button"
+                                    aria-label="Close menu"
+                                    onClick={() => setMenuOpen(false)}
+                                    className="fixed inset-0 z-30 cursor-default"
+                                />
+                                <motion.div
+                                    initial={{ opacity: 0, y: -8 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: -8 }}
+                                    transition={{ duration: 0.2 }}
+                                    className="absolute right-0 top-full z-40 mt-2 w-56 overflow-hidden rounded-2xl bg-white p-2 shadow-xl ring-1 ring-black/5"
                                 >
-                                    {link.label}
-                                </Link>
-                            ))}
-                        </nav>
-
-                        <div className="items-center hidden xl:flex">
-                            <a
-                                href="#"
-                                title=""
-                                className="inline-flex items-center justify-center px-5 py-2 font-display text-xs font-bold tracking-widest text-black uppercase transition-all duration-200 bg-white border-2 border-transparent rounded-full hover:bg-opacity-90 focus:outline-none"
-                            >
-                                Join Beta
-                            </a>
-                        </div>
-
-                        <button type="button" className="p-2 -m-2 transition-all duration-200 rounded-full text-white xl:hidden focus:outline-none">
-                            <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
-                            </svg>
-                        </button>
-                    </div>
+                                    {navLinks.map((link) => (
+                                        <Link
+                                            key={link.href}
+                                            href={link.href}
+                                            onClick={() => setMenuOpen(false)}
+                                            className="flex items-center justify-between rounded-xl px-3 py-2.5 font-display text-xs font-semibold uppercase tracking-widest text-neutral-800 transition-colors hover:bg-neutral-100 hover:text-primary"
+                                        >
+                                            {link.label}
+                                            <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h14M13 5l7 7-7 7" />
+                                            </svg>
+                                        </Link>
+                                    ))}
+                                </motion.div>
+                            </>
+                        )}
+                    </AnimatePresence>
                 </div>
             </header>
 
-            <div className="relative z-10 flex items-center flex-1 min-h-0">
-                <div className="w-full px-6 overflow-hidden sm:px-8 lg:px-12 xl:px-16">
-                    <div className="w-full lg:w-3/4 xl:w-1/2">
-                        {/* <motion.a
-                            href="#"
-                            initial={{ opacity: 0, y: -10 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5 }}
-                            className="mb-5 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 font-display text-[11px] font-semibold uppercase tracking-widest text-primary transition-colors hover:bg-primary/20"
-                        >
-                            <span className="relative flex h-1.5 w-1.5">
-                                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
-                                <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-primary" />
-                            </span>
-                            Now Live — India&apos;s First AI Fitness Platform
-                        </motion.a> */}
-
-                        <p className="tracking-tighter text-white">
-                            <span className="font-display font-normal text-4xl sm:text-6xl xl:text-7xl">India&apos;s AI-Powered</span><br />
-                            <span className="font-display font-normal text-4xl sm:text-6xl xl:text-7xl">Fitness &amp; Health</span><br />
-                            <span className="font-serif italic font-normal text-5xl sm:text-7xl xl:text-8xl text-primary">Platform</span>
-                        </p>
-
-                        <p className="mt-4 font-display text-sm sm:text-base font-normal leading-6 sm:leading-7 text-white text-opacity-70 max-w-xl">
-                            The world&apos;s first AI Multi-Agent Fitness Platform built for Indian lifestyles. Personalized AI coaching, nutrition, rewards, community, and athlete opportunities — all in one platform.
-                        </p>
-
-                        <div className="flex flex-wrap items-center mt-5 gap-3 sm:mt-6">
-                            <a
-                                href="#"
-                                title=""
-                                className="
-                                    inline-flex
-                                    items-center
-                                    justify-center
-                                    px-4
-                                    py-2
-                                    font-display
-                                    text-xs
-                                    sm:text-sm
-                                    font-bold
-                                    tracking-wide
-                                    uppercase
-                                    transition-all
-                                    duration-200
-                                    border-2 border-transparent
-                                    rounded-full
-                                    bg-white
-                                    text-black
-                                    shadow-[0_0_24px_rgba(245,158,11,0.35)]
-                                    hover:bg-opacity-90
-                                    focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary focus:ring-offset-secondary
-                                "
-                                role="button"
-                            >
-                                Download App
-                            </a>
-
-                            <a
-                                href="#"
-                                title=""
-                                className="
-                                    inline-flex
-                                    items-center
-                                    justify-center
-                                    px-4
-                                    py-2
-                                    font-display
-                                    text-xs
-                                    sm:text-sm
-                                    font-bold
-                                    tracking-wide
-                                    uppercase
-                                    transition-all
-                                    duration-200
-                                    bg-transparent
-                                    border-2
-                                    rounded-full
-                                    text-white
-                                    border-primary
-                                    hover:bg-white
-                                    focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary
-                                    hover:text-black
-                                    focus:ring-offset-secondary
-                                "
-                                role="button"
-                            >
-                                Join Beta
-                            </a>
-
-                            <a
-                                href="#"
-                                title=""
-                                className="
-                                    inline-flex
-                                    items-center
-                                    justify-center
-                                    px-4
-                                    py-2
-                                    font-display
-                                    text-xs
-                                    sm:text-sm
-                                    font-bold
-                                    tracking-wide
-                                    uppercase
-                                    text-white
-                                    transition-all
-                                    duration-200
-                                    rounded-full
-                                    hover:text-primary
-                                    focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary
-                                    focus:ring-offset-secondary
-                                "
-                                role="button"
-                            >
-                                Start Your Journey
-                                <svg className="w-3.5 h-3.5 ml-1.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h14M13 5l7 7-7 7" />
-                                </svg>
-                            </a>
-                        </div>
-
-                        <div className="grid grid-cols-2 gap-4 pt-4 mt-6 border-t sm:grid-cols-4 sm:gap-6 sm:pt-5 sm:mt-8 border-white/10 max-w-2xl">
-                            <div>
-                                <p className="font-display text-xl font-bold text-white sm:text-3xl">213M</p>
-                                <p className="mt-1 font-display text-[10px] sm:text-xs font-normal tracking-wide text-white uppercase text-opacity-60">Indians trying to get fit</p>
-                            </div>
-                            <div>
-                                <p className="font-display text-xl font-bold text-white sm:text-3xl">1.8B</p>
-                                <p className="mt-1 font-display text-[10px] sm:text-xs font-normal tracking-wide text-white uppercase text-opacity-60">Global audience</p>
-                            </div>
-                            <div>
-                                <p className="font-display text-xl font-bold text-white sm:text-3xl">94%</p>
-                                <p className="mt-1 font-display text-[10px] sm:text-xs font-normal tracking-wide text-white uppercase text-opacity-60">Quit within 30 days</p>
-                            </div>
-                            <div>
-                                <p className="font-display text-xl font-bold text-primary sm:text-3xl">95K+</p>
-                                <p className="mt-1 font-display text-[10px] sm:text-xs font-normal tracking-wide text-white uppercase text-opacity-60">Indian recipes tracked</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            {/* Annotations */}
+            <div className="absolute left-4 top-[24%] z-30 max-w-[190px] sm:left-10 sm:top-[26%] sm:max-w-[230px]">
+                <span className="inline-block bg-black px-2 py-1 font-mono text-[11px] font-semibold text-white">01</span>
+                <p className="mt-2 font-mono text-[12px] leading-snug text-neutral-800 sm:text-[13px]">
+                    /AI that flags injury risk before it happens.
+                </p>
             </div>
 
-            <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.6, delay: 1 }}
-                className="relative z-10 flex-shrink-0 hidden pb-6 sm:flex justify-center"
+            <div className="absolute right-4 top-[46%] z-30 max-w-[190px] text-right sm:right-10 sm:max-w-[230px] sm:text-left">
+                <span className="inline-block bg-black px-2 py-1 font-mono text-[11px] font-semibold text-white">02</span>
+                <p className="mt-2 font-mono text-[12px] leading-snug text-neutral-800 sm:text-[13px]">
+                    We analyze micro-movement — stride, heart rate, and reaction time.
+                </p>
+            </div>
+
+            {/* Side signal lines */}
+            <div className="pointer-events-none absolute left-0 top-1/2 z-10 hidden h-px w-[16%] bg-primary/70 sm:block" />
+            <div className="pointer-events-none absolute left-[16%] top-1/2 z-10 hidden h-2 w-2 -translate-y-1/2 rotate-45 bg-primary sm:block" />
+            <svg className="pointer-events-none absolute left-1 top-1/2 z-10 hidden h-3 w-3 -translate-y-1/2 text-primary sm:block" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M11 19l-7-7 7-7M4 12h16" />
+            </svg>
+            <div className="pointer-events-none absolute right-0 top-1/2 z-10 hidden h-px w-[16%] bg-primary/70 sm:block" />
+            <div className="pointer-events-none absolute right-[16%] top-1/2 z-10 hidden h-2 w-2 -translate-y-1/2 rotate-45 bg-primary sm:block" />
+            <svg className="pointer-events-none absolute right-1 top-1/2 z-10 hidden h-3 w-3 -translate-y-1/2 text-primary sm:block" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M13 5l7 7-7 7M20 12H4" />
+            </svg>
+
+            {/* Route arc */}
+            <svg
+                className="pointer-events-none absolute left-1/2 top-[42%] z-0 hidden h-[42vh] w-[70vw] max-w-[820px] -translate-x-1/2 -translate-y-1/2 opacity-60 sm:block"
+                viewBox="0 0 800 400"
+                fill="none"
             >
-                <a href="#" title="" className="flex flex-col items-center gap-2 text-white/40 transition-colors hover:text-white/70 focus:outline-none">
-                    <span className="font-display text-[10px] font-semibold uppercase tracking-[0.3em]">Scroll to Explore</span>
-                    <motion.svg
-                        animate={{ y: [0, 6, 0] }}
-                        transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
-                        className="w-4 h-4"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                    >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                    </motion.svg>
-                </a>
+                <defs>
+                    <marker id="hero-arrowhead" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+                        <path d="M0,0 L8,4 L0,8 Z" className="fill-primary" />
+                    </marker>
+                </defs>
+                <path
+                    d="M60,340 C 220,300 260,140 420,110 C 540,90 620,120 730,60"
+                    className="stroke-primary/50"
+                    strokeWidth="2"
+                    strokeDasharray="8 10"
+                    strokeLinecap="round"
+                    markerEnd="url(#hero-arrowhead)"
+                />
+            </svg>
+
+            {/* Wordmark */}
+            <div className="absolute inset-x-0 bottom-0 z-10 select-none overflow-hidden pb-1 sm:pb-2">
+                <p className="whitespace-nowrap text-center font-display text-[17vw] font-bold leading-[0.78] tracking-tighter text-neutral-950 sm:text-[13.5vw]">
+                    IMPOSSIBLE AI
+                </p>
+            </div>
+
+            {/* Figure — centered inside the rings */}
+            <motion.div
+                initial={{ opacity: 0, scale: 0.85 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="absolute left-1/2 top-[40%] z-0 -translate-x-1/2 -translate-y-1/2"
+            >
+                <img
+                    src="/hero.png"
+                    alt="Athlete in motion"
+                    className="h-[40vh] w-auto object-contain drop-shadow-2xl sm:h-[50vh]"
+                />
             </motion.div>
-        </div>
+        </section>
     );
 };
 

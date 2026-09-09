@@ -11,14 +11,17 @@ const ctas = [
 
 const GetStarted = () => {
     return (
-        <section className="relative overflow-hidden border-t border-white/5 bg-black px-6 py-16 sm:px-8 sm:py-20 lg:px-12 xl:px-16">
+        <section className="relative overflow-hidden border-t border-black/10 bg-[#e9e9e6] px-6 py-16 sm:px-8 sm:py-20 lg:px-12 xl:px-16">
+            <div className="pointer-events-none absolute inset-0 bg-grid-light opacity-50" />
+            <div className="pointer-events-none absolute left-1/2 top-1/2 aspect-square w-[60vw] min-w-[420px] max-w-[820px] -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-primary/40" />
+
             <div className="relative mx-auto max-w-4xl text-center">
                 <motion.span
                     initial={{ opacity: 0, y: 12 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5 }}
-                    className="font-display text-xs font-semibold uppercase tracking-[0.3em] text-primary"
+                    className="inline-block bg-black px-2 py-1 font-mono text-[11px] font-semibold tracking-widest text-white"
                 >
                     Get Started
                 </motion.span>
@@ -28,7 +31,7 @@ const GetStarted = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.55, delay: 0.05 }}
-                    className="mt-4 font-display text-4xl font-bold tracking-tight text-white sm:text-6xl"
+                    className="mt-4 font-display text-4xl font-bold tracking-tight text-neutral-950 sm:text-6xl"
                 >
                     Ready to Transform
                     <br />
@@ -40,7 +43,7 @@ const GetStarted = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.55, delay: 0.1 }}
-                    className="mx-auto mt-5 max-w-xl font-sans text-sm leading-6 text-white/60 sm:text-base"
+                    className="mx-auto mt-5 max-w-xl font-sans text-sm leading-6 text-neutral-600 sm:text-base"
                 >
                     Experience AI-powered coaching, nutrition, rewards, community, and athlete opportunities — all in one
                     app built for India.
@@ -58,7 +61,7 @@ const GetStarted = () => {
                             <a
                                 key={c.label}
                                 href="#"
-                                className="inline-flex items-center justify-center rounded-full border-2 border-transparent bg-white px-6 py-3 font-display text-xs font-bold uppercase tracking-widest text-black shadow-[0_0_28px_rgba(245,158,11,0.35)] transition-all hover:bg-opacity-90"
+                                className="inline-flex items-center justify-center rounded-full border-2 border-transparent bg-black px-6 py-3 font-display text-xs font-bold uppercase tracking-widest text-white shadow-sm transition-all hover:bg-neutral-800"
                             >
                                 {c.label}
                             </a>
@@ -66,7 +69,7 @@ const GetStarted = () => {
                             <a
                                 key={c.label}
                                 href="#"
-                                className="inline-flex items-center justify-center rounded-full border-2 border-white/20 px-6 py-3 font-display text-xs font-bold uppercase tracking-widest text-white transition-all hover:border-primary hover:text-primary"
+                                className="inline-flex items-center justify-center rounded-full border-2 border-black/15 bg-white px-6 py-3 font-display text-xs font-bold uppercase tracking-widest text-neutral-800 transition-all hover:border-primary hover:text-primary"
                             >
                                 {c.label}
                             </a>

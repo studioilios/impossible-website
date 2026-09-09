@@ -24,10 +24,9 @@ const SectionHeading = ({
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-80px" }}
                 transition={{ duration: 0.5 }}
-                className={`flex items-center gap-3 ${centered ? "justify-center" : ""}`}
+                className={`flex items-center gap-2 ${centered ? "justify-center" : ""}`}
             >
-                <span className="h-px w-8 bg-primary/60" />
-                <span className="font-display text-xs font-semibold tracking-[0.3em] uppercase text-primary">
+                <span className="inline-block bg-black px-2 py-1 font-mono text-[11px] font-semibold tracking-widest text-white">
                     {eyebrow}
                 </span>
             </motion.div>
@@ -37,7 +36,7 @@ const SectionHeading = ({
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-80px" }}
                 transition={{ duration: 0.55, delay: 0.05 }}
-                className="mt-4 font-display text-3xl font-bold tracking-tight text-white sm:text-5xl"
+                className="mt-4 font-display text-3xl font-bold tracking-tight text-neutral-950 sm:text-5xl"
             >
                 {title}
                 {accent && (
@@ -54,7 +53,7 @@ const SectionHeading = ({
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-80px" }}
                     transition={{ duration: 0.55, delay: 0.1 }}
-                    className="mt-4 font-sans text-sm leading-6 text-white/60 sm:text-base sm:leading-7"
+                    className="mt-4 font-sans text-sm leading-6 text-neutral-600 sm:text-base sm:leading-7"
                 >
                     {description}
                 </motion.p>
