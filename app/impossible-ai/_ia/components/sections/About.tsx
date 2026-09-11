@@ -121,106 +121,171 @@ const About = () => {
     }, []);
 
     return (
-        <section id="about" ref={sectionRef} className="relative" style={{ height: "500vh" }}>
-            <div className="sticky top-0 h-screen w-full overflow-hidden">
-                {/* Layer 1 — background image */}
-                <img
-                    src="/scrollbgimg.png"
-                    alt="Athlete training in the gym"
-                    className="pointer-events-none absolute inset-0 h-full w-full object-cover"
-                />
-
-                {/* Layer 2 — decorative concentric rings */}
-                <div ref={ringsRef} className="pointer-events-none absolute inset-0" style={{ willChange: "opacity" }}>
-                    {RING_SIZES.map((size) => (
-                        <div
-                            key={size}
-                            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/25"
-                            style={{ width: size, height: size }}
-                        />
-                    ))}
-                </div>
-
-                {/* Layer 3 — mask with circular hole */}
-                <div
-                    ref={maskRef}
-                    className="pointer-events-none absolute inset-0 bg-[#f3f3f1]"
-                    style={{ willChange: "clip-path" }}
-                >
-                    <div className="pointer-events-none absolute inset-0 bg-grid-light opacity-40" />
-                </div>
-
-                {/* Layer 4 — heading, fades out as the circle grows */}
-                <div
-                    ref={headingRef}
-                    className="pointer-events-none absolute inset-x-0 top-[14%] flex flex-col items-center px-6 text-center sm:top-[16%]"
-                    style={{ willChange: "opacity" }}
-                >
+        <>
+            {/* Mobile — plain static section. The pinned scroll-jack effect below relies on
+                a stable window height and generous scroll room; mobile browsers resize their
+                chrome mid-scroll and there isn't room to pin 4 stats + 3 cards on one screen,
+                so phones get a normal flowing layout instead of the animated reveal. */}
+            <div className="relative overflow-hidden border-t border-black/10 bg-[#f3f3f1] px-5 py-14 sm:hidden">
+                <div className="pointer-events-none absolute inset-0 bg-grid-light opacity-40" />
+                <div className="relative mx-auto flex max-w-md flex-col items-center text-center">
                     <span className="inline-block bg-black px-2 py-1 font-mono text-[11px] font-semibold tracking-widest text-white">
                         About Us
                     </span>
-                    <h2 className="mt-4 max-w-3xl font-display text-3xl font-bold tracking-tight text-neutral-950 sm:text-5xl">
+                    <h2 className="mt-4 font-display text-3xl font-bold tracking-tight text-neutral-950">
                         Built to Fix{" "}
                         <span className="font-serif italic font-normal text-primary">India&apos;s Broken Fitness Story</span>
                     </h2>
-                </div>
 
-                {/* Layer 5 — intro copy, stats, and cards, slide up after the reveal */}
-                <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center gap-5 px-6 sm:gap-6">
-                    <p
-                        ref={introRef}
-                        className="max-w-2xl text-center font-sans text-sm leading-6 text-white opacity-0 drop-shadow-sm sm:text-base sm:leading-7"
-                        style={{ willChange: "transform, opacity" }}
-                    >
+                    <div className="relative mt-6 h-48 w-full overflow-hidden rounded-2xl">
+                        <img
+                            src="/scrollbgimg.png"
+                            alt="Athlete training in the gym"
+                            className="h-full w-full object-cover"
+                        />
+                    </div>
+
+                    <p className="mt-6 font-sans text-sm leading-6 text-neutral-700">
                         Nearly a billion Indians are deficient in an essential nutrient. Diabetes is showing up in
                         people barely out of their twenties. Global fitness apps were never built for Indian food,
                         biology, or life — so we built the one that is.
                     </p>
 
-                    <div
-                        ref={statsRef}
-                        className="grid w-full max-w-3xl grid-cols-2 divide-x divide-y divide-black/10 overflow-hidden rounded-2xl border border-black/10 bg-white/90 opacity-0 shadow-sm backdrop-blur-sm sm:grid-cols-4 sm:divide-y-0"
-                        style={{ willChange: "transform, opacity" }}
-                    >
+                    <div className="mt-6 grid w-full grid-cols-2 divide-x divide-y divide-black/10 overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm">
                         {stats.map((s) => (
-                            <div key={s.label} className="px-3 py-3.5 text-center sm:px-2 sm:py-4">
-                                <p className="font-display text-xl font-bold text-neutral-950 sm:text-2xl">{s.value}</p>
-                                <p className="mt-1 font-mono text-[9px] font-medium uppercase tracking-wide text-neutral-500 sm:text-[10px]">
+                            <div key={s.label} className="px-3 py-3.5 text-center">
+                                <p className="font-display text-xl font-bold text-neutral-950">{s.value}</p>
+                                <p className="mt-1 font-mono text-[9px] font-medium uppercase tracking-wide text-neutral-500">
                                     {s.label}
                                 </p>
                             </div>
                         ))}
                     </div>
 
-                    <div className="grid max-w-5xl gap-5 sm:grid-cols-3">
+                    <div className="mt-6 flex w-full flex-col gap-4">
                         {cards.map((c, i) => (
                             <div
                                 key={c.title}
-                                ref={(el) => {
-                                    cardRefs.current[i] = el;
-                                }}
-                                className="pointer-events-auto relative overflow-hidden rounded-2xl border border-black/10 bg-white/90 p-5 opacity-0 shadow-sm backdrop-blur-sm transition-colors duration-300 hover:border-primary/40 sm:p-6"
-                                style={{ willChange: "transform, opacity" }}
+                                className="relative rounded-2xl border border-black/10 bg-white p-5 text-left shadow-sm"
                             >
                                 <span className="absolute right-5 top-5 font-mono text-xs font-semibold text-neutral-300">
                                     0{i + 1}
                                 </span>
-                                <div className="flex h-11 w-11 items-center justify-center rounded-full border border-primary/30 bg-primary/10 text-xl sm:h-12 sm:w-12 sm:text-2xl">
+                                <div className="flex h-11 w-11 items-center justify-center rounded-full border border-primary/30 bg-primary/10 text-xl">
                                     {c.icon}
                                 </div>
-                                <h3 className="mt-4 font-display text-base font-bold text-neutral-950 sm:mt-5 sm:text-lg">
-                                    {c.title}
-                                </h3>
-                                <p className="mt-2 font-sans text-xs leading-5 text-neutral-600 sm:text-sm sm:leading-6">
-                                    {c.description}
-                                </p>
-                                <span className="mt-4 block h-px w-8 bg-primary/50 sm:mt-5" />
+                                <h3 className="mt-4 font-display text-base font-bold text-neutral-950">{c.title}</h3>
+                                <p className="mt-2 font-sans text-xs leading-5 text-neutral-600">{c.description}</p>
+                                <span className="mt-4 block h-px w-8 bg-primary/50" />
                             </div>
                         ))}
                     </div>
                 </div>
             </div>
-        </section>
+
+            {/* Tablet/desktop — pinned scroll-jack reveal */}
+            <section
+                id="about"
+                ref={sectionRef}
+                className="relative hidden sm:block"
+                style={{ height: "500vh" }}
+            >
+                <div className="sticky top-0 h-screen w-full overflow-hidden">
+                    {/* Layer 1 — background image */}
+                    <img
+                        src="/scrollbgimg.png"
+                        alt="Athlete training in the gym"
+                        className="pointer-events-none absolute inset-0 h-full w-full object-cover"
+                    />
+
+                    {/* Layer 2 — decorative concentric rings */}
+                    <div ref={ringsRef} className="pointer-events-none absolute inset-0" style={{ willChange: "opacity" }}>
+                        {RING_SIZES.map((size) => (
+                            <div
+                                key={size}
+                                className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/25"
+                                style={{ width: size, height: size }}
+                            />
+                        ))}
+                    </div>
+
+                    {/* Layer 3 — mask with circular hole */}
+                    <div
+                        ref={maskRef}
+                        className="pointer-events-none absolute inset-0 bg-[#f3f3f1]"
+                        style={{ willChange: "clip-path" }}
+                    >
+                        <div className="pointer-events-none absolute inset-0 bg-grid-light opacity-40" />
+                    </div>
+
+                    {/* Layer 4 — heading, fades out as the circle grows */}
+                    <div
+                        ref={headingRef}
+                        className="pointer-events-none absolute inset-x-0 top-[16%] flex flex-col items-center px-6 text-center"
+                        style={{ willChange: "opacity" }}
+                    >
+                        <span className="inline-block bg-black px-2 py-1 font-mono text-[11px] font-semibold tracking-widest text-white">
+                            About Us
+                        </span>
+                        <h2 className="mt-4 max-w-3xl font-display text-5xl font-bold tracking-tight text-neutral-950">
+                            Built to Fix{" "}
+                            <span className="font-serif italic font-normal text-primary">India&apos;s Broken Fitness Story</span>
+                        </h2>
+                    </div>
+
+                    {/* Layer 5 — intro copy, stats, and cards, slide up after the reveal */}
+                    <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center gap-6 px-6">
+                        <p
+                            ref={introRef}
+                            className="max-w-2xl text-center font-sans text-base leading-7 text-white opacity-0 drop-shadow-sm"
+                            style={{ willChange: "transform, opacity" }}
+                        >
+                            Nearly a billion Indians are deficient in an essential nutrient. Diabetes is showing up in
+                            people barely out of their twenties. Global fitness apps were never built for Indian food,
+                            biology, or life — so we built the one that is.
+                        </p>
+
+                        <div
+                            ref={statsRef}
+                            className="grid w-full max-w-3xl grid-cols-4 divide-x divide-black/10 overflow-hidden rounded-2xl border border-black/10 bg-white/90 opacity-0 shadow-sm backdrop-blur-sm"
+                            style={{ willChange: "transform, opacity" }}
+                        >
+                            {stats.map((s) => (
+                                <div key={s.label} className="px-2 py-4 text-center">
+                                    <p className="font-display text-2xl font-bold text-neutral-950">{s.value}</p>
+                                    <p className="mt-1 font-mono text-[10px] font-medium uppercase tracking-wide text-neutral-500">
+                                        {s.label}
+                                    </p>
+                                </div>
+                            ))}
+                        </div>
+
+                        <div className="grid max-w-5xl grid-cols-3 gap-5">
+                            {cards.map((c, i) => (
+                                <div
+                                    key={c.title}
+                                    ref={(el) => {
+                                        cardRefs.current[i] = el;
+                                    }}
+                                    className="pointer-events-auto relative overflow-hidden rounded-2xl border border-black/10 bg-white/90 p-6 opacity-0 shadow-sm backdrop-blur-sm transition-colors duration-300 hover:border-primary/40"
+                                    style={{ willChange: "transform, opacity" }}
+                                >
+                                    <span className="absolute right-5 top-5 font-mono text-xs font-semibold text-neutral-300">
+                                        0{i + 1}
+                                    </span>
+                                    <div className="flex h-12 w-12 items-center justify-center rounded-full border border-primary/30 bg-primary/10 text-2xl">
+                                        {c.icon}
+                                    </div>
+                                    <h3 className="mt-5 font-display text-lg font-bold text-neutral-950">{c.title}</h3>
+                                    <p className="mt-2 font-sans text-sm leading-6 text-neutral-600">{c.description}</p>
+                                    <span className="mt-5 block h-px w-8 bg-primary/50" />
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </>
     );
 };
 

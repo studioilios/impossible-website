@@ -26,7 +26,7 @@ const PhoneVisual = ({
 
 const AppShowcase = () => {
     return (
-        <section className="relative flex h-screen w-full flex-col justify-center overflow-hidden border-t border-black/10 bg-[#f3f3f1] px-6 py-8 sm:px-8 lg:px-12 xl:px-16">
+        <section className="relative flex min-h-screen w-full flex-col justify-center overflow-x-hidden border-t border-black/10 bg-[#f3f3f1] px-6 py-12 sm:px-8 lg:h-screen lg:overflow-hidden lg:py-8 lg:px-12 xl:px-16">
             <div className="pointer-events-none absolute inset-0 bg-grid-light opacity-40" />
             <div className="pointer-events-none absolute left-1/2 top-1/2 z-0 aspect-square w-[54vw] min-w-[380px] max-w-[760px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-black/10" />
             <div className="pointer-events-none absolute left-1/2 top-1/2 z-0 aspect-square w-[34vw] min-w-[260px] max-w-[480px] -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-primary/30" />
@@ -74,7 +74,7 @@ const AppShowcase = () => {
                                 alt="Impossible AI daily briefing screen"
                                 width={1024}
                                 height={1536}
-                                className="h-[50vh] max-h-[520px] w-auto sm:h-[62vh] sm:max-h-[680px] lg:h-[70vh] lg:max-h-[760px]"
+                                className="h-[38vh] max-h-[380px] w-auto sm:h-[62vh] sm:max-h-[680px] lg:h-[70vh] lg:max-h-[760px]"
                                 priority
                             />
                         </PhoneVisual>
@@ -107,7 +107,7 @@ const AppShowcase = () => {
                                 alt="Impossible AI real-time form feedback screen"
                                 width={408}
                                 height={612}
-                                className="h-[50vh] max-h-[520px] w-auto sm:h-[62vh] sm:max-h-[680px] lg:h-[70vh] lg:max-h-[760px]"
+                                className="h-[38vh] max-h-[380px] w-auto sm:h-[62vh] sm:max-h-[680px] lg:h-[70vh] lg:max-h-[760px]"
                                 priority
                             />
                         </PhoneVisual>
