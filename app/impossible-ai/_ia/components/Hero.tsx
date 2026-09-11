@@ -35,25 +35,25 @@ const Hero = () => {
             />
 
             {/* Nav */}
-            <header className="relative z-30 flex items-center justify-between px-5 pt-6 sm:px-10 sm:pt-8">
+            <header className="relative z-30 flex items-center justify-between px-4 pt-5 sm:px-10 sm:pt-8">
                 <Link
                     href="/impossible-ai"
                     title="Impossible AI"
-                    className="flex items-center gap-2 rounded-full bg-white px-4 py-2 shadow-sm ring-1 ring-black/5 focus:outline-none"
+                    className="flex items-center gap-1.5 rounded-full bg-white px-3 py-1.5 shadow-sm ring-1 ring-black/5 focus:outline-none sm:gap-2 sm:px-4 sm:py-2"
                 >
-                    <span className="font-serif text-base italic font-normal tracking-wide text-neutral-950">
+                    <span className="font-serif text-sm italic font-normal tracking-wide text-neutral-950 sm:text-base">
                         Impossible <span className="text-primary">AI</span>
                     </span>
                 </Link>
 
-                <div className="relative flex items-center gap-3">
+                <div className="relative flex items-center gap-2 sm:gap-3">
                     <button
                         type="button"
                         onClick={() => setMenuOpen((v) => !v)}
                         aria-expanded={menuOpen}
-                        className="inline-flex items-center gap-1.5 rounded-full bg-white px-4 py-2 font-display text-xs font-semibold uppercase tracking-widest text-neutral-800 shadow-sm ring-1 ring-black/5 focus:outline-none"
+                        className="inline-flex items-center gap-1 rounded-full bg-white px-3 py-1.5 font-display text-[10px] font-semibold uppercase tracking-widest text-neutral-800 shadow-sm ring-1 ring-black/5 focus:outline-none sm:gap-1.5 sm:px-4 sm:py-2 sm:text-xs"
                     >
-                        <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <svg className="h-3 w-3 sm:h-3.5 sm:w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
                         Menu
@@ -61,7 +61,7 @@ const Hero = () => {
                     <a
                         href="#"
                         title=""
-                        className="inline-flex items-center justify-center rounded-full bg-black px-5 py-2 font-display text-xs font-semibold uppercase tracking-widest text-white transition-colors hover:bg-neutral-800 focus:outline-none"
+                        className="inline-flex items-center justify-center rounded-full bg-black px-3.5 py-1.5 font-display text-[10px] font-semibold uppercase tracking-widest text-white transition-colors hover:bg-neutral-800 focus:outline-none sm:px-5 sm:py-2 sm:text-xs"
                     >
                         Get the App
                     </a>
@@ -151,7 +151,7 @@ const Hero = () => {
             </svg>
 
             {/* Wordmark */}
-            <div className="absolute inset-x-0 bottom-0 z-10 select-none overflow-hidden pb-1 sm:pb-2">
+            <div className="absolute inset-x-0 bottom-10 z-10 select-none overflow-hidden pb-1 sm:bottom-0 sm:pb-2">
                 <p className="whitespace-nowrap text-center font-display text-[17vw] font-bold leading-[0.78] tracking-tighter text-neutral-950 sm:text-[13.5vw]">
                     IMPOSSIBLE AI
                 </p>
