@@ -8,7 +8,7 @@ const Footer = () => {
         <footer className="relative overflow-hidden border-t border-black/10 bg-white px-6 pt-14 sm:px-8 lg:px-12 xl:px-16">
             <div className="mx-auto max-w-7xl">
                 <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
-                    <div className="lg:col-span-2">
+                    <div className="sm:col-span-2 lg:col-span-2">
                         <Link href="/impossible-ai" className="inline-flex items-center gap-2">
                             <svg className="h-4 w-4 text-primary" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M13 2 3 14h7l-1 8 11-14h-7l1-6z" />
@@ -16,15 +16,30 @@ const Footer = () => {
                             <span className="font-display text-xl font-bold tracking-widest text-neutral-950">Impossible AI</span>
                         </Link>
                         <p className="mt-3 max-w-sm font-sans text-sm leading-6 text-neutral-500">
-                            India&apos;s first AI Multi-Agent Fitness Platform. Built for Indian lifestyles, powered by
-                            world-class AI.
+                            A global AI fitness platform, built for diverse lifestyles and powered by world class AI.
                         </p>
-                        <a
-                            href="#"
-                            className="mt-5 inline-flex items-center gap-2 rounded-full bg-black px-5 py-2.5 font-display text-xs font-bold uppercase tracking-widest text-white transition-colors hover:bg-neutral-800"
-                        >
-                            Get the App
-                        </a>
+                        <section aria-labelledby="footer-locations" className="mt-6">
+                            <h3 id="footer-locations" className="font-display text-xl font-semibold text-neutral-950">
+                                Locations
+                            </h3>
+                            <div className="mt-4 grid gap-5 sm:grid-cols-2">
+                                <address className="not-italic">
+                                    <h4 className="font-display text-base font-semibold text-neutral-950">United States</h4>
+                                    <div className="mt-2 flex flex-wrap gap-2">
+                                        <span className="rounded bg-neutral-100 px-2.5 py-1 font-sans text-xs text-neutral-700">Primary</span>
+                                        <span className="rounded bg-neutral-100 px-2.5 py-1 font-sans text-xs text-neutral-700">US Operations / Sister Company</span>
+                                    </div>
+                                    <p className="mt-2 font-sans text-sm text-neutral-600">San Francisco, CA (California) 94104</p>
+                                </address>
+                                <address className="not-italic">
+                                    <h4 className="font-display text-base font-semibold text-neutral-950">India</h4>
+                                    <div className="mt-2 flex flex-wrap gap-2">
+                                        <span className="rounded bg-neutral-100 px-2.5 py-1 font-sans text-xs text-neutral-700">Headquarters</span>
+                                    </div>
+                                    <p className="mt-2 font-sans text-sm text-neutral-600">Bengaluru, Karnataka 560043</p>
+                                </address>
+                            </div>
+                        </section>
                     </div>
 
                     <div>
@@ -59,7 +74,7 @@ const Footer = () => {
                 </div>
 
                 <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-black/10 pt-6 sm:flex-row">
-                    <p className="font-sans text-xs text-neutral-400">© 2026 IMPOSSIBLE AI — MADE FOR INDIA 🇮🇳</p>
+                    <p className="font-sans text-xs text-neutral-400">© 2026 IMPOSSIBLE AI | MADE FOR EVERYONE</p>
                     <div className="flex items-center gap-5 font-sans text-xs text-neutral-400">
                         <a href="#" className="transition-colors hover:text-primary">Privacy</a>
                         <a href="#" className="transition-colors hover:text-primary">Terms</a>

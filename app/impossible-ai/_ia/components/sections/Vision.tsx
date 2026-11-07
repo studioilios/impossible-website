@@ -13,7 +13,7 @@ const Vision = () => {
                     eyebrow="Our Vision"
                     title="Building the Future"
                     accent="of Fitness"
-                    description="Making world-class fitness accessible, affordable, intelligent, and personalized for every Indian."
+                    description="Making world class fitness accessible, affordable, intelligent, and personal for people everywhere."
                     align="center"
                 />
 
@@ -43,9 +43,8 @@ const Vision = () => {
                         Predictive Healthcare Powered by AI
                     </h3>
                     <p className="mt-3 font-sans text-sm leading-6 text-white/60 sm:text-base">
-                        We&apos;re building the intelligence layer for India&apos;s next billion-dollar health outcome
-                        improvement — catching problems before they happen, personalizing interventions before they&apos;re
-                        needed.
+                        We&apos;re building an intelligent health platform for people around the world, helping spot
+                        potential concerns early and personalize support before it&apos;s needed.
                     </p>
                 </motion.div>
             </div>

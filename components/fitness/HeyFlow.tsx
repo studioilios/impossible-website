@@ -92,7 +92,7 @@ const healthTips = [
   {
     id: 1,
     title: 'Sleep Better Tonight',
-    description: 'Aim for 7-9 hours of quality sleep',
+    description: 'Aim for 7 to 9 hours of quality sleep',
     icon: <Moon className="w-5 h-5" />,
     color: 'from-purple-500/20 to-blue-500/20'
   },
@@ -261,7 +261,7 @@ export function HeyFlow({ onBack, onNavigate }: HeyFlowProps) {
           <div className="space-y-4">
             <div className="flex items-baseline gap-2">
               <span className="text-3xl font-black italic tracking-tighter">{weeklyProgress}</span>
-              <span className="text-white/30 font-bold">/ 150</span>
+              <span className="text-white/30 font-bold">of 150</span>
               <span className="text-[10px] font-black uppercase tracking-widest text-white/40">Heart Points</span>
             </div>
 
@@ -286,7 +286,7 @@ export function HeyFlow({ onBack, onNavigate }: HeyFlowProps) {
           <div className="flex items-center justify-between mb-6">
             <div>
               <h2 className="text-sm font-black uppercase tracking-[0.15em]">Daily Goals</h2>
-              <p className="text-xs text-white/40 font-bold mt-1">{goalsAchieved} / 7 Goals Achieved</p>
+              <p className="text-xs text-white/40 font-bold mt-1">{goalsAchieved} of 7 Goals Achieved</p>
             </div>
           </div>
 

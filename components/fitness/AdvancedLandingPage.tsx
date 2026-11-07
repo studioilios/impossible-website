@@ -28,47 +28,47 @@ const LIGHTFALL = {
 };
 
 const HERO_ROLES = ['Working Professionals', 'Solo Athletes', 'Fitness Coaches', 'Gym Owners'];
-const HERO_BADGES = ['AI-Powered', 'India First', 'Personalized', 'Multi-Agent AI'];
+const HERO_BADGES = ['AI Powered', 'Global Reach', 'Personalized', 'Multi Agent AI'];
 const HERO_STATS = [
-  { value: '213M', label: 'Indians trying to get fit' },
-  { value: '1.8B', label: 'Global audience' },
-  { value: '94%', label: 'Quit within 30 days' },
-  { value: '1st', label: 'AI Multi-Agent Platform' },
+  { value: 'Global', label: 'People on a fitness journey' },
+  { value: '24/7', label: 'Personalized health support' },
+  { value: '95K+', label: 'Recipes and meals' },
+  { value: 'AI', label: 'Connected wellness platform' },
 ];
 
 const PROBLEM_STATS = [
-  { value: '101M', label: 'Diabetics in India' },
-  { value: '136M', label: 'Pre-diabetics' },
-  { value: '52%', label: 'Urban obesity growth' },
-  { value: '20–30 Yrs', label: 'Younger disease onset' },
-  { value: '₹37K Cr', label: 'Economic burden' },
-  { value: '820M', label: 'Affected by pollution' },
+  { value: 'Global', label: 'metabolic health challenge' },
+  { value: 'Every age', label: 'nutrition needs matter' },
+  { value: 'Daily', label: 'movement supports health' },
+  { value: 'Growing', label: 'need for better habits' },
+  { value: 'Preventable', label: 'many lifestyle risks' },
+  { value: 'Together', label: 'small changes add up' },
 ];
 const LIFESTYLE_PROBLEMS = [
-  { icon: Building2, title: 'Sedentary Jobs', body: 'Long office hours and commuting reduce physical activity to near zero for millions of urban Indians.' },
+  { icon: Building2, title: 'Sedentary Jobs', body: 'Long office hours and commuting can reduce physical activity for people in cities around the world.' },
   { icon: Utensils, title: 'Ultra Processed Food', body: 'Cheap processed food dominates daily diets, causing metabolic damage across every age group.' },
   { icon: Brain, title: 'Stress & Sleep Loss', body: 'Poor sleep and chronic stress accelerate health decline, compounding all other risk factors.' },
 ];
 
 const NUTRITION_GROUPS = [
-  { age: 'Children (5–15 Years)', pop: '225 Million children', color: C.saffron, stats: ['93.4% inadequate calcium intake', 'Childhood obesity increased 288%', 'Severe micronutrient gaps from early age'] },
-  { age: 'Youth (15–25 Years)', pop: '390 Million people', color: C.lime, stats: ['59.1% teenage girls are anemic', '$1 Billion energy drink market', '67% report health damage from energy drinks'] },
-  { age: 'Working Adults (25–40)', pop: '350 Million adults', color: C.teal, stats: ['98% Omega-3 deficient', '59–98% Vitamin D deficient', '101M diabetics, 136M pre-diabetics'] },
+  { age: 'Children (5 to 15 Years)', pop: 'Healthy habits start early', color: C.saffron, stats: ['Growing bodies need balanced nutrition', 'Daily movement supports lifelong wellbeing', 'Healthy routines are easier to build early'] },
+  { age: 'Youth (15 to 25 Years)', pop: 'Support through change', color: C.lime, stats: ['Changing routines can make healthy habits harder', 'Balanced meals and movement support wellbeing', 'Good sleep and recovery matter at every age'] },
+  { age: 'Working Adults (25 to 40)', pop: 'Health through busy lives', color: C.teal, stats: ['Long workdays can limit time for movement', 'Nutrition needs vary from person to person', 'Small, consistent habits can support long term health'] },
 ];
 
-const INDIA_FIRST = [
-  { icon: Utensils, label: 'Indian Food', desc: '95,000+ Indian recipes, regional cuisines, and thali tracking' },
-  { icon: Globe, label: 'Indian Languages', desc: 'AI coaching in 6 Indian languages including Hindi, Tamil, Telugu' },
-  { icon: Users, label: 'Indian Lifestyle', desc: 'Built around Indian work schedules, climate, and cultural habits' },
-  { icon: Star, label: 'Indian Festivals', desc: 'Festival calendar for Diwali, Navratri, fasting days and more' },
-  { icon: Heart, label: 'Indian Health Patterns', desc: 'Trained on Indian phenotype data and metabolic disease patterns' },
-  { icon: Shield, label: 'Indian Bodies', desc: 'Diet plans calibrated for South Asian physiology and insulin response' },
+const GLOBAL_FITNESS = [
+  { icon: Utensils, label: 'Global Cuisines', desc: '95,000+ recipes, regional cuisines, and meal tracking' },
+  { icon: Globe, label: 'Multiple Languages', desc: 'AI coaching in 6 languages for people around the world' },
+  { icon: Users, label: 'Everyday Lifestyles', desc: 'Built around varied work schedules, climates, and cultural habits' },
+  { icon: Star, label: 'Cultural Traditions', desc: 'Plans that can adapt to local festivals, fasting days, and routines' },
+  { icon: Heart, label: 'Health Patterns', desc: 'Personalized insights shaped around your health data and needs' },
+  { icon: Shield, label: 'Every Body', desc: 'Nutrition plans tailored to your goals, preferences, and physiology' },
 ];
 
 const CORE_FEATURES = [
-  { icon: Brain, tag: 'AI COACH', title: 'AI Health Coach', color: C.lime, colorRgb: '180,181,201', desc: 'Conversational AI coach that knows you personally.', bullets: ['Under 3-second responses', 'Permanent memory of your journey', '6 Indian languages supported', 'Daily coaching conversations'] },
-  { icon: Utensils, tag: 'NUTRITION AI', title: 'AI Diet Intelligence', color: C.saffron, colorRgb: '255,140,66', desc: 'The most comprehensive Indian food database, powered by AI.', bullets: ['95,000+ Indian recipes', 'Full macro & micro tracking', 'Regional food support', 'Indian phenotype database'] },
-  { icon: Sparkles, tag: 'PERSONAL AI', title: 'AI Personal Agent', color: C.teal, colorRgb: '78,205,196', desc: 'Your own AI wellness companion, always adapting to you.', bullets: ['AI wellness companion', 'Daily coaching & check-ins', 'Adaptive fitness plans', 'Personalized guidance 24/7'] },
+  { icon: Brain, tag: 'AI COACH', title: 'AI Health Coach', color: C.lime, colorRgb: '180,181,201', desc: 'Conversational AI coach that knows you personally.', bullets: ['Under 3-second responses', 'Permanent memory of your journey', 'Support in 6 languages', 'Daily coaching conversations'] },
+  { icon: Utensils, tag: 'NUTRITION AI', title: 'AI Diet Intelligence', color: C.saffron, colorRgb: '255,140,66', desc: 'A global food database, powered by AI.', bullets: ['95,000+ recipes from around the world', 'Full macro and micro tracking', 'Cuisine support across regions', 'Nutrition insights tailored to your body'] },
+  { icon: Sparkles, tag: 'PERSONAL AI', title: 'AI Personal Agent', color: C.teal, colorRgb: '78,205,196', desc: 'Your own AI wellness companion, always adapting to you.', bullets: ['AI wellness companion', 'Daily coaching & check ins', 'Adaptive fitness plans', 'Personalized guidance all day and night'] },
   { icon: Users, tag: 'COMMUNITY', title: 'Community', color: C.lime, colorRgb: '180,181,201', desc: 'Find your tribe. Train together. Grow together.', bullets: ['Running clubs & fitness groups', 'Local marathon events', 'Accountability partners', 'Hyperlocal gym discovery'] },
   { icon: Trophy, tag: 'REWARDS', title: 'Token Rewards', color: C.saffron, colorRgb: '255,140,66', desc: 'Every healthy action earns you real rewards.', bullets: ['Earn tokens for workouts', 'Redeem for gym passes', 'Coaching & supplements', 'Daily, weekly & monthly challenges'] },
   { icon: Target, tag: 'GAMIFICATION', title: 'Gamification', color: C.teal, colorRgb: '78,205,196', desc: 'Turn fitness into a game you actually want to play.', bullets: ['XP & leaderboards', 'Badges & trophies', 'Challenge maps & events', 'Fitness avatar system'] },
@@ -89,9 +89,9 @@ const GAMIFICATION_STEPS = [
 const REWARD_EXAMPLES = [
   { action: '10,000 steps', tokens: '5 Tokens', icon: '🚶' },
   { action: '300 kcal workout', tokens: '15 Tokens', icon: '💪' },
-  { action: 'Gym check-in', tokens: '20 Tokens', icon: '🏋️' },
-  { action: '7–8 hours sleep', tokens: '10 Tokens', icon: '😴' },
-  { action: '30-day streak', tokens: '200 Bonus Tokens', icon: '🔥' },
+  { action: 'Gym check in', tokens: '20 Tokens', icon: '🏋️' },
+  { action: '7 to 8 hours sleep', tokens: '10 Tokens', icon: '😴' },
+  { action: '30 day streak', tokens: '200 Bonus Tokens', icon: '🔥' },
   { action: 'Health checkup', tokens: '50 Tokens', icon: '🏥' },
 ];
 
@@ -104,23 +104,23 @@ const ATHLETE_STEPS = [
 ];
 
 const COMPARISON_FEATURES = [
-  { feature: '95K Indian Foods', ai: true, cult: false, hme: 'p', fittr: 'p', strava: false },
-  { feature: 'AI Real-time Coach', ai: true, cult: false, hme: 'p', fittr: 'p', strava: false },
+  { feature: '95K+ Global Recipes', ai: true, cult: false, hme: 'p', fittr: 'p', strava: false },
+  { feature: 'AI Real time Coach', ai: true, cult: false, hme: 'p', fittr: 'p', strava: false },
   { feature: 'Blood Test Integration', ai: true, cult: false, hme: false, fittr: false, strava: false },
   { feature: 'Vernacular Coaching', ai: true, cult: false, hme: false, fittr: false, strava: false },
   { feature: 'Festival Calendar', ai: true, cult: false, hme: false, fittr: false, strava: false },
-  { feature: 'AQI-Aware Workouts', ai: true, cult: false, hme: false, fittr: false, strava: false },
+  { feature: 'AQI Aware Workouts', ai: true, cult: false, hme: false, fittr: false, strava: false },
   { feature: 'Token Rewards', ai: true, cult: false, hme: false, fittr: false, strava: false },
-  { feature: 'Tier-2 City Pricing', ai: true, cult: false, hme: false, fittr: true, strava: false },
+  { feature: 'Tier 2 City Pricing', ai: true, cult: false, hme: false, fittr: true, strava: false },
   { feature: 'Community Feed', ai: true, cult: true, hme: false, fittr: true, strava: true },
   { feature: 'Corporate Wellness', ai: true, cult: true, hme: true, fittr: false, strava: false },
   { feature: 'AI Suggestions', ai: true, cult: 'p', hme: true, fittr: true, strava: false },
 ];
 
 const REVENUE_STREAMS = [
-  { title: 'Subscription', detail: '₹99/month · ₹999/year', icon: Smartphone },
-  { title: 'Corporate Wellness', detail: '₹60 per employee/month', icon: Building2 },
-  { title: 'Marketplace Commission', detail: '15–22% per transaction', icon: TrendingUp },
+  { title: 'Subscription', detail: '₹99 per month · ₹999 per year', icon: Smartphone },
+  { title: 'Corporate Wellness', detail: '₹60 per employee per month', icon: Building2 },
+  { title: 'Marketplace Commission', detail: '15 to 22% per transaction', icon: TrendingUp },
   { title: 'Merchandise & Products', detail: 'Fitness gear & token redemption', icon: Gift },
 ];
 const UNIT_METRICS = [
@@ -136,16 +136,16 @@ const ROADMAP = [
 ];
 
 const FAQS = [
-  { q: 'What makes Impossible AI different?', a: "Impossible AI is India's first Multi-Agent AI Fitness Platform built for Indian lifestyles. We understand Indian food (95,000+ recipes), 6 Indian languages, Indian festivals, and Indian health patterns including metabolic conditions unique to South Asians." },
-  { q: 'How does the AI coach work?', a: 'Our AI coach provides under 3-second responses with permanent memory of your fitness journey. It gives personalized guidance in 6 Indian languages, conducts daily check-ins, and continuously adapts your plan based on progress.' },
-  { q: 'How are tokens earned?', a: '10,000 steps = 5 tokens, 300 kcal workout = 15 tokens, gym check-in = 20 tokens, 7-8 hours sleep = 10 tokens, 30-day streak = 200 bonus tokens. Our AI verifies activities using GPS, phone sensors, and wearables.' },
-  { q: 'Can I redeem tokens for cash?', a: 'Yes! Tokens can be redeemed for cash, gym passes, supplements, personal coaching sessions, fitness products from our marketplace, and donated to health-related charities.' },
-  { q: 'Does it support Indian food?', a: 'Absolutely. 95,000+ Indian recipes with full macro tracking, regional food support for all Indian cuisines, and an Indian phenotype database for accurate nutrition analysis.' },
+  { q: 'What makes Impossible AI different?', a: 'Impossible AI is a global AI fitness platform designed for diverse lifestyles. Explore 95,000+ recipes from around the world, coaching in multiple languages, plans that adapt to local routines, and rewards for healthy actions.' },
+  { q: 'How does the AI coach work?', a: 'Our AI coach responds in under 3 seconds and remembers your fitness journey. It gives personalized guidance in 6 languages, conducts daily check ins, and continuously adapts your plan based on progress.' },
+  { q: 'How are tokens earned?', a: '10,000 steps = 5 tokens, 300 kcal workout = 15 tokens, gym check in = 20 tokens, 7 to 8 hours sleep = 10 tokens, and a 30 day streak = 200 bonus tokens. Our AI verifies activities using GPS, phone sensors, and wearables.' },
+  { q: 'Can I redeem tokens for cash?', a: 'Yes! Tokens can be redeemed for cash, gym passes, supplements, personal coaching sessions, fitness products from our marketplace, and donated to health related charities.' },
+  { q: 'Does it support global cuisines?', a: 'Explore 95,000+ recipes from cuisines around the world, with macro tracking and nutrition guidance tailored to your needs.' },
   { q: 'Does it work with wearables?', a: 'Yes, Impossible AI integrates with smartwatches and fitness bands to verify activities, track health metrics automatically, and provide richer coaching insights.' },
-  { q: 'Can athletes find coaches?', a: 'Yes! AI-powered matching connects athletes with coaches, helps with sponsor discovery, government scheme applications, competition calendars, and builds a verified performance profile for national visibility.' },
+  { q: 'Can athletes find coaches?', a: 'Yes! AI powered matching connects athletes with coaches, helps with sponsor discovery, government scheme applications, competition calendars, and builds a verified performance profile for national visibility.' },
   { q: 'Is there a community?', a: 'Yes! Find local running clubs, fitness groups, gym partners, and accountability buddies. Hyperlocal discovery shows nearby gyms, trainers, yoga studios, CrossFit boxes, and upcoming events.' },
   { q: 'Is the app available?', a: 'The Android app is live with AI Trainer and Gym Partnerships. iOS is in active development. Join our waitlist for early access.' },
-  { q: 'Which languages are supported?', a: 'Hindi, Tamil, Telugu, Kannada, Malayalam, and Marathi. More regional languages are being added based on demand.' },
+  { q: 'Which languages are supported?', a: 'The coach currently supports 6 languages, with more being added based on demand.' },
 ];
 
 const NAV_LINKS = ['Problem', 'Features', 'Rewards', 'Athletes', 'Compare', 'Pricing'];
@@ -243,7 +243,7 @@ export function AdvancedLandingPage({ onNavigate }: AdvancedLandingPageProps) {
             </div>
             <div>
               <div className="disp" style={{ fontSize: 16, lineHeight: 1, fontWeight: 700 }}>Impossible AI</div>
-              <div className="mono" style={{ fontSize: 9, color: C.lime, marginTop: 2 }}>INDIA'S AI FITNESS PLATFORM</div>
+              <div className="mono" style={{ fontSize: 9, color: C.lime, marginTop: 2 }}>GLOBAL AI FITNESS PLATFORM</div>
             </div>
           </div>
           <div className="nav-links">
@@ -324,10 +324,10 @@ export function AdvancedLandingPage({ onNavigate }: AdvancedLandingPageProps) {
           </div>
 
           <h1 className="disp" style={{ fontSize: 'clamp(44px,9vw,100px)', lineHeight: 0.92, margin: 0, fontWeight: 900, marginBottom: 24 }}>
-            India's <span style={{ color: C.lime }}>AI-Powered</span><br />Fitness &amp; Health<br />Platform
+            Global <span style={{ color: C.lime }}>AI Powered</span><br />Fitness &amp; Health<br />Platform
           </h1>
           <p style={{ fontSize: 'clamp(15px,1.6vw,19px)', color: C.muted, maxWidth: 620, lineHeight: 1.75, margin: '0 auto 20px' }}>
-            The world's first AI Multi-Agent Fitness Platform built for Indian lifestyles. Personalized AI coaching, nutrition, rewards, community, and athlete opportunities - all in one platform.
+            A global AI fitness platform designed for diverse lifestyles. Personalized coaching, nutrition, rewards, community, and athlete opportunities, all in one place.
           </p>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', justifyContent: 'center', marginBottom: 40 }}>
             {HERO_BADGES.map((b) => <span key={b} className="tag-lime" style={{ marginBottom: 0 }}>{b}</span>)}
@@ -353,10 +353,10 @@ export function AdvancedLandingPage({ onNavigate }: AdvancedLandingPageProps) {
         <div style={inner}>
           <div className="tag-saffron">• THE PROBLEM</div>
           <h2 className="disp" style={{ fontSize: 'clamp(32px,6vw,68px)', fontWeight: 900, marginBottom: 12, lineHeight: 1.1 }}>
-            India is Facing a Metabolic &amp;<br /><span style={{ color: C.saffron }}>Environmental Tsunami</span>
+            The World Faces a Metabolic &amp;<br /><span style={{ color: C.saffron }}>Environmental Challenge</span>
           </h2>
           <p style={{ color: C.muted, fontSize: 16, marginBottom: 56, maxWidth: 600, lineHeight: 1.7 }}>
-            Urban India's health crisis is accelerating. Lifestyle diseases are hitting younger and younger — and the numbers demand urgent action.
+            Across regions, lifestyle diseases are affecting people at younger ages. Better daily support can help people build healthier habits.
           </p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(min(100%,175px),1fr))', gap: 16, marginBottom: 56 }}>
             {PROBLEM_STATS.map((s) => (
@@ -381,7 +381,7 @@ export function AdvancedLandingPage({ onNavigate }: AdvancedLandingPageProps) {
           <div style={{ background: `linear-gradient(135deg,rgba(255,140,66,.08),rgba(180,181,201,.04))`, border: `1px solid rgba(255,140,66,.2)`, borderRadius: 20, padding: 'clamp(20px,4vw,32px)', boxSizing: 'border-box' }}>
             <div className="tag-saffron">• HEALTH FACTS</div>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(min(100%,250px),1fr))', gap: 16 }}>
-              {['26% of adolescents have unhealthy cholesterol levels.', '20–25% of young adults have hypertension.', 'Lifestyle diseases are mostly preventable through exercise, nutrition, and healthy habits.'].map((f, i) => (
+              {['26% of adolescents have unhealthy cholesterol levels.', '20 to 25% of young adults have hypertension.', 'Lifestyle diseases are mostly preventable through exercise, nutrition, and healthy habits.'].map((f, i) => (
                 <div key={i} style={{ display: 'flex', gap: 12, alignItems: 'flex-start' }}>
                   <Check style={{ width: 16, height: 16, color: C.saffron, marginTop: 2, flexShrink: 0 }} />
                   <span style={{ fontSize: 14, color: C.text, lineHeight: 1.6 }}>{f}</span>
@@ -395,9 +395,9 @@ export function AdvancedLandingPage({ onNavigate }: AdvancedLandingPageProps) {
       {/* ── 3. NUTRITION CRISIS ── */}
       <section style={sec({ background: C.paper })}>
         <div style={inner}>
-          <div className="tag-saffron">• INDIA'S NUTRITION CRISIS</div>
+          <div className="tag-saffron">• GLOBAL NUTRITION CHALLENGES</div>
           <h2 className="disp" style={{ fontSize: 'clamp(32px,6vw,68px)', fontWeight: 900, marginBottom: 56 }}>
-            A Nation <span style={{ color: C.saffron }}>Deficient</span> at Every Age
+            Nutrition <span style={{ color: C.saffron }}>Matters</span> at Every Age
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(min(100%,290px),1fr))', gap: 24, marginBottom: 48 }}>
             {NUTRITION_GROUPS.map((g) => (
@@ -418,9 +418,9 @@ export function AdvancedLandingPage({ onNavigate }: AdvancedLandingPageProps) {
             ))}
           </div>
           <div style={{ background: `linear-gradient(135deg,rgba(255,140,66,.12),rgba(180,181,201,.06))`, border: `1px solid rgba(255,140,66,.25)`, borderRadius: 20, padding: 'clamp(28px,5vw,56px)', textAlign: 'center', boxSizing: 'border-box' }}>
-            <div className="disp" style={{ fontSize: 'clamp(48px,8vw,88px)', fontWeight: 900, color: C.saffron, lineHeight: 1 }}>965 Million</div>
-            <div style={{ fontSize: 20, color: C.text, marginTop: 12, fontWeight: 600 }}>Indians are deficient in at least one essential nutrient</div>
-            <div style={{ fontSize: 14, color: C.muted, marginTop: 8 }}>Across children, youth, and working adults — a nationwide crisis demanding AI-powered solutions</div>
+            <div className="disp" style={{ fontSize: 'clamp(48px,8vw,88px)', fontWeight: 900, color: C.saffron, lineHeight: 1 }}>Every Person</div>
+            <div style={{ fontSize: 20, color: C.text, marginTop: 12, fontWeight: 600 }}>deserves practical, personalized nutrition support</div>
+            <div style={{ fontSize: 14, color: C.muted, marginTop: 8 }}>Across ages and regions, thoughtful daily guidance can make healthy choices easier</div>
           </div>
         </div>
       </section>
@@ -430,10 +430,10 @@ export function AdvancedLandingPage({ onNavigate }: AdvancedLandingPageProps) {
         <div style={inner}>
           <div className="tag-lime">• MARKET OPPORTUNITY</div>
           <h2 className="disp" style={{ fontSize: 'clamp(32px,6vw,68px)', fontWeight: 900, marginBottom: 56 }}>
-            India's <span style={{ color: C.lime }}>Fitness Revolution</span>
+            The <span style={{ color: C.lime }}>Global Fitness Opportunity</span>
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(min(100%,190px),1fr))', gap: 16, marginBottom: 48 }}>
-            {[{ v: '100M+', l: 'Overweight adults' }, { v: '49–57%', l: 'Physically inactive' }, { v: '1 in 4', l: 'Adults have hypertension' }, { v: '15%', l: 'CAGR growth rate' }].map((s) => (
+            {[{ v: '100M+', l: 'Overweight adults' }, { v: '49 to 57%', l: 'Physically inactive' }, { v: '1 in 4', l: 'Adults have hypertension' }, { v: '15%', l: 'CAGR growth rate' }].map((s) => (
               <div key={s.l} className="stat-card">
                 <div className="disp" style={{ fontSize: 38, fontWeight: 900, color: C.lime }}>{s.v}</div>
                 <div style={{ fontSize: 13, color: C.muted, marginTop: 8 }}>{s.l}</div>
@@ -472,11 +472,11 @@ export function AdvancedLandingPage({ onNavigate }: AdvancedLandingPageProps) {
         <div style={inner}>
           <div className="tag-saffron">• WHY IMPOSSIBLE AI</div>
           <h2 className="disp" style={{ fontSize: 'clamp(32px,6vw,68px)', fontWeight: 900, marginBottom: 12 }}>
-            Built for Indian Bodies.<br /><span style={{ color: C.saffron }}>Indian Food. Indian Lives.</span>
+            Built for Every Body.<br /><span style={{ color: C.saffron }}>Global Food. Real Life.</span>
           </h2>
-          <p style={{ color: C.muted, fontSize: 16, marginBottom: 56, maxWidth: 520, lineHeight: 1.7 }}>Unlike western fitness apps, Impossible AI truly understands what it means to live, eat, and exercise in India.</p>
+          <p style={{ color: C.muted, fontSize: 16, marginBottom: 56, maxWidth: 520, lineHeight: 1.7 }}>Impossible AI adapts to the foods, routines, and cultures that shape health around the world.</p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(min(100%,280px),1fr))', gap: 20 }}>
-            {INDIA_FIRST.map((item) => (
+            {GLOBAL_FITNESS.map((item) => (
               <motion.div key={item.label} whileHover={{ scale: 1.01 }} transition={{ duration: 0.15 }}
                 style={{ background: C.bg, border: `1px solid ${C.line}`, borderRadius: 16, padding: 'clamp(18px,3vw,28px)', boxSizing: 'border-box', display: 'flex', gap: 16 }}>
                 <div style={{ width: 44, height: 44, background: C.saffronGlow, borderRadius: 12, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
@@ -530,7 +530,7 @@ export function AdvancedLandingPage({ onNavigate }: AdvancedLandingPageProps) {
           <h2 className="disp" style={{ fontSize: 'clamp(32px,6vw,68px)', fontWeight: 900, marginBottom: 16 }}>
             Every Healthy Action <span style={{ color: C.lime }}>Pays</span>
           </h2>
-          <p style={{ color: C.muted, fontSize: 16, marginBottom: 56, maxWidth: 520, lineHeight: 1.7 }}>AI verifies your activities using GPS, phone sensors, and wearables — then credits tokens automatically. No cheating, no guessing.</p>
+          <p style={{ color: C.muted, fontSize: 16, marginBottom: 56, maxWidth: 520, lineHeight: 1.7 }}>AI verifies your activities using GPS, phone sensors, and wearables, then credits tokens automatically. No cheating, no guessing.</p>
           <div style={{ display: 'flex', alignItems: 'flex-start', flexWrap: 'wrap', gap: 8, marginBottom: 56, justifyContent: 'center' }}>
             {REWARD_STEPS.map((step, i) => (
               <div key={step.n} style={{ display: 'flex', alignItems: 'flex-start' }}>
@@ -615,7 +615,7 @@ export function AdvancedLandingPage({ onNavigate }: AdvancedLandingPageProps) {
           <h2 className="disp" style={{ fontSize: 'clamp(32px,6vw,68px)', fontWeight: 900, marginBottom: 16 }}>
             One Platform.<br /><span style={{ color: C.saffron }}>Every Athlete's Path.</span>
           </h2>
-          <p style={{ color: C.muted, fontSize: 16, marginBottom: 56, maxWidth: 520, lineHeight: 1.7 }}>From creating your first profile to getting discovered by national scouts — the complete athlete journey in one platform.</p>
+          <p style={{ color: C.muted, fontSize: 16, marginBottom: 56, maxWidth: 520, lineHeight: 1.7 }}>From creating your first profile to getting discovered by national scouts, the complete athlete journey in one platform.</p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(min(100%,180px),1fr))', gap: 20, marginBottom: 64 }}>
             {ATHLETE_STEPS.map((step, i) => (
               <motion.div key={step.n} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
@@ -630,7 +630,7 @@ export function AdvancedLandingPage({ onNavigate }: AdvancedLandingPageProps) {
           </div>
 
           <div className="tag-saffron">• ATHLETE NETWORK</div>
-          <h3 className="disp" style={{ fontSize: 'clamp(24px,4vw,40px)', fontWeight: 900, marginBottom: 40 }}>India's First Performance-Based <span style={{ color: C.saffron }}>Athlete Network</span></h3>
+          <h3 className="disp" style={{ fontSize: 'clamp(24px,4vw,40px)', fontWeight: 900, marginBottom: 40 }}>A Global Performance-Based <span style={{ color: C.saffron }}>Athlete Network</span></h3>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(min(100%,280px),1fr))', gap: 24 }}>
             <div style={{ background: C.bg, border: `1px solid ${C.line}`, borderRadius: 20, padding: 'clamp(20px,4vw,32px)', boxSizing: 'border-box' }}>
               <div className="tag-saffron">FEATURES</div>
@@ -648,7 +648,7 @@ export function AdvancedLandingPage({ onNavigate }: AdvancedLandingPageProps) {
             <div style={{ background: C.bg, border: `1px solid ${C.line}`, borderRadius: 20, padding: 'clamp(20px,4vw,32px)', boxSizing: 'border-box' }}>
               <div className="tag-saffron">BENEFITS</div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
-                {['Get discovered by national scouts', 'Apply for government grants', 'Meet world-class coaches', 'Receive brand sponsorship', 'Never miss trials & competitions'].map((b, i) => (
+                {['Get discovered by national scouts', 'Apply for government grants', 'Meet world class coaches', 'Receive brand sponsorship', 'Never miss trials & competitions'].map((b, i) => (
                   <div key={i} style={{ display: 'flex', gap: 12, alignItems: 'flex-start' }}>
                     <Check style={{ width: 16, height: 16, color: C.saffron, marginTop: 2, flexShrink: 0 }} />
                     <span style={{ fontSize: 14, color: C.muted, lineHeight: 1.5 }}>{b}</span>
@@ -658,9 +658,9 @@ export function AdvancedLandingPage({ onNavigate }: AdvancedLandingPageProps) {
             </div>
             <div style={{ background: `linear-gradient(135deg,rgba(255,140,66,.08),rgba(180,181,201,.04))`, border: `1px solid rgba(255,140,66,.2)`, borderRadius: 20, padding: 'clamp(20px,4vw,32px)', boxSizing: 'border-box' }}>
               <div className="tag-saffron">VISION</div>
-              <div className="disp" style={{ fontSize: 22, fontWeight: 700, marginBottom: 20, lineHeight: 1.3 }}>Building India's Next Generation of Athletes</div>
+              <div className="disp" style={{ fontSize: 22, fontWeight: 700, marginBottom: 20, lineHeight: 1.3 }}>Supporting the Next Generation of Athletes</div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-                {['Discover hidden talent across India', 'Reduce athlete dropout rates', 'Build scientific development pathways', 'Create an Olympic pipeline'].map((g, i) => (
+                {['Discover talent around the world', 'Reduce athlete dropout rates', 'Build scientific development pathways', 'Create opportunities to compete globally'].map((g, i) => (
                   <div key={i} style={{ display: 'flex', gap: 10, alignItems: 'flex-start' }}>
                     <Star style={{ width: 14, height: 14, color: C.saffron, marginTop: 3, flexShrink: 0 }} />
                     <span style={{ fontSize: 14, color: C.muted, lineHeight: 1.5 }}>{g}</span>
@@ -703,7 +703,7 @@ export function AdvancedLandingPage({ onNavigate }: AdvancedLandingPageProps) {
               </div>
             </div>
             <div style={{ background: C.paper, border: `1px solid ${C.line}`, borderRadius: 20, padding: 'clamp(20px,4vw,32px)', boxSizing: 'border-box' }}>
-              <div className="tag-lime">INDIA'S FITNESS SOCIAL NETWORK</div>
+              <div className="tag-lime">GLOBAL FITNESS SOCIAL NETWORK</div>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, marginBottom: 20 }}>
                 {[{ icon: MessageCircle, label: 'Posts & Comments' }, { icon: Heart, label: 'Likes & Reactions' }, { icon: Share2, label: 'Share Moments' }, { icon: Users, label: 'Friends & Clubs' }, { icon: MapPin, label: 'Local Events' }, { icon: Trophy, label: 'Token Rewards' }].map((item) => (
                   <div key={item.label} style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
@@ -753,7 +753,7 @@ export function AdvancedLandingPage({ onNavigate }: AdvancedLandingPageProps) {
               </div>
 
               <p style={{ fontSize: 15, color: C.muted, lineHeight: 1.7, marginBottom: 32, maxWidth: 360 }}>
-                Turn every healthy action into a rewarding game experience. Missions, bosses, XP — all tied to your real fitness goals.
+                Turn every healthy action into a rewarding game experience. Missions, bosses, and XP are all tied to your real fitness goals.
               </p>
 
               {/* Divider */}
@@ -808,7 +808,7 @@ export function AdvancedLandingPage({ onNavigate }: AdvancedLandingPageProps) {
               >
                 <img
                   src="/game-map.png"
-                  alt="Fitness Game Map — Impossible AI"
+                  alt="Fitness Game Map for Impossible AI"
                   style={{ width: '100%', height: 'auto', display: 'block', borderRadius: 24 }}
                 />
               </motion.div>
@@ -931,7 +931,7 @@ export function AdvancedLandingPage({ onNavigate }: AdvancedLandingPageProps) {
           <div className="tag-lime">• MARKET SIZE</div>
           <h2 className="disp" style={{ fontSize: 'clamp(32px,6vw,68px)', fontWeight: 900, marginBottom: 56 }}>A Massive <span style={{ color: C.lime }}>Addressable Market</span></h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(min(100%,260px),1fr))', gap: 24, marginBottom: 40 }}>
-            {[{ label: 'TAM', value: '$150B–250B+', desc: 'Total Addressable Market — Global fitness & health', color: C.saffron }, { label: 'SAM', value: '$5B–15B', desc: 'Serviceable Addressable Market — India digital fitness', color: C.lime }, { label: 'SOM', value: '$100M–500M', desc: 'Serviceable Obtainable Market — Near-term opportunity', color: C.teal }].map((m) => (
+            {[{ label: 'TAM', value: '$150B to $250B+', desc: 'Total Addressable Market, global fitness and health', color: C.saffron }, { label: 'SAM', value: '$5B to $15B', desc: 'Serviceable Addressable Market across priority regions', color: C.lime }, { label: 'SOM', value: '$100M to $500M', desc: 'Serviceable Obtainable Market, near term opportunity', color: C.teal }].map((m) => (
               <motion.div key={m.label} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
                 style={{ background: C.paper, border: `1px solid ${C.line}`, borderLeft: `4px solid ${m.color}`, borderRadius: 20, padding: 'clamp(24px,4vw,36px)', boxSizing: 'border-box' }}>
                 <div className="mono" style={{ fontSize: 11, color: m.color, marginBottom: 8 }}>{m.label}</div>
@@ -941,7 +941,7 @@ export function AdvancedLandingPage({ onNavigate }: AdvancedLandingPageProps) {
             ))}
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(min(100%,190px),1fr))', gap: 16 }}>
-            {[{ v: '820M', l: 'Smartphone users in India' }, { v: '0.8–2%', l: 'Current gym penetration' }, { v: '67%', l: 'Never use memberships' }, { v: '50%', l: 'Quit gyms within 6 months' }].map((s) => (
+            {[{ v: 'Global', l: 'fitness and health audience' }, { v: 'Digital', l: 'coaching and wellness access' }, { v: 'Local', l: 'gyms and activity communities' }, { v: 'Flexible', l: 'ways to build healthy habits' }].map((s) => (
               <div key={s.l} className="stat-card">
                 <div className="disp" style={{ fontSize: 32, fontWeight: 900, color: C.lime }}>{s.v}</div>
                 <div style={{ fontSize: 12, color: C.muted, marginTop: 8 }}>{s.l}</div>
@@ -1015,7 +1015,7 @@ export function AdvancedLandingPage({ onNavigate }: AdvancedLandingPageProps) {
           <h2 className="disp" style={{ fontSize: 'clamp(36px,7vw,80px)', fontWeight: 900, marginBottom: 16, lineHeight: 0.95 }}>
             Building the Future<br />of <span style={{ color: C.lime }}>Fitness</span>
           </h2>
-          <p style={{ fontSize: 16, color: C.muted, marginBottom: 56, lineHeight: 1.7 }}>Making world-class fitness accessible, affordable, intelligent, and personalized for every Indian.</p>
+          <p style={{ fontSize: 16, color: C.muted, marginBottom: 56, lineHeight: 1.7 }}>Making world class fitness accessible, affordable, intelligent, and personal for people everywhere.</p>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 16, justifyContent: 'center', marginBottom: 56 }}>
             {['Accessible', 'Affordable', 'Intelligent', 'Personalized'].map((v, i) => (
               <motion.div key={v} initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
@@ -1028,7 +1028,7 @@ export function AdvancedLandingPage({ onNavigate }: AdvancedLandingPageProps) {
             <Brain style={{ width: 40, height: 40, color: C.lime, margin: '0 auto 16px' }} />
             <div className="disp" style={{ fontSize: 22, fontWeight: 700, marginBottom: 8 }}>Predictive Healthcare Powered by AI</div>
             <div style={{ fontSize: 15, color: C.muted, lineHeight: 1.7 }}>
-              We're building the intelligence layer for India's next billion-dollar health outcome improvement — catching problems before they happen, personalizing interventions before they're needed.
+              We're building an intelligent health platform for people around the world, helping spot potential concerns early and personalize support before it's needed.
             </div>
           </div>
         </div>
@@ -1071,7 +1071,7 @@ export function AdvancedLandingPage({ onNavigate }: AdvancedLandingPageProps) {
             Ready to Transform<br />Your <span style={{ color: C.lime }}>Fitness Journey?</span>
           </h2>
           <p style={{ fontSize: 'clamp(15px,2vw,18px)', color: C.muted, marginBottom: 48, lineHeight: 1.7, maxWidth: 620, margin: '0 auto 48px' }}>
-            Experience AI-powered coaching, nutrition, rewards, community, and athlete opportunities — all in one app built for India.
+            Experience AI powered coaching, nutrition, rewards, community, and athlete opportunities, all in one app designed for people around the world.
           </p>
           <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
             <button onClick={() => onNavigate?.('signup')} className="btn-lime" style={{ fontSize: 13, padding: '18px 36px' }}>DOWNLOAD ON ANDROID <ChevronRight style={{ width: 15, height: 15 }} /></button>
@@ -1093,7 +1093,7 @@ export function AdvancedLandingPage({ onNavigate }: AdvancedLandingPageProps) {
                 </div>
                 <div className="disp" style={{ fontSize: 18, fontWeight: 700 }}>Impossible AI</div>
               </div>
-              <p style={{ fontSize: 14, color: C.muted, maxWidth: 320, lineHeight: 1.7, marginBottom: 24 }}>India's first AI Multi-Agent Fitness Platform. Built for Indian lifestyles, powered by world-class AI.</p>
+              <p style={{ fontSize: 14, color: C.muted, maxWidth: 320, lineHeight: 1.7, marginBottom: 24 }}>A global AI fitness platform designed for diverse lifestyles, powered by world class AI.</p>
               <div style={{ display: 'flex', gap: 12 }}>
                 {[Instagram, Youtube, Twitter].map((Icon, i) => (
                   <a key={i} href="#" style={{ width: 36, height: 36, border: `1px solid ${C.lineBright}`, borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: C.muted }}>
@@ -1116,7 +1116,7 @@ export function AdvancedLandingPage({ onNavigate }: AdvancedLandingPageProps) {
             </div>
           </div>
           <div style={{ borderTop: `1px solid ${C.line}`, paddingTop: 24, display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: 12 }} className="mono">
-            <span style={{ fontSize: 11, color: C.muted2 }}>© 2026 IMPOSSIBLE AI — MADE FOR INDIA 🇮🇳</span>
+            <span style={{ fontSize: 11, color: C.muted2 }}>© 2026 IMPOSSIBLE AI | MADE FOR EVERYONE</span>
             <span style={{ fontSize: 11, color: C.muted2 }}>PRIVACY · TERMS · CONTACT</span>
           </div>
         </div>

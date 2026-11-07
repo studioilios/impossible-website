@@ -49,6 +49,7 @@ const Gamification = () => {
                     title="Fitness as a Game"
                     accent="You Want to Play"
                     description="Every workout becomes an adventure. Complete missions. Earn XP. Unlock rewards. Compete with friends. Level up your fitness."
+                    tone="light"
                 />
 
                 <div className="mt-14 grid items-center gap-12 sm:mt-16 lg:grid-cols-2 lg:gap-8">
@@ -66,7 +67,7 @@ const Gamification = () => {
                                     Fitness as a Game
                                 </h3>
                                 <p className="mt-1.5 font-sans text-sm leading-6 text-white/60">
-                                    Turn every healthy action into a rewarding game experience. Missions, bosses, XP — all tied
+                                    Turn every healthy action into a rewarding game experience. Missions, bosses, and XP are all tied
                                     to your real fitness goals.
                                 </p>
                             </div>

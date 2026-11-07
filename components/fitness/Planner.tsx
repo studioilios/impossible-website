@@ -318,7 +318,7 @@ function DayView({ selectedDate, setSelectedDate, plans, onToggleComplete }: any
       <div className="space-y-6">
         <div className="flex items-center justify-between mb-2">
           <h2 className="text-sm font-black uppercase tracking-widest text-white/40">Activities for {selectedDate.toLocaleDateString('en-US', { day: 'numeric', month: 'short' })}</h2>
-          <span className="text-[10px] font-black uppercase tracking-widest text-[#CCFF00]">{plans.filter((p:any) => p.completed).length}/{plans.length} Done</span>
+          <span className="text-[10px] font-black uppercase tracking-widest text-[#CCFF00]">{plans.filter((p:any) => p.completed).length} of {plans.length} Done</span>
         </div>
 
         {plans.length > 0 ? (
@@ -355,7 +355,7 @@ function DayView({ selectedDate, setSelectedDate, plans, onToggleComplete }: any
                       </div>
                     )}
                     {plan.notes && (
-                      <span className="text-[9px] text-white/30 font-bold uppercase tracking-wide">/ {plan.notes}</span>
+                      <span className="text-[9px] text-white/30 font-bold uppercase tracking-wide">{plan.notes}</span>
                     )}
                   </div>
                 </div>

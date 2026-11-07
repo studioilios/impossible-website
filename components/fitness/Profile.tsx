@@ -247,7 +247,7 @@ export function Profile({ onNavigate, initialTab = 'overview' }: ProfileProps) {
                   <h3 className="text-[10px] font-black uppercase tracking-widest text-white/40 mb-2">Fitness Score</h3>
                   <div className="flex items-baseline gap-2 mb-4">
                     <span className="text-5xl font-black italic tracking-tighter text-[#CCFF00]">63</span>
-                    <span className="text-sm font-bold italic text-white/30">/ 100</span>
+                    <span className="text-sm font-bold italic text-white/30">of 100</span>
                   </div>
                   <div className="space-y-1.5">
                     <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-tight text-white/60">

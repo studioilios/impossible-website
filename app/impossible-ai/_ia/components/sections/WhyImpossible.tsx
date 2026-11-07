@@ -4,12 +4,12 @@ import SectionHeading from "@ia/components/ui/SectionHeading";
 import FeatureCard from "@ia/components/ui/FeatureCard";
 
 const points = [
-    { icon: "🍛", title: "Indian Food", description: "95,000+ Indian recipes, regional cuisines, and thali tracking" },
-    { icon: "🗣️", title: "Indian Languages", description: "AI coaching in 6 Indian languages including Hindi, Tamil, Telugu" },
-    { icon: "🏙️", title: "Indian Lifestyle", description: "Built around Indian work schedules, climate, and cultural habits" },
-    { icon: "🪔", title: "Indian Festivals", description: "Festival calendar for Diwali, Navratri, fasting days and more" },
-    { icon: "🧬", title: "Indian Health Patterns", description: "Trained on Indian phenotype data and metabolic disease patterns" },
-    { icon: "🧘", title: "Indian Bodies", description: "Diet plans calibrated for South Asian physiology and insulin response" },
+    { icon: "🍛", title: "Global Cuisines", description: "95,000+ recipes, regional cuisines, and meal tracking" },
+    { icon: "🗣️", title: "Multiple Languages", description: "AI coaching in 6 languages for people around the world" },
+    { icon: "🏙️", title: "Everyday Lifestyles", description: "Built around varied work schedules, climates, and cultural habits" },
+    { icon: "🪔", title: "Cultural Traditions", description: "Plans that can adapt to local festivals, fasting days, and routines" },
+    { icon: "🧬", title: "Health Patterns", description: "Personalized insights shaped around your health data and needs" },
+    { icon: "🧘", title: "Every Body", description: "Nutrition plans tailored to your goals, preferences, and physiology" },
 ];
 
 const WhyImpossible = () => {
@@ -18,9 +18,9 @@ const WhyImpossible = () => {
             <div className="relative mx-auto max-w-7xl">
                 <SectionHeading
                     eyebrow="Why Impossible AI"
-                    title="Built for Indian Bodies."
-                    accent="Indian Food. Indian Lives."
-                    description="Unlike western fitness apps, Impossible AI truly understands what it means to live, eat, and exercise in India."
+                    title="Built for Every Body."
+                    accent="Global Food. Real Life."
+                    description="Impossible AI adapts to the foods, routines, and cultures that shape health around the world."
                 />
 
                 <div className="mt-12 grid gap-5 sm:mt-14 sm:grid-cols-2 lg:grid-cols-3">

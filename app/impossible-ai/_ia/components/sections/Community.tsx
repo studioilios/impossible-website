@@ -59,7 +59,7 @@ const Community = () => {
                         className="flex flex-col rounded-2xl border border-white/10 bg-white/[0.03] p-7"
                     >
                         <h3 className="font-display text-xs font-bold uppercase tracking-widest text-white/50">
-                            India&apos;s Fitness Social Network
+                            Global Fitness Social Network
                         </h3>
                         <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3">
                             {networkFeatures.map((n) => (

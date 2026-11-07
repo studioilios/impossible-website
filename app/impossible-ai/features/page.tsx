@@ -7,7 +7,7 @@ import HowItWorks from "@ia/components/sections/HowItWorks";
 import Footer from "@ia/components/Footer";
 
 export const metadata: Metadata = {
-    description: "AI coaching, nutrition intelligence, and gamification built for Indian bodies and lifestyles.",
+    description: "AI coaching, nutrition intelligence, and gamification designed for people everywhere.",
 };
 
 export default function FeaturesPage() {

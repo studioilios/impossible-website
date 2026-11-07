@@ -47,7 +47,7 @@ export function AICoach() {
         <div className="flex items-center gap-4 text-xs text-gray-500">
           <span>2,180 conversations</span>
           <span>•</span>
-          <span className="text-[#CCFF00]">GPT-6 Powered</span>
+          <span className="text-[#CCFF00]">GPT 6 Powered</span>
         </div>
       </div>
 

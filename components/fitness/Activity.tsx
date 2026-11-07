@@ -115,7 +115,7 @@ const CATEGORIES: WorkoutCategory[] = [
     id: 'yoga',
     title: 'Yoga',
     subtitle: 'Balance & flow',
-    label: 'Mind-Body',
+    label: 'Mind Body',
     image: 'https://images.unsplash.com/photo-1597079997686-87eeebe516d8',
     gradient: 'from-green-500/20 via-green-500/5 to-transparent',
     colorClass: 'text-green-400 border-green-500/30 bg-green-500/10',
@@ -127,7 +127,7 @@ const CATEGORIES: WorkoutCategory[] = [
   // STRENGTH & PERFORMANCE
   { id: 'muscle-building', title: 'Muscle Building', subtitle: 'Hypertrophy focus', label: 'Growth', image: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48', gradient: 'from-gray-500/20', colorClass: 'text-gray-400', accentColor: '#9ca3af', trainerAvatars: [], group: 'Strength' },
   { id: 'power-training', title: 'Power Training', subtitle: 'Strength & Speed', label: 'Explosive', image: 'https://images.unsplash.com/photo-1517836357463-d25dfeac3438', gradient: 'from-yellow-500/20', colorClass: 'text-yellow-400', accentColor: '#eab308', trainerAvatars: [], group: 'Strength' },
-  { id: 'functional', title: 'Functional Training', subtitle: 'Real-world fitness', label: 'Utility', image: 'https://images.unsplash.com/photo-1599058917233-3583688b5e63', gradient: 'from-cyan-500/20', colorClass: 'text-cyan-400', accentColor: '#06b6d4', trainerAvatars: [], group: 'Strength' },
+  { id: 'functional', title: 'Functional Training', subtitle: 'Real world fitness', label: 'Utility', image: 'https://images.unsplash.com/photo-1599058917233-3583688b5e63', gradient: 'from-cyan-500/20', colorClass: 'text-cyan-400', accentColor: '#06b6d4', trainerAvatars: [], group: 'Strength' },
 
   // ENDURANCE
   { id: 'fat-burn', title: 'Fat Burn', subtitle: 'Weight management', label: 'Metabolism', image: 'https://images.unsplash.com/photo-1518611012118-2969c636f7b4', gradient: 'from-red-500/20', colorClass: 'text-red-400', accentColor: '#ef4444', trainerAvatars: [], group: 'Endurance' },
@@ -136,7 +136,7 @@ const CATEGORIES: WorkoutCategory[] = [
 
   // MOBILITY & RECOVERY
   { id: 'mobility', title: 'Mobility & Stretching', subtitle: 'Joint health', label: 'Flexibility', image: 'https://images.unsplash.com/photo-1758599879927-f60878034fca', gradient: 'from-green-500/20', colorClass: 'text-green-400', accentColor: '#22c55e', trainerAvatars: [], group: 'Mobility' },
-  { id: 'injury-prevention', title: 'Injury Prevention', subtitle: 'Pre-hab focus', label: 'Longevity', image: 'https://images.unsplash.com/photo-1627272183313-08655e88880c', gradient: 'from-indigo-500/20', colorClass: 'text-indigo-400', accentColor: '#6366f1', trainerAvatars: [], group: 'Mobility' },
+  { id: 'injury-prevention', title: 'Injury Prevention', subtitle: 'Rehab focus', label: 'Longevity', image: 'https://images.unsplash.com/photo-1627272183313-08655e88880c', gradient: 'from-indigo-500/20', colorClass: 'text-indigo-400', accentColor: '#6366f1', trainerAvatars: [], group: 'Mobility' },
 
   // MIND-BODY
   { id: 'meditation', title: 'Meditation', subtitle: 'Mental clarity', label: 'Mental', image: 'https://images.unsplash.com/photo-1641391400871-3a6578a11d5a', gradient: 'from-purple-500/20', colorClass: 'text-purple-400', accentColor: '#a855f7', trainerAvatars: [], group: 'Mind-Body' },
@@ -166,7 +166,7 @@ const STRENGTH_WORKOUTS: WorkoutDetail[] = [
     steps: [
       { id: '1', name: 'Incline Dumbbell Press', instruction: 'Keep elbows at 45 degrees, push weights directly up.', reps: '12 reps × 3 sets', image: 'https://images.unsplash.com/photo-1710746904729-f3ad9f682bb9' },
       { id: '2', name: 'Bent Over Rows', instruction: 'Hinge at hips, pull bar towards belly button.', reps: '10 reps × 4 sets', image: 'https://images.unsplash.com/photo-1693707963745-297f4e5dd2a6' },
-      { id: '3', name: 'Push-up Variations', instruction: 'Wide stance for chest, diamond for triceps.', reps: '15 reps × 3 sets', image: 'https://images.unsplash.com/photo-1764426445448-95103b0024a6' }
+      { id: '3', name: 'Push up Variations', instruction: 'Wide stance for chest, diamond for triceps.', reps: '15 reps × 3 sets', image: 'https://images.unsplash.com/photo-1764426445448-95103b0024a6' }
     ],
     trainer: {
       name: 'Marcus Chen',
@@ -205,8 +205,8 @@ const GROUP_CONFIG = {
   'Strength': { icon: Dumbbell, title: 'Strength & Performance' },
   'Endurance': { icon: Heart, title: 'Endurance Training' },
   'Mobility': { icon: Shield, title: 'Mobility & Recovery' },
-  'Mind-Body': { icon: Wind, title: 'Mind–Body' },
-  'Goal': { icon: TargetIcon, title: 'Goal-Based Workouts' },
+  'Mind-Body': { icon: Wind, title: 'Mind Body' },
+  'Goal': { icon: TargetIcon, title: 'Goal Based Workouts' },
   'Sports': { icon: Rocket, title: 'Sports & Athletic' }
 };
 

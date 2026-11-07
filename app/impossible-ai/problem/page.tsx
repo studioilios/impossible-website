@@ -6,7 +6,7 @@ import MarketOpportunity from "@ia/components/sections/MarketOpportunity";
 import Footer from "@ia/components/Footer";
 
 export const metadata: Metadata = {
-    description: "India's metabolic and nutrition crisis, and the market opportunity behind Impossible AI.",
+    description: "Global metabolic and nutrition challenges, and the market opportunity behind Impossible AI.",
 };
 
 export default function ProblemPage() {

@@ -188,7 +188,7 @@ export function YogaStudios({ onNavigate }: YogaStudiosProps) {
                 {/* Beginner Friendly Badge */}
                 {studio.beginnerFriendly && (
                   <div className="bg-teal-500/10 border border-teal-500/20 rounded-xl px-3 py-2 mb-3">
-                    <p className="text-xs text-teal-400">🧘 Beginner-friendly</p>
+                    <p className="text-xs text-teal-400">🧘 Beginner friendly</p>
                   </div>
                 )}
 
@@ -227,14 +227,14 @@ export function YogaStudios({ onNavigate }: YogaStudiosProps) {
                 <div className="grid grid-cols-2 gap-2 mb-3">
                   <div className="bg-white/5 border border-white/10 rounded-xl p-3">
                     <p className="text-xs text-gray-500 mb-1">Monthly</p>
-                    <p className="text-sm">₹{studio.monthlyPrice.toLocaleString()}<span className="text-xs text-gray-500">/mo</span></p>
+                    <p className="text-sm">₹{studio.monthlyPrice.toLocaleString()}<span className="text-xs text-gray-500"> per month</span></p>
                   </div>
                   <div className="bg-teal-500/10 border border-teal-500/30 rounded-xl p-3 relative">
                     <div className="absolute -top-2 right-2 bg-teal-500 text-black px-2 py-0.5 rounded-full text-xs">
                       Best Value
                     </div>
                     <p className="text-xs text-gray-500 mb-1">Yearly</p>
-                    <p className="text-sm text-teal-400">₹{studio.yearlyPrice.toLocaleString()}<span className="text-xs text-gray-500">/yr</span></p>
+                    <p className="text-sm text-teal-400">₹{studio.yearlyPrice.toLocaleString()}<span className="text-xs text-gray-500"> per year</span></p>
                   </div>
                 </div>
 

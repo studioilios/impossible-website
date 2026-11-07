@@ -4,9 +4,9 @@ import SectionHeading from "@ia/components/ui/SectionHeading";
 import StatCard from "@ia/components/ui/StatCard";
 
 const stats = [
-    { value: "3.4×", label: "More Active — Community users vs solo users" },
-    { value: "54%", label: "Retention Rate — vs only 6% for solo users" },
-    { value: "25.8×", label: "LTV:CAC Ratio — Exceptional unit economics" },
+    { value: "3.4×", label: "More Active, community users vs solo users" },
+    { value: "54%", label: "Retention Rate, compared with 6% for solo users" },
+    { value: "25.8×", label: "LTV:CAC Ratio, exceptional unit economics" },
 ];
 
 const CommunityBenefits = () => {

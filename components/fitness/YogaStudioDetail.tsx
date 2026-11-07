@@ -150,7 +150,7 @@ export function YogaStudioDetail({ studio, onBack }: YogaStudioDetailProps) {
 
           {studioData.beginnerFriendly && (
             <div className="bg-teal-500/10 border border-teal-500/20 rounded-2xl px-4 py-3 mb-4">
-              <p className="text-sm text-teal-400">🧘 Beginner-friendly studio with guided sessions</p>
+              <p className="text-sm text-teal-400">🧘 Beginner friendly studio with guided sessions</p>
             </div>
           )}
 
@@ -286,7 +286,7 @@ export function YogaStudioDetail({ studio, onBack }: YogaStudioDetailProps) {
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle className="w-3 h-3 text-teal-400" />
-                  <span>2 free guest passes/month</span>
+                  <span>2 free guest passes per month</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle className="w-3 h-3 text-teal-400" />

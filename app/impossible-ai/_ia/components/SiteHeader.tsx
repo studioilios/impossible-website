@@ -11,9 +11,14 @@ const SiteHeader = () => {
         <header className="sticky top-0 z-40 flex-shrink-0 border-b border-white/10 bg-black/90 backdrop-blur">
             <div className="w-full px-6 py-4 sm:px-8 lg:px-12 xl:px-16">
                 <div className="flex items-center justify-between">
-                    <Link href="/impossible-ai" title="Impossible AI" className="flex flex-col leading-none rounded-md flex-shrink-0 focus:outline-none">
-                        <span className="font-display text-xl font-bold tracking-widest text-white sm:text-2xl">Impossible AI</span>
-                        <span className="hidden sm:block mt-1 font-display text-[10px] font-semibold tracking-[0.2em] uppercase text-primary">India&apos;s AI Fitness Platform</span>
+                    <Link
+                        href="/impossible-ai"
+                        title="Impossible AI"
+                        className="flex h-10 flex-shrink-0 items-center rounded-full bg-white px-4 shadow-sm ring-1 ring-black/5 focus:outline-none"
+                    >
+                        <span className="whitespace-nowrap font-serif text-base italic font-normal tracking-wide text-neutral-950 sm:text-lg">
+                            Impossible <span className="text-primary">AI</span>
+                        </span>
                     </Link>
 
                     <nav className="items-center hidden space-x-8 xl:flex">
