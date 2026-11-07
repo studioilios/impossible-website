@@ -137,7 +137,7 @@ const FAQ = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, margin: "-80px" }}
                         transition={{ duration: 0.55, delay: 0.15 }}
-                        href="#"
+                        href="/impossible-ai/support"
                         className="mt-6 inline-flex items-center gap-2 rounded-full border-2 border-black/15 bg-white px-5 py-2.5 font-display text-xs font-bold uppercase tracking-widest text-neutral-800 transition-all hover:border-primary hover:text-primary"
                     >
                         Contact Us
