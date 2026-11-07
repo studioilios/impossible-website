@@ -1,7 +1,14 @@
 import Link from "next/link";
+import { site } from "@ia/lib/site";
 
 const productLinks = ["AI Coach", "Nutrition AI", "Rewards", "Athletes", "Community", "Pricing"];
-const companyLinks = ["About", "Team", "Careers", "Blog", "Contact"];
+const companyLinks = [
+    { label: "Support", href: site.routes.support },
+    { label: "Contact", href: `${site.routes.support}#contact` },
+    { label: "Privacy Policy", href: site.routes.privacy },
+    { label: "Terms of Use", href: site.routes.terms },
+    { label: "Delete Account", href: site.routes.deleteAccount },
+];
 
 const Footer = () => {
     return (
@@ -44,14 +51,14 @@ const Footer = () => {
 
                     <div>
                         <h4 className="font-display text-xs font-semibold uppercase tracking-widest text-neutral-400">
-                            Company
+                            Help
                         </h4>
                         <ul className="mt-4 space-y-2.5">
                             {companyLinks.map((l) => (
-                                <li key={l}>
-                                    <a href="#" className="font-sans text-sm text-neutral-600 transition-colors hover:text-primary">
-                                        {l}
-                                    </a>
+                                <li key={l.label}>
+                                    <Link href={l.href} className="font-sans text-sm text-neutral-600 transition-colors hover:text-primary">
+                                        {l.label}
+                                    </Link>
                                 </li>
                             ))}
                         </ul>
@@ -61,9 +68,9 @@ const Footer = () => {
                 <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-black/10 pt-6 sm:flex-row">
                     <p className="font-sans text-xs text-neutral-400">© 2026 IMPOSSIBLE AI — MADE FOR INDIA 🇮🇳</p>
                     <div className="flex items-center gap-5 font-sans text-xs text-neutral-400">
-                        <a href="#" className="transition-colors hover:text-primary">Privacy</a>
-                        <a href="#" className="transition-colors hover:text-primary">Terms</a>
-                        <a href="#" className="transition-colors hover:text-primary">Contact</a>
+                        <Link href={site.routes.privacy} className="transition-colors hover:text-primary">Privacy</Link>
+                        <Link href={site.routes.terms} className="transition-colors hover:text-primary">Terms</Link>
+                        <Link href={site.routes.support} className="transition-colors hover:text-primary">Support</Link>
                     </div>
                 </div>
             </div>
