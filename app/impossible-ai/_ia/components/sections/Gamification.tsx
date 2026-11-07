@@ -33,7 +33,7 @@ const Gamification = () => {
     };
 
     return (
-        <section className="relative overflow-hidden border-t border-white/5 bg-black px-6 py-12 sm:px-8 sm:py-16 lg:px-12 xl:px-16">
+        <section data-home-theme-dark="true" className="relative overflow-hidden border-t border-white/5 bg-black px-6 py-12 sm:px-8 sm:py-16 lg:px-12 xl:px-16">
             <div
                 className="pointer-events-none absolute inset-0 opacity-[0.04]"
                 style={{

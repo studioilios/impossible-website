@@ -8,7 +8,7 @@ const SiteHeader = () => {
     const pathname = usePathname();
 
     return (
-        <header className="sticky top-0 z-40 flex-shrink-0 border-b border-white/10 bg-black/90 backdrop-blur">
+        <header className="sticky top-0 z-40 flex-shrink-0 border-b border-black/10 bg-[#f3f3f1]/95 backdrop-blur">
             <div className="w-full px-6 py-4 sm:px-8 lg:px-12 xl:px-16">
                 <div className="flex items-center justify-between">
                     <Link
@@ -30,7 +30,7 @@ const SiteHeader = () => {
                                     href={link.href}
                                     title=""
                                     className={`font-display text-xs font-semibold tracking-widest uppercase transition-all duration-200 rounded focus:outline-none ${
-                                        active ? "text-primary" : "text-white/70 hover:text-white"
+                                        active ? "text-primary" : "text-neutral-700 hover:text-neutral-950"
                                     }`}
                                 >
                                     {link.label}
@@ -43,13 +43,13 @@ const SiteHeader = () => {
                         <Link
                             href="#"
                             title=""
-                            className="inline-flex items-center justify-center px-5 py-2 font-display text-xs font-bold tracking-widest text-black uppercase transition-all duration-200 bg-white border-2 border-transparent rounded-full hover:bg-opacity-90 focus:outline-none"
+                            className="inline-flex items-center justify-center px-5 py-2 font-display text-xs font-bold tracking-widest text-white uppercase transition-all duration-200 bg-black border-2 border-transparent rounded-full hover:bg-neutral-800 focus:outline-none"
                         >
                             Join Beta
                         </Link>
                     </div>
 
-                    <button type="button" className="p-2 -m-2 transition-all duration-200 rounded-full text-white xl:hidden focus:outline-none">
+                    <button type="button" className="p-2 -m-2 transition-all duration-200 rounded-full text-neutral-800 xl:hidden focus:outline-none">
                         <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
                         </svg>

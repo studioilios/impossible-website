@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function RewardsPage() {
     return (
-        <main className="bg-black">
+        <main data-home-theme="true" className="bg-[#f3f3f1]">
             <SiteHeader />
             <RewardSystem />
             <CredEconomy />

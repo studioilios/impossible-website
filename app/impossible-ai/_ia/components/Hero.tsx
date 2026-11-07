@@ -107,7 +107,7 @@ const Hero = () => {
             <div className="absolute left-4 top-[17%] z-30 max-w-[155px] sm:left-10 sm:top-[26%] sm:max-w-[230px]">
                 <span className="inline-block bg-black px-2 py-1 font-mono text-[11px] font-semibold text-white">01</span>
                 <p className="mt-1.5 font-mono text-[11px] leading-snug text-neutral-800 sm:mt-2 sm:text-[13px]">
-                    /AI that flags injury risk before it happens.
+                    AI that flags injury risk before it happens.
                 </p>
             </div>
 

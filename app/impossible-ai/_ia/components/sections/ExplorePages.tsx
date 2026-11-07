@@ -6,11 +6,6 @@ import SectionHeading from "@ia/components/ui/SectionHeading";
 
 const pages = [
     {
-        title: "The Problem",
-        description: "Global metabolic challenges, nutrition gaps, and the market opportunity behind Impossible AI.",
-        href: "/impossible-ai/problem",
-    },
-    {
         title: "Features",
         description: "AI coaching, nutrition intelligence, and gamification designed for people everywhere.",
         href: "/impossible-ai/features",
@@ -46,7 +41,7 @@ const ExplorePages = () => {
                 <SectionHeading
                     title="Everything In"
                     accent="One Platform"
-                    description="Six systems, one app. Dive into any part of Impossible AI."
+                    description="Explore the core parts of Impossible AI, all in one app."
                     align="center"
                 />
 

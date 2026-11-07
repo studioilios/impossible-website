@@ -36,20 +36,6 @@ const HERO_STATS = [
   { value: 'AI', label: 'Connected wellness platform' },
 ];
 
-const PROBLEM_STATS = [
-  { value: 'Global', label: 'metabolic health challenge' },
-  { value: 'Every age', label: 'nutrition needs matter' },
-  { value: 'Daily', label: 'movement supports health' },
-  { value: 'Growing', label: 'need for better habits' },
-  { value: 'Preventable', label: 'many lifestyle risks' },
-  { value: 'Together', label: 'small changes add up' },
-];
-const LIFESTYLE_PROBLEMS = [
-  { icon: Building2, title: 'Sedentary Jobs', body: 'Long office hours and commuting can reduce physical activity for people in cities around the world.' },
-  { icon: Utensils, title: 'Ultra Processed Food', body: 'Cheap processed food dominates daily diets, causing metabolic damage across every age group.' },
-  { icon: Brain, title: 'Stress & Sleep Loss', body: 'Poor sleep and chronic stress accelerate health decline, compounding all other risk factors.' },
-];
-
 const NUTRITION_GROUPS = [
   { age: 'Children (5 to 15 Years)', pop: 'Healthy habits start early', color: C.saffron, stats: ['Growing bodies need balanced nutrition', 'Daily movement supports lifelong wellbeing', 'Healthy routines are easier to build early'] },
   { age: 'Youth (15 to 25 Years)', pop: 'Support through change', color: C.lime, stats: ['Changing routines can make healthy habits harder', 'Balanced meals and movement support wellbeing', 'Good sleep and recovery matter at every age'] },
@@ -148,7 +134,7 @@ const FAQS = [
   { q: 'Which languages are supported?', a: 'The coach currently supports 6 languages, with more being added based on demand.' },
 ];
 
-const NAV_LINKS = ['Problem', 'Features', 'Rewards', 'Athletes', 'Compare', 'Pricing'];
+const NAV_LINKS = ['Features', 'Rewards', 'Athletes', 'Compare', 'Pricing'];
 
 interface AdvancedLandingPageProps {
   onNavigate?: (screen: string, data?: any) => void;
@@ -348,51 +334,7 @@ export function AdvancedLandingPage({ onNavigate }: AdvancedLandingPageProps) {
         </div>
       </section>
 
-      {/* ── 2. PROBLEM ── */}
-      <section id="problem" style={sec()}>
-        <div style={inner}>
-          <div className="tag-saffron">• THE PROBLEM</div>
-          <h2 className="disp" style={{ fontSize: 'clamp(32px,6vw,68px)', fontWeight: 900, marginBottom: 12, lineHeight: 1.1 }}>
-            The World Faces a Metabolic &amp;<br /><span style={{ color: C.saffron }}>Environmental Challenge</span>
-          </h2>
-          <p style={{ color: C.muted, fontSize: 16, marginBottom: 56, maxWidth: 600, lineHeight: 1.7 }}>
-            Across regions, lifestyle diseases are affecting people at younger ages. Better daily support can help people build healthier habits.
-          </p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(min(100%,175px),1fr))', gap: 16, marginBottom: 56 }}>
-            {PROBLEM_STATS.map((s) => (
-              <motion.div key={s.label} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-                style={{ background: C.paper, border: `1px solid ${C.line}`, borderRadius: 16, padding: '24px 20px', boxSizing: 'border-box' }}>
-                <div className="disp" style={{ fontSize: 32, fontWeight: 900, color: C.saffron, marginBottom: 8 }}>{s.value}</div>
-                <div style={{ fontSize: 13, color: C.muted, lineHeight: 1.5 }}>{s.label}</div>
-              </motion.div>
-            ))}
-          </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(min(100%,280px),1fr))', gap: 20, marginBottom: 48 }}>
-            {LIFESTYLE_PROBLEMS.map((p) => (
-              <div key={p.title} className="feat-card">
-                <div style={{ width: 44, height: 44, background: C.saffronGlow, borderRadius: 12, display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 16 }}>
-                  <p.icon style={{ width: 22, height: 22, color: C.saffron }} />
-                </div>
-                <h3 style={{ fontSize: 18, fontWeight: 700, marginBottom: 8 }}>{p.title}</h3>
-                <p style={{ fontSize: 14, color: C.muted, lineHeight: 1.6 }}>{p.body}</p>
-              </div>
-            ))}
-          </div>
-          <div style={{ background: `linear-gradient(135deg,rgba(255,140,66,.08),rgba(180,181,201,.04))`, border: `1px solid rgba(255,140,66,.2)`, borderRadius: 20, padding: 'clamp(20px,4vw,32px)', boxSizing: 'border-box' }}>
-            <div className="tag-saffron">• HEALTH FACTS</div>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(min(100%,250px),1fr))', gap: 16 }}>
-              {['26% of adolescents have unhealthy cholesterol levels.', '20 to 25% of young adults have hypertension.', 'Lifestyle diseases are mostly preventable through exercise, nutrition, and healthy habits.'].map((f, i) => (
-                <div key={i} style={{ display: 'flex', gap: 12, alignItems: 'flex-start' }}>
-                  <Check style={{ width: 16, height: 16, color: C.saffron, marginTop: 2, flexShrink: 0 }} />
-                  <span style={{ fontSize: 14, color: C.text, lineHeight: 1.6 }}>{f}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── 3. NUTRITION CRISIS ── */}
+      {/* ── NUTRITION CHALLENGES ── */}
       <section style={sec({ background: C.paper })}>
         <div style={inner}>
           <div className="tag-saffron">• GLOBAL NUTRITION CHALLENGES</div>
