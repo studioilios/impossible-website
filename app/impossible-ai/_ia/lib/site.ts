@@ -5,7 +5,7 @@ export const site = {
     privacyEmail: "test.impossibleai@gmail.com",
     country: "India",
     responseTime: "within 48 hours",
-    effectiveDate: "November 7, 2026",
+    effectiveDate: "November 8, 2026",
     routes: {
         support: "/impossible-ai/support",
         privacy: "/impossible-ai/privacy",

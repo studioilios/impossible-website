@@ -37,7 +37,7 @@ export const privacyPolicy: LegalDoc = {
                         ["Account", "Email address, display name, profile photo, and a device identifier used to secure your login."],
                         ["Profile and goals", "Age, gender, height, weight, fitness level, goals, dietary preferences, and onboarding answers."],
                         ["Fitness and activity", "Workouts, sets, reps, steps, distance, pace, calories, streaks, and achievements."],
-                        ["Health data", "With your permission, data from Apple Health such as steps, workouts, heart rate, and sleep."],
+                        ["Health data", "With your permission, data from Apple Health (workouts, steps, and active energy) or Health Connect (exercise sessions, steps, active calories burned, and distance)."],
                         ["Location", "Precise location while you track an outdoor activity or search for nearby gyms and studios."],
                         ["Camera and media", "Camera frames for rep counting and form checks, and photos or videos you choose to post."],
                         ["Nutrition", "Meals, food photos, and logs you add to the nutrition tracker."],
@@ -63,7 +63,7 @@ export const privacyPolicy: LegalDoc = {
                         "Detect fraud and abuse, fix bugs, and improve the Service.",
                     ],
                 },
-                { type: "p", text: "We do not sell your personal information. We do not use your health data for advertising, and we do not share Apple Health data with third parties for marketing." },
+                { type: "p", text: "We do not sell your personal information. We do not use your health data for advertising, and we do not share Apple Health or Health Connect data with third parties for marketing." },
             ],
         },
         {
@@ -74,10 +74,39 @@ export const privacyPolicy: LegalDoc = {
             ],
         },
         {
-            id: "health-data",
-            title: "Apple Health",
+            id: "ai-services",
+            title: "Third Party AI Services",
             blocks: [
-                { type: "p", text: "If you connect Apple Health, we read only the data types you approve in the permission screen. You can revoke access at any time in the iOS Settings app under Health. Data read from Apple Health is used solely to provide fitness features inside the Service and is never sold or used for advertising." },
+                { type: "p", text: "Some features use third party AI services to generate responses. Before any data is sent to an AI service, the app shows a consent screen that lists what is sent and who receives it. Nothing is sent unless you tap Agree, and you can decline and keep using the rest of the app." },
+                { type: "p", text: "When you use AI coaching, meal analysis, form checks, voice input, or plan generation, we send only the data needed for that request:" },
+                {
+                    type: "list",
+                    items: [
+                        "Messages you type or speak to the AI coach and diet plan assistant.",
+                        "Meal and food photos you choose to analyse.",
+                        "Exercise video frames you choose to send for an AI form check.",
+                        "Profile details you entered: age, gender, height, weight, goals, dietary preferences, and activity history.",
+                    ],
+                },
+                { type: "p", text: "This data is sent to Google (Gemini API) and Anthropic (Claude API). They process it only to generate the response you requested, under terms that require protection of personal data equal to the protection described in this policy. Activity history you imported from Apple Health or Health Connect may be included in the profile details sent with a request, only to generate the response you asked for and never for advertising." },
+                { type: "p", text: "Some AI features run fully on your device and send nothing to any AI service." },
+            ],
+        },
+        {
+            id: "health-data",
+            title: "Apple Health and Health Connect",
+            blocks: [
+                { type: "p", text: "If you choose to connect Apple Health on iPhone or Health Connect on Android, we read only the data types you approve in the permission screen. We never write data to Apple Health or Health Connect." },
+                {
+                    type: "list",
+                    items: [
+                        "Apple Health: workouts, steps, and active energy burned.",
+                        "Health Connect: exercise sessions, steps, active calories burned, distance, and past records of these types so your history is complete when you first connect.",
+                    ],
+                },
+                { type: "p", text: "We use this data only to show your activity history, daily steps, calories burned, challenges, XP, and league progress inside the Service. Data read from Apple Health or Health Connect is never sold, never used for advertising or to build advertising profiles, never transferred to data brokers or information resellers, and never used to determine credit worthiness or for lending." },
+                { type: "p", text: "Our use of information received from Health Connect adheres to the Health Connect Permissions policy, including the Limited Use requirements." },
+                { type: "p", text: "You can revoke access at any time: on iPhone in Settings, Health, Data Access and Devices; on Android in the Health Connect app under App permissions. You can also disconnect inside the app. To delete health data we already imported, delete your account or email us." },
             ],
         },
         {
@@ -91,7 +120,8 @@ export const privacyPolicy: LegalDoc = {
                     rows: [
                         ["Supabase", "Database and file storage."],
                         ["Render", "Hosting for our application servers."],
-                        ["Google Gemini API", "AI coaching, meal analysis, and plan generation."],
+                        ["Google Gemini API", "AI coaching, meal analysis, form checks, and plan generation. Receives only the data listed in Third Party AI Services, after you agree."],
+                        ["Anthropic Claude API", "AI coaching, meal analysis, and plan generation. Receives only the data listed in Third Party AI Services, after you agree."],
                         ["Google (Gmail)", "Delivery of login codes and account emails."],
                         ["Map tile providers", "Displaying maps for activity tracking and nearby places."],
                     ],
@@ -115,7 +145,7 @@ export const privacyPolicy: LegalDoc = {
                     items: [
                         "Access and update your profile in the app at any time.",
                         "Delete your account in the app from Profile, Settings, Delete Account, or by contacting us.",
-                        "Withdraw permissions for location, camera, notifications, and Apple Health in your device settings.",
+                        "Withdraw permissions for location, camera, notifications, Apple Health, and Health Connect in your device settings.",
                         `Request a copy of your data or ask us to correct it by emailing ${site.privacyEmail}.`,
                     ],
                 },
