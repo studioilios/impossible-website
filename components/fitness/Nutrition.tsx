@@ -69,7 +69,7 @@ export function Nutrition() {
         <div className="mb-4">
           <div className="flex items-end gap-2 mb-2">
             <span className="text-4xl text-[#CCFF00]">1,840</span>
-            <span className="text-lg text-gray-500 mb-1">/ 2,200</span>
+            <span className="text-lg text-gray-500 mb-1">of 2,200</span>
             <span className="text-sm text-gray-500 mb-1">kcal</span>
           </div>
           <div className="h-3 bg-white/5 rounded-full overflow-hidden">
@@ -84,17 +84,17 @@ export function Nutrition() {
           <div className="bg-white/5 rounded-xl p-3">
             <div className="text-xs text-gray-500 mb-1">Protein</div>
             <div className="text-xl text-[#CCFF00] mb-1">68g</div>
-            <div className="text-xs text-gray-500">/ 120g</div>
+            <div className="text-xs text-gray-500">of 120g</div>
           </div>
           <div className="bg-white/5 rounded-xl p-3">
             <div className="text-xs text-gray-500 mb-1">Carbs</div>
             <div className="text-xl text-[#DFFF00] mb-1">185g</div>
-            <div className="text-xs text-gray-500">/ 220g</div>
+            <div className="text-xs text-gray-500">of 220g</div>
           </div>
           <div className="bg-white/5 rounded-xl p-3">
             <div className="text-xs text-gray-500 mb-1">Fats</div>
             <div className="text-xl text-[#FFFF00] mb-1">52g</div>
-            <div className="text-xs text-gray-500">/ 70g</div>
+            <div className="text-xs text-gray-500">of 70g</div>
           </div>
         </div>
       </div>

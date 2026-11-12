@@ -33,3 +33,70 @@ body {
     linear-gradient(to bottom, rgba(0, 0, 0, 0.07) 1px, transparent 1px);
   background-size: 90px 90px;
 }
+
+/* Match secondary Impossible AI pages to the home page's light canvas and orange accent. */
+main[data-home-theme] section[class~="bg-black"]:not([data-home-theme-dark]) {
+  background-color: #f3f3f1 !important;
+  border-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+main[data-home-theme] section[class~="bg-black"]:not([data-home-theme-dark]) [class~="text-white"] {
+  color: #171717 !important;
+}
+
+main[data-home-theme] section[class~="bg-black"]:not([data-home-theme-dark]) [class~="text-white/90"] {
+  color: #262626 !important;
+}
+
+main[data-home-theme] section[class~="bg-black"]:not([data-home-theme-dark]) [class~="text-white/80"] {
+  color: #404040 !important;
+}
+
+main[data-home-theme] section[class~="bg-black"]:not([data-home-theme-dark]) [class~="text-white/75"],
+main[data-home-theme] section[class~="bg-black"]:not([data-home-theme-dark]) [class~="text-white/70"],
+main[data-home-theme] section[class~="bg-black"]:not([data-home-theme-dark]) [class~="text-white/65"],
+main[data-home-theme] section[class~="bg-black"]:not([data-home-theme-dark]) [class~="text-white/60"],
+main[data-home-theme] section[class~="bg-black"]:not([data-home-theme-dark]) [class~="text-white/55"] {
+  color: #525252 !important;
+}
+
+main[data-home-theme] section[class~="bg-black"]:not([data-home-theme-dark]) [class~="text-white/50"],
+main[data-home-theme] section[class~="bg-black"]:not([data-home-theme-dark]) [class~="text-white/40"] {
+  color: #737373 !important;
+}
+
+main[data-home-theme] section[class~="bg-black"]:not([data-home-theme-dark]) [class~="text-white/30"],
+main[data-home-theme] section[class~="bg-black"]:not([data-home-theme-dark]) [class~="text-white/25"] {
+  color: #a3a3a3 !important;
+}
+
+main[data-home-theme] section[class~="bg-black"]:not([data-home-theme-dark]) [class~="border-white/5"],
+main[data-home-theme] section[class~="bg-black"]:not([data-home-theme-dark]) [class~="border-white/10"],
+main[data-home-theme] section[class~="bg-black"]:not([data-home-theme-dark]) [class~="border-white/15"] {
+  border-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+main[data-home-theme] section[class~="bg-black"]:not([data-home-theme-dark]) [class~="bg-white/[0.03]"],
+main[data-home-theme] section[class~="bg-black"]:not([data-home-theme-dark]) [class~="bg-white/[0.04]"],
+main[data-home-theme] section[class~="bg-black"]:not([data-home-theme-dark]) [class~="bg-white/[0.05]"],
+main[data-home-theme] section[class~="bg-black"]:not([data-home-theme-dark]) [class~="bg-white/[0.015]"],
+main[data-home-theme] section[class~="bg-black"]:not([data-home-theme-dark]) [class~="from-white/[0.04]"],
+main[data-home-theme] section[class~="bg-black"]:not([data-home-theme-dark]) [class~="bg-black/40"] {
+  background-color: #ffffff !important;
+}
+
+main[data-home-theme] section[class~="bg-black"]:not([data-home-theme-dark]) [class~="bg-white/10"],
+main[data-home-theme] section[class~="bg-black"]:not([data-home-theme-dark]) [class~="bg-white/5"] {
+  background-color: #e5e5e5 !important;
+}
+
+main[data-home-theme] section[class~="bg-black"]:not([data-home-theme-dark]) [class~="via-black"],
+main[data-home-theme] section[class~="bg-black"]:not([data-home-theme-dark]) [class~="to-black"] {
+  background-color: #ffffff !important;
+  background-image: none !important;
+}
+
+main[data-home-theme] section[class~="bg-black"]:not([data-home-theme-dark]) [class~="bg-black"][class~="text-white"] {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function PrivacyPage() {
     return (
-        <main className="bg-black">
+        <main data-home-theme="true" className="bg-[#f3f3f1]">
             <SiteHeader />
             <LegalDocument doc={privacyPolicy} />
             <Footer />

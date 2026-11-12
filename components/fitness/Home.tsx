@@ -89,7 +89,7 @@ export function Home({ onNavigate }: HomeProps) {
           <div className="flex items-center gap-3 text-xs text-black/60">
             <span>2,180+ AI Conversations</span>
             <span>•</span>
-            <span className="px-2 py-1 bg-black/10 rounded">GPT-6</span>
+            <span className="px-2 py-1 bg-black/10 rounded">GPT 6</span>
             <span className="px-2 py-1 bg-black/10 rounded">2M+ Health Models</span>
           </div>
         </div>
@@ -209,7 +209,7 @@ export function Home({ onNavigate }: HomeProps) {
         <div className="mb-4">
           <div className="flex items-end gap-2 mb-2">
             <span className="text-3xl text-[#CCFF00]">1,840</span>
-            <span className="text-sm text-gray-500 mb-1">/ 2,200 kcal</span>
+            <span className="text-sm text-gray-500 mb-1">of 2,200 kcal</span>
           </div>
           <div className="h-2 bg-white/5 rounded-full overflow-hidden">
             <div className="h-full bg-[#CCFF00] rounded-full" style={{ width: '84%' }}></div>
@@ -438,14 +438,14 @@ export function Home({ onNavigate }: HomeProps) {
               <div className="grid grid-cols-2 gap-2 mb-3">
                 <div className="bg-white/5 border border-white/10 rounded-xl p-3">
                   <p className="text-xs text-gray-500 mb-1">Monthly</p>
-                  <p className="text-sm">₹1,999<span className="text-xs text-gray-500">/mo</span></p>
+                  <p className="text-sm">₹1,999<span className="text-xs text-gray-500"> per month</span></p>
                 </div>
                 <div className="bg-cyan-500/10 border border-cyan-500/30 rounded-xl p-3 relative">
                   <div className="absolute -top-2 right-2 bg-cyan-500 text-black px-2 py-0.5 rounded-full text-xs">
                     Best Value
                   </div>
                   <p className="text-xs text-gray-500 mb-1">Yearly</p>
-                  <p className="text-sm text-cyan-400">₹14,999<span className="text-xs text-gray-500">/yr</span></p>
+                  <p className="text-sm text-cyan-400">₹14,999<span className="text-xs text-gray-500"> per year</span></p>
                 </div>
               </div>
 
@@ -542,14 +542,14 @@ export function Home({ onNavigate }: HomeProps) {
               <div className="grid grid-cols-2 gap-2 mb-3">
                 <div className="bg-white/5 border border-white/10 rounded-xl p-3">
                   <p className="text-xs text-gray-500 mb-1">Monthly</p>
-                  <p className="text-sm">₹2,499<span className="text-xs text-gray-500">/mo</span></p>
+                  <p className="text-sm">₹2,499<span className="text-xs text-gray-500"> per month</span></p>
                 </div>
                 <div className="bg-cyan-500/10 border border-cyan-500/30 rounded-xl p-3 relative">
                   <div className="absolute -top-2 right-2 bg-cyan-500 text-black px-2 py-0.5 rounded-full text-xs">
                     Best Value
                   </div>
                   <p className="text-xs text-gray-500 mb-1">Yearly</p>
-                  <p className="text-sm text-cyan-400">₹19,999<span className="text-xs text-gray-500">/yr</span></p>
+                  <p className="text-sm text-cyan-400">₹19,999<span className="text-xs text-gray-500"> per year</span></p>
                 </div>
               </div>
 
@@ -583,7 +583,7 @@ export function Home({ onNavigate }: HomeProps) {
             <div className="bg-gradient-to-br from-red-500/10 to-transparent border-b border-red-500/20 px-4 py-2">
               <div className="flex items-center gap-2 text-xs text-red-400">
                 <span>🚨</span>
-                <span>Emergency-ready facility</span>
+                <span>Emergency ready facility</span>
               </div>
             </div>
 
@@ -654,14 +654,14 @@ export function Home({ onNavigate }: HomeProps) {
               <div className="grid grid-cols-2 gap-2 mb-3">
                 <div className="bg-white/5 border border-white/10 rounded-xl p-3">
                   <p className="text-xs text-gray-500 mb-1">Monthly</p>
-                  <p className="text-sm">₹3,499<span className="text-xs text-gray-500">/mo</span></p>
+                  <p className="text-sm">₹3,499<span className="text-xs text-gray-500"> per month</span></p>
                 </div>
                 <div className="bg-cyan-500/10 border border-cyan-500/30 rounded-xl p-3 relative">
                   <div className="absolute -top-2 right-2 bg-cyan-500 text-black px-2 py-0.5 rounded-full text-xs">
                     Best Value
                   </div>
                   <p className="text-xs text-gray-500 mb-1">Yearly</p>
-                  <p className="text-sm text-cyan-400">₹29,999<span className="text-xs text-gray-500">/yr</span></p>
+                  <p className="text-sm text-cyan-400">₹29,999<span className="text-xs text-gray-500"> per year</span></p>
                 </div>
               </div>
 

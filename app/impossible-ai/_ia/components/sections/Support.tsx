@@ -126,14 +126,15 @@ const Support = () => {
 
     return (
         <>
-            <section className="relative overflow-hidden bg-black px-6 pb-16 pt-16 sm:px-8 sm:pb-20 sm:pt-24 lg:px-12 xl:px-16">
+            <section className="relative overflow-hidden border-t border-black/10 bg-[#f3f3f1] px-6 pb-16 pt-16 sm:px-8 sm:pb-20 sm:pt-24 lg:px-12 xl:px-16">
+                <div className="pointer-events-none absolute inset-0 bg-grid-light opacity-30" />
                 <div className="pointer-events-none absolute -right-40 top-10 aspect-square w-[520px] rounded-full border-2 border-primary/25" />
                 <div className="relative mx-auto max-w-7xl">
                     <motion.span
                         initial={{ opacity: 0, y: 12 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5 }}
-                        className="inline-block bg-white px-2 py-1 font-mono text-[11px] font-semibold uppercase tracking-widest text-black"
+                        className="inline-block bg-black px-2 py-1 font-mono text-[11px] font-semibold uppercase tracking-widest text-white"
                     >
                         Support
                     </motion.span>
@@ -141,7 +142,7 @@ const Support = () => {
                         initial={{ opacity: 0, y: 16 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.55, delay: 0.05 }}
-                        className="mt-5 font-display text-4xl font-bold tracking-tight text-white sm:text-6xl"
+                        className="mt-5 font-display text-4xl font-bold tracking-tight text-neutral-950 sm:text-6xl"
                     >
                         How Can We <span className="font-serif italic font-normal text-primary">Help?</span>
                     </motion.h1>
@@ -149,7 +150,7 @@ const Support = () => {
                         initial={{ opacity: 0, y: 16 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.55, delay: 0.1 }}
-                        className="mt-5 max-w-2xl font-sans text-sm leading-7 text-white/60 sm:text-base"
+                        className="mt-5 max-w-2xl font-sans text-sm leading-7 text-neutral-600 sm:text-base"
                     >
                         Get help with your account, workouts, tracking, rewards, and privacy. Our team is based in Bengaluru and
                         responds {site.responseTime}.
@@ -163,10 +164,10 @@ const Support = () => {
                                 initial={{ opacity: 0, y: 24 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.5, delay: 0.15 + i * 0.08 }}
-                                className="group rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.05] to-transparent p-6 transition-colors hover:border-primary/40"
+                                className="group rounded-2xl border border-black/10 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-primary/40 hover:shadow-md"
                             >
-                                <h3 className="font-display text-lg font-bold text-white">{c.title}</h3>
-                                <p className="mt-2 font-sans text-sm leading-6 text-white/55">{c.body}</p>
+                                <h3 className="font-display text-lg font-bold text-neutral-950">{c.title}</h3>
+                                <p className="mt-2 font-sans text-sm leading-6 text-neutral-600">{c.body}</p>
                                 <p className="mt-5 break-all font-display text-xs font-bold uppercase tracking-widest text-primary">
                                     {c.cta}
                                 </p>

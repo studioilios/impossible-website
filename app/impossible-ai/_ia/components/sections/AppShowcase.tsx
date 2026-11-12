@@ -61,29 +61,50 @@ const AppShowcase = () => {
                     transition={{ duration: 0.55, delay: 0.1 }}
                     className="mx-auto mt-3 max-w-lg text-center font-sans text-xs leading-6 text-neutral-600 sm:text-sm"
                 >
-                    A look at what&apos;s actually on your screen — from your AI-scored morning briefing to live form
-                    correction mid-set.
+                    A look at what&apos;s on your screen, from your AI scored morning briefing to live form correction
+                    during your workout.
                 </motion.p>
 
-                <div className="mt-8 flex min-h-0 flex-1 flex-col items-center justify-center gap-8 lg:flex-row lg:items-center lg:justify-center lg:gap-0">
+                <div className="mt-8 w-full max-w-sm overflow-hidden rounded-2xl border border-black/10 bg-white/75 px-4 shadow-sm lg:hidden">
+                    <div className="flex items-start gap-3 border-b border-black/10 py-4 text-left">
+                        <span className="inline-flex shrink-0 bg-black px-2 py-1 font-mono text-[11px] font-semibold text-white">01</span>
+                        <p className="font-mono text-[12px] leading-snug text-neutral-800">
+                            Your daily AI score, recovery, plan, and streaks in one glance.
+                        </p>
+                    </div>
+                    <div className="flex items-start gap-3 border-b border-black/10 py-4 text-left">
+                        <span className="inline-flex shrink-0 bg-black px-2 py-1 font-mono text-[11px] font-semibold text-white">02</span>
+                        <p className="font-mono text-[12px] leading-snug text-neutral-800">
+                            Connect with the global fitness community and build your journey alongside athletes everywhere.
+                        </p>
+                    </div>
+                    <div className="flex items-start gap-3 py-4 text-left">
+                        <span className="inline-flex shrink-0 bg-black px-2 py-1 font-mono text-[11px] font-semibold text-white">03</span>
+                        <p className="font-mono text-[12px] leading-snug text-neutral-800">
+                            Live form correction. Every rep tracked as you train.
+                        </p>
+                    </div>
+                </div>
+
+                <div className="mt-8 flex min-h-0 w-full flex-1 flex-col items-center justify-center gap-8 sm:gap-10 lg:mt-8 lg:flex-row lg:items-center lg:justify-center lg:gap-12 xl:gap-16">
                     {/* Left image */}
                     <div className="relative flex-shrink-0">
                         <PhoneVisual delay={0} align="left">
                             <Image
-                                src="/appimg2.png"
+                                src="/ProductTour1.jpeg?v=2"
                                 alt="Impossible AI daily briefing screen"
-                                width={1024}
-                                height={1536}
-                                className="h-[38vh] max-h-[380px] w-auto sm:h-[62vh] sm:max-h-[680px] lg:h-[70vh] lg:max-h-[760px]"
+                                width={800}
+                                height={1600}
+                                className="h-[60vh] max-h-[520px] w-auto sm:h-[56vh] sm:max-h-[520px] lg:h-[70vh] lg:max-h-[760px]"
                                 priority
                             />
                         </PhoneVisual>
 
                         {/* Mobile caption */}
-                        <div className="mt-4 max-w-[240px] text-center lg:hidden">
+                        <div className="mt-4 hidden max-w-[240px] text-center">
                             <span className="inline-block bg-black px-2 py-1 font-mono text-[11px] font-semibold text-white">01</span>
                             <p className="mt-2 font-mono text-[12px] leading-snug text-neutral-800">
-                                /Your daily AI score — recovery, plan, and streaks in one glance.
+                                Your daily AI score, recovery, plan, and streaks in one glance.
                             </p>
                         </div>
 
@@ -91,40 +112,45 @@ const AppShowcase = () => {
                         <div className="absolute left-full top-4 hidden w-56 max-w-[190px] pl-4 lg:block">
                             <span className="inline-block bg-black px-2 py-1 font-mono text-[11px] font-semibold text-white">01</span>
                             <p className="mt-2 font-mono text-[12px] leading-snug text-neutral-800">
-                                /Your daily AI score — recovery, plan, and streaks in one glance.
+                                Your daily AI score, recovery, plan, and streaks in one glance.
                             </p>
                         </div>
                     </div>
 
-                    {/* space reserved for copy */}
-                    <div className="hidden lg:block lg:min-w-[220px] lg:flex-1 xl:min-w-[360px]" />
+                    {/* Middle point */}
+                    <div className="hidden max-w-[260px] text-center lg:flex lg:min-w-[220px] lg:flex-none lg:flex-col lg:items-center lg:justify-center xl:min-w-[300px]">
+                        <span className="inline-block bg-black px-2 py-1 font-mono text-[11px] font-semibold text-white">02</span>
+                        <p className="mt-2 font-mono text-[12px] leading-snug text-neutral-800">
+                            Connect with the global fitness community and build your journey alongside athletes everywhere.
+                        </p>
+                    </div>
 
                     {/* Right image */}
                     <div className="relative flex-shrink-0">
                         <PhoneVisual delay={0.12} align="right">
                             <Image
-                                src="/appimg1.png"
-                                alt="Impossible AI real-time form feedback screen"
-                                width={408}
-                                height={612}
-                                className="h-[38vh] max-h-[380px] w-auto sm:h-[62vh] sm:max-h-[680px] lg:h-[70vh] lg:max-h-[760px]"
+                                src="/ProductTour2.jpeg?v=2"
+                                alt="Impossible AI real time form feedback screen"
+                                width={800}
+                                height={1600}
+                                className="h-[60vh] max-h-[520px] w-auto sm:h-[56vh] sm:max-h-[520px] lg:h-[70vh] lg:max-h-[760px]"
                                 priority
                             />
                         </PhoneVisual>
 
                         {/* Mobile caption */}
-                        <div className="mt-4 max-w-[240px] text-center lg:hidden">
-                            <span className="inline-block bg-black px-2 py-1 font-mono text-[11px] font-semibold text-white">02</span>
+                        <div className="mt-4 hidden max-w-[240px] text-center">
+                            <span className="inline-block bg-black px-2 py-1 font-mono text-[11px] font-semibold text-white">03</span>
                             <p className="mt-2 font-mono text-[12px] leading-snug text-neutral-800">
-                                /Live form correction — every rep tracked, mid-set.
+                                Live form correction. Every rep tracked as you train.
                             </p>
                         </div>
 
                         {/* Desktop annotation */}
                         <div className="absolute right-full bottom-4 hidden w-56 max-w-[190px] pr-4 text-right lg:block">
-                            <span className="inline-block bg-black px-2 py-1 font-mono text-[11px] font-semibold text-white">02</span>
+                            <span className="inline-block bg-black px-2 py-1 font-mono text-[11px] font-semibold text-white">03</span>
                             <p className="mt-2 font-mono text-[12px] leading-snug text-neutral-800">
-                                /Live form correction — every rep tracked, mid-set.
+                                Live form correction. Every rep tracked as you train.
                             </p>
                         </div>
                     </div>

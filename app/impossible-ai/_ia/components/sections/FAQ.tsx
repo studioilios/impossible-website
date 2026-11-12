@@ -6,23 +6,23 @@ import { AnimatePresence, motion } from "framer-motion";
 const faqs = [
     {
         q: "What makes Impossible AI different?",
-        a: "We're built ground-up for Indian bodies, food, languages, and lifestyles — with 95,000+ Indian recipes, vernacular AI coaching, festival-aware plans, and real-money token rewards no other fitness app offers.",
+        a: "We're built for people around the world, with 95,000+ recipes from diverse cuisines, coaching in multiple languages, plans that adapt to local routines, and token rewards for healthy actions.",
     },
     {
         q: "How does the AI coach work?",
-        a: "Your AI coach responds in under 3 seconds, remembers your entire journey permanently, and coaches you daily in 6 Indian languages — adapting your plan as your data evolves.",
+        a: "Your AI coach responds in under 3 seconds, remembers your journey, and coaches you daily in 6 languages while adapting your plan as your data evolves.",
     },
     {
         q: "How are tokens earned?",
-        a: "AI verifies real activity via GPS, phone sensors, and wearables — steps, workouts, gym check-ins, sleep, and streaks all automatically credit tokens with no manual entry.",
+        a: "AI verifies real activity via GPS, phone sensors, and wearables. Steps, workouts, gym visits, sleep, and streaks automatically credit tokens with no manual entry.",
     },
     {
         q: "Can I redeem tokens for cash?",
         a: "Yes. Tokens can be redeemed for cash, gym passes, supplements, coaching sessions, or donated to charity.",
     },
     {
-        q: "Does it support Indian food?",
-        a: "Yes — a database of 95,000+ Indian recipes with full macro & micro tracking, regional cuisine support, and thali tracking calibrated to Indian phenotype data.",
+        q: "Does it support global cuisines?",
+        a: "Yes. Explore 95,000+ recipes from cuisines around the world, with macro and micro tracking and nutrition guidance tailored to your needs.",
     },
     {
         q: "Does it work with wearables?",
@@ -30,11 +30,11 @@ const faqs = [
     },
     {
         q: "Can athletes find coaches?",
-        a: "Yes — the Athlete Network matches you with world-class coaches, sponsors, and government schemes based on performance data.",
+        a: "Yes. The Athlete Network matches you with world class coaches, sponsors, and government schemes based on performance data.",
     },
     {
         q: "Is there a community?",
-        a: "Yes — find gyms, trainers, yoga studios, running clubs, and CrossFit boxes near you, plus a full social feed with posts, challenges, and leaderboards.",
+        a: "Yes. Find gyms, trainers, yoga studios, running clubs, and CrossFit boxes near you, plus a full social feed with posts, challenges, and leaderboards.",
     },
     {
         q: "Is the app available?",
@@ -42,7 +42,7 @@ const faqs = [
     },
     {
         q: "Which languages are supported?",
-        a: "Impossible AI coaches in 6 Indian languages, including Hindi, Tamil, and Telugu.",
+        a: "Impossible AI supports coaching in 6 languages. Contact us for the current language list.",
     },
 ];
 

@@ -6,35 +6,35 @@ const exercises = [
   { 
     name: 'Bench Press', 
     sets: '4 sets', 
-    reps: '8-10 reps', 
+    reps: '8 to 10 reps', 
     rest: '90s',
     image: 'https://images.unsplash.com/photo-1714181871329-1392197011c2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxneW0lMjBlcXVpcG1lbnQlMjBiZW5jaCUyMHByZXNzfGVufDF8fHx8MTc2NzU5NzgxN3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
   },
   { 
     name: 'Incline Dumbbell Press', 
     sets: '3 sets', 
-    reps: '10-12 reps', 
+    reps: '10 to 12 reps', 
     rest: '60s',
     image: 'https://images.unsplash.com/photo-1586401100295-7a8096fd231a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmaXRuZXNzJTIwZXhlcmNpc2UlMjBkdW1iYmVsbHxlbnwxfHx8fDE3Njc1OTc4MTZ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
   },
   { 
     name: 'Cable Flyes', 
     sets: '3 sets', 
-    reps: '12-15 reps', 
+    reps: '12 to 15 reps', 
     rest: '45s',
     image: 'https://images.unsplash.com/photo-1669807164466-10a6584a067e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxneW0lMjB3b3Jrb3V0JTIwc3RyZW5ndGglMjB0cmFpbmluZ3xlbnwxfHx8fDE3Njc1OTY3NTZ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
   },
   { 
     name: 'Tricep Dips', 
     sets: '3 sets', 
-    reps: '10-12 reps', 
+    reps: '10 to 12 reps', 
     rest: '60s',
     image: 'https://images.unsplash.com/photo-1761839256547-0a1cd11b6dfb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhdGhsZXRlJTIwdHJhaW5pbmclMjBmaXRuZXNzfGVufDF8fHx8MTc2NzU5NzgxN3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
   },
   { 
     name: 'Overhead Tricep Extension', 
     sets: '3 sets', 
-    reps: '12-15 reps', 
+    reps: '12 to 15 reps', 
     rest: '45s',
     image: 'https://images.unsplash.com/photo-1586401100295-7a8096fd231a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmaXRuZXNzJTIwZXhlcmNpc2UlMjBkdW1iYmVsbHxlbnwxfHx8fDE3Njc1OTc4MTZ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
   },
@@ -126,7 +126,7 @@ export function TrainingPlan() {
                 </div>
                 <div>
                   <div className="text-xs text-gray-400 mb-1">Pace</div>
-                  <div className="text-lg text-[#DFFF00]">6:15/km</div>
+                  <div className="text-lg text-[#DFFF00]">6:15 per km</div>
                 </div>
                 <div>
                   <div className="text-xs text-gray-400 mb-1">HR Zone</div>
@@ -166,7 +166,7 @@ export function TrainingPlan() {
               <span className="text-sm text-gray-400">Hydration</span>
               <div className="flex items-center gap-2">
                 <Droplet className="w-4 h-4 text-[#DFFF00]" />
-                <span className="text-sm text-[#DFFF00]">1.8L / 2.5L</span>
+                <span className="text-sm text-[#DFFF00]">1.8L of 2.5L</span>
               </div>
             </div>
           </div>

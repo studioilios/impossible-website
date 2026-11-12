@@ -378,7 +378,7 @@ export function Community({ onBack, onNavigate }: CommunityProps) {
                               },
                               { 
                                 id: 2, 
-                                title: '30 Day Push-up Challenge', 
+                                title: '30 Day Push up Challenge', 
                                 participants: 1850, 
                                 daysLeft: 8, 
                                 icon: '💪',

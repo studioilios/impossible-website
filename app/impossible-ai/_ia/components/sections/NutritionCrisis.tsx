@@ -5,27 +5,27 @@ import SectionHeading from "@ia/components/ui/SectionHeading";
 
 const groups = [
     {
-        label: "Children (5–15 Years)",
-        population: "225 Million children",
+        label: "Children (5 to 15 Years)",
+        population: "Healthy habits start early",
         points: [
-            "93.4% inadequate calcium intake",
-            "Childhood obesity increased 288%",
-            "Severe micronutrient gaps from early age",
+            "Growing bodies need balanced nutrition",
+            "Daily movement supports lifelong wellbeing",
+            "Healthy routines are easier to build early",
         ],
     },
     {
-        label: "Youth (15–25 Years)",
-        population: "390 Million people",
+        label: "Youth (15 to 25 Years)",
+        population: "Support through change",
         points: [
-            "59.1% teenage girls are anemic",
-            "$1 Billion energy drink market",
-            "67% report health damage from energy drinks",
+            "Changing routines can make healthy habits harder",
+            "Balanced meals and movement support wellbeing",
+            "Good sleep and recovery matter at every age",
         ],
     },
     {
-        label: "Working Adults (25–40)",
-        population: "350 Million adults",
-        points: ["98% Omega-3 deficient", "59–98% Vitamin D deficient", "101M diabetics, 136M pre-diabetics"],
+        label: "Working Adults (25 to 40)",
+        population: "Health through busy lives",
+        points: ["Long workdays can limit time for movement", "Nutrition needs vary from person to person", "Small, consistent habits can support long term health"],
     },
 ];
 
@@ -34,8 +34,8 @@ const NutritionCrisis = () => {
         <section className="relative overflow-hidden border-t border-white/5 bg-black px-6 py-12 sm:px-8 sm:py-16 lg:px-12 xl:px-16">
             <div className="relative mx-auto max-w-7xl">
                 <SectionHeading
-                    eyebrow="India's Nutrition Crisis"
-                    title="A Nation Deficient at"
+                    eyebrow="Global Nutrition Challenges"
+                    title="Nutrition Matters at"
                     accent="Every Age"
                 />
 
@@ -76,13 +76,13 @@ const NutritionCrisis = () => {
                     className="relative mt-14 overflow-hidden rounded-3xl border border-primary/25 bg-gradient-to-br from-primary/15 via-black to-black p-8 text-center sm:p-12"
                 >
                     <p className="font-display text-5xl font-bold tracking-tight text-white sm:text-7xl">
-                        965 <span className="text-primary">Million</span>
+                        Every <span className="text-primary">Person</span>
                     </p>
                     <p className="mx-auto mt-3 max-w-xl font-sans text-sm text-white/60 sm:text-base">
-                        Indians are deficient in at least one essential nutrient
+                        deserves access to practical, personalized nutrition support
                     </p>
                     <p className="mx-auto mt-4 max-w-2xl font-sans text-xs uppercase tracking-widest text-white/40 sm:text-sm">
-                        Across children, youth, and working adults — a nationwide crisis demanding AI-powered solutions
+                        Across children, young people, and adults, thoughtful daily support can make healthy choices easier
                     </p>
                 </motion.div>
             </div>
