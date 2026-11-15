@@ -179,7 +179,7 @@ export function Planner({ onBack }: PlannerProps) {
           <div className="flex-1">
             <h4 className="font-black italic uppercase tracking-tight text-cyan-400 mb-1 text-sm">Smart Suggestion</h4>
             <p className="text-[10px] text-white/60 leading-relaxed font-bold uppercase tracking-wide mb-3">
-              You usually run on Mondays. Should I add a 5 km morning session to your tomorrow's plan?
+              You usually run on Mondays. Should I add a 5 km morning session to your tomorrow&apos;s plan?
             </p>
             <div className="flex gap-2">
               <button className="px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-xl text-[8px] font-black uppercase tracking-widest text-cyan-400">Yes, Add It</button>
@@ -264,7 +264,14 @@ export function Planner({ onBack }: PlannerProps) {
   );
 }
 
-function DayView({ selectedDate, setSelectedDate, plans, onToggleComplete }: any) {
+interface PlannerViewProps {
+  selectedDate: Date;
+  setSelectedDate: (date: Date) => void;
+  plans: PlanItem[];
+  onToggleComplete?: (id: string) => void;
+}
+
+function DayView({ selectedDate, setSelectedDate, plans, onToggleComplete }: PlannerViewProps) {
   // Generate a week strip around the selected date
   const weekStrip = Array.from({ length: 7 }, (_, i) => {
     const d = new Date(selectedDate);
@@ -318,7 +325,7 @@ function DayView({ selectedDate, setSelectedDate, plans, onToggleComplete }: any
       <div className="space-y-6">
         <div className="flex items-center justify-between mb-2">
           <h2 className="text-sm font-black uppercase tracking-widest text-white/40">Activities for {selectedDate.toLocaleDateString('en-US', { day: 'numeric', month: 'short' })}</h2>
-          <span className="text-[10px] font-black uppercase tracking-widest text-[#CCFF00]">{plans.filter((p:any) => p.completed).length} of {plans.length} Done</span>
+          <span className="text-[10px] font-black uppercase tracking-widest text-[#CCFF00]">{plans.filter((p) => p.completed).length} of {plans.length} Done</span>
         </div>
 
         {plans.length > 0 ? (
@@ -335,7 +342,7 @@ function DayView({ selectedDate, setSelectedDate, plans, onToggleComplete }: any
                 }`}
               >
                 <button 
-                  onClick={() => onToggleComplete(plan.id)}
+                  onClick={() => onToggleComplete?.(plan.id)}
                   className={`w-6 h-6 rounded-full flex items-center justify-center transition-all ${
                     plan.completed ? 'bg-[#CCFF00]' : 'border-2 border-white/20'
                   }`}
@@ -375,13 +382,13 @@ function DayView({ selectedDate, setSelectedDate, plans, onToggleComplete }: any
   );
 }
 
-function WeekView({ plans }: any) {
+function WeekView({ plans }: PlannerViewProps) {
   const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
   
   return (
     <div className="space-y-4">
       {days.map((day, i) => {
-        const dayPlans = plans.filter((p: any) => p.date.getDay() === (i + 1) % 7);
+        const dayPlans = plans.filter((p) => p.date.getDay() === (i + 1) % 7);
         const isToday = new Date().getDay() === (i + 1) % 7;
         
         return (
@@ -401,7 +408,7 @@ function WeekView({ plans }: any) {
             
             {dayPlans.length > 0 ? (
               <div className="flex flex-wrap gap-2">
-                {dayPlans.map((p: any) => (
+                {dayPlans.map((p) => (
                   <div key={p.id} className="px-3 py-1.5 bg-white/5 rounded-xl border border-white/5 flex items-center gap-2">
                     <div className={`w-1.5 h-1.5 rounded-full ${p.completed ? 'bg-[#CCFF00]' : 'bg-white/20'}`} />
                     <span className="text-[9px] font-black uppercase tracking-widest text-white/40">{p.type}</span>
@@ -421,7 +428,7 @@ function WeekView({ plans }: any) {
   );
 }
 
-function MonthView({ selectedDate, setSelectedDate, plans }: any) {
+function MonthView({ selectedDate, setSelectedDate, plans }: PlannerViewProps) {
   const year = selectedDate.getFullYear();
   const month = selectedDate.getMonth();
   
@@ -457,7 +464,7 @@ function MonthView({ selectedDate, setSelectedDate, plans }: any) {
           
           const isSelected = date.toDateString() === selectedDate.toDateString();
           const isToday = date.toDateString() === new Date().toDateString();
-          const dayPlans = plans.filter((p: any) => p.date.toDateString() === date.toDateString());
+          const dayPlans = plans.filter((p) => p.date.toDateString() === date.toDateString());
           
           return (
             <button
@@ -473,7 +480,7 @@ function MonthView({ selectedDate, setSelectedDate, plans }: any) {
                 {date.getDate()}
               </div>
               <div className="flex gap-0.5">
-                {dayPlans.slice(0, 3).map((p: any) => (
+                {dayPlans.slice(0, 3).map((p) => (
                   <div key={p.id} className={`w-1 h-1 rounded-full ${p.completed ? 'bg-[#CCFF00]' : 'bg-white/20'}`} />
                 ))}
               </div>

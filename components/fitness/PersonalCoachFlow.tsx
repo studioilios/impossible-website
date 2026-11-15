@@ -574,7 +574,7 @@ export function PersonalCoachFlow({ onBack }: { onBack: () => void }) {
               <section className="pt-2">
                 <div className="mb-8">
                   <h2 className="text-3xl font-black italic uppercase tracking-tighter leading-none mb-2">Coaching Plans</h2>
-                  <p className="text-[10px] text-[#CCFF00] font-black uppercase tracking-[0.3em]">Direct access to {selectedCoach.name.split(' ')[0]}'s methodology</p>
+                  <p className="text-[10px] text-[#CCFF00] font-black uppercase tracking-[0.3em]">Direct access to {selectedCoach.name.split(' ')[0]}&apos;s methodology</p>
                 </div>
 
                 <div className="space-y-6">
@@ -640,7 +640,7 @@ export function PersonalCoachFlow({ onBack }: { onBack: () => void }) {
                     <h3 className="text-[11px] text-[#CCFF00] font-black uppercase tracking-[0.4em]">Coach Methodology</h3>
                   </div>
                   <p className="text-white/60 text-lg leading-relaxed font-medium italic">
-                    "{selectedCoach.about}"
+                    &quot;{selectedCoach.about}&quot;
                   </p>
                 </div>
 
@@ -653,7 +653,7 @@ export function PersonalCoachFlow({ onBack }: { onBack: () => void }) {
                     <h3 className="text-[11px] text-[#CCFF00] font-black uppercase tracking-[0.4em]">Core Philosophy</h3>
                   </div>
                   <p className="text-white text-2xl font-black italic uppercase leading-[1.1] tracking-tight relative z-10">
-                    "{selectedCoach.approach}"
+                    &quot;{selectedCoach.approach}&quot;
                   </p>
                 </div>
               </div>

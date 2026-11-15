@@ -36,7 +36,7 @@ import {
 
 interface HeyFlowProps {
   onBack: () => void;
-  onNavigate: (screen: any) => void;
+  onNavigate: (screen: string) => void;
 }
 
 // Mock data for charts
@@ -276,7 +276,7 @@ export function HeyFlow({ onBack, onNavigate }: HeyFlowProps) {
             </div>
 
             <p className="text-xs text-white/50 leading-relaxed italic">
-              "Achieving 150 minutes of activity per week improves heart health, sleep, and mood."
+              &quot;Achieving 150 minutes of activity per week improves heart health, sleep, and mood.&quot;
             </p>
           </div>
         </div>
@@ -487,7 +487,7 @@ export function HeyFlow({ onBack, onNavigate }: HeyFlowProps) {
         <div className="bg-white/[0.03] backdrop-blur-2xl rounded-[2rem] border border-white/10 p-6 shadow-xl">
           <h2 className="text-sm font-black uppercase tracking-[0.15em] mb-2">Connect Your Health Devices</h2>
           <p className="text-xs text-white/50 mb-6 italic">
-            "Sync your health data from wearables and health apps."
+            &quot;Sync your health data from wearables and health apps.&quot;
           </p>
 
           <div className="space-y-3">

@@ -2,7 +2,7 @@ import { Star } from 'lucide-react';
 import { ImageWithFallback } from '../figma/ImageWithFallback';
 
 interface CoachesProps {
-  onNavigate: (screen: string, data?: any) => void;
+  onNavigate: (screen: string, data?: unknown) => void;
 }
 
 const coaches = [

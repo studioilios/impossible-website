@@ -63,7 +63,7 @@ export function TrainingPlan() {
           <div className="absolute bottom-5 left-5 right-5">
             <div className="flex items-center gap-2 mb-3">
               <Zap className="w-5 h-5 text-[#CCFF00]" />
-              <h2 className="text-lg">Today's Focus</h2>
+              <h2 className="text-lg">Today&apos;s Focus</h2>
             </div>
             <p className="text-2xl mb-2">Upper Body Strength</p>
             <p className="text-sm text-gray-400">Optimised for your energy today</p>
@@ -174,7 +174,7 @@ export function TrainingPlan() {
           <div className="bg-orange-500/10 border border-orange-500/20 rounded-xl p-3 flex items-start gap-3">
             <AlertCircle className="w-4 h-4 text-orange-400 flex-shrink-0 mt-0.5" />
             <p className="text-sm text-orange-200">
-              Your body handled yesterday well. Let's keep today steady.
+              Your body handled yesterday well. Let&apos;s keep today steady.
             </p>
           </div>
         </div>

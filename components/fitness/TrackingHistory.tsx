@@ -544,7 +544,7 @@ export function TrackingHistory({ onBack }: TrackingHistoryProps) {
             <div className="flex-1">
               <h3 className="text-base font-black uppercase tracking-tight text-cyan-400 mb-2">AI Performance Insight</h3>
               <p className="text-sm text-white/80 leading-relaxed italic mb-4">
-                "You were most active in March. Your weekly workouts increased by 22% compared to February."
+                &quot;You were most active in March. Your weekly workouts increased by 22% compared to February.&quot;
               </p>
               <div className="flex items-center gap-2 flex-wrap">
                 <div className="px-3 py-1 bg-cyan-500/10 border border-cyan-500/20 rounded-full">

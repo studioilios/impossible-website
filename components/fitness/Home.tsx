@@ -4,7 +4,7 @@ import { ActivityMapCard } from './ActivityMapCard';
 import { Stories } from './Stories';
 
 interface HomeProps {
-  onNavigate: (screen: any, data?: any) => void;
+  onNavigate: (screen: string, data?: unknown) => void;
 }
 
 export function Home({ onNavigate }: HomeProps) {

@@ -4,9 +4,9 @@ import { ImageWithFallback } from '../figma/ImageWithFallback';
 import { useState } from 'react';
 
 interface GymChannelProps {
-  gym: any;
+  gym: { thumbnail: string; gymName: string; gymLogo: string; rating: number; distance: string };
   onBack: () => void;
-  onNavigate: (screen: string, data?: any) => void;
+  onNavigate: (screen: string, data?: unknown) => void;
 }
 
 const channelVideos = [

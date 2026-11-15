@@ -26,14 +26,16 @@ import { LandingPage } from './fitness/LandingPage';
 import { AdvancedLandingPage } from './fitness/AdvancedLandingPage';
 
 type Screen = 'home' | 'activity' | 'ai' | 'stats' | 'profile' | 'coaches' | 'coach-profile' | 'gyms' | 'gyms-video' | 'gym-channel' | 'gym-detail' | 'video-player' | 'yoga-studios' | 'yoga-studio-detail' | 'personal-coach-flow' | 'activity-detail' | 'community' | 'planner' | 'hey-flow' | 'community-chat' | 'landing';
+type BottomNavScreen = 'home' | 'activity' | 'ai' | 'stats' | 'profile' | 'hey-flow';
+type NavigationData = Record<string, unknown>;
 
 export default function App() {
   const [activeScreen, setActiveScreen] = useState<Screen>('landing');
-  const [selectedData, setSelectedData] = useState<any>(null);
+  const [selectedData, setSelectedData] = useState<NavigationData | null>(null);
 
-  const handleNavigate = (screen: Screen, data?: any) => {
+  const handleNavigate = (screen: Screen, data?: unknown) => {
     setActiveScreen(screen);
-    setSelectedData(data);
+    setSelectedData(data && typeof data === 'object' ? data as NavigationData : null);
   };
 
   const handleBack = () => {
@@ -54,41 +56,41 @@ export default function App() {
 
   return (
     <div className={`min-h-screen bg-black text-white ${activeScreen === 'landing' ? '' : 'pb-20'}`}>
-      {activeScreen === 'home' && <Home onNavigate={handleNavigate} />}
+      {activeScreen === 'home' && <Home onNavigate={(screen, data) => handleNavigate(screen as Screen, data)} />}
       {activeScreen === 'activity' && <Activity />}
       {activeScreen === 'ai' && <AICoach />}
       {activeScreen === 'stats' && <Nutrition />}
       {activeScreen === 'profile' && (
         <Profile 
-          onNavigate={handleNavigate} 
-          initialTab={selectedData?.tab || 'overview'} 
+          onNavigate={(screen, data) => handleNavigate(screen as Screen, data)} 
+          initialTab={typeof selectedData?.tab === 'string' ? selectedData.tab as never : 'overview'} 
         />
       )}
       {activeScreen === 'coaches' && <Coaches onNavigate={(screen, data) => handleNavigate(screen as Screen, data)} />}
-      {activeScreen === 'coach-profile' && <CoachProfile coach={selectedData} onBack={handleBack} />}
+      {activeScreen === 'coach-profile' && <CoachProfile coach={selectedData as never} onBack={handleBack} />}
       {activeScreen === 'gyms' && <Gyms onNavigate={(screen, data) => handleNavigate(screen as Screen, data)} />}
       {activeScreen === 'gyms-video' && <GymsVideo onNavigate={(screen, data) => handleNavigate(screen as Screen, data)} />}
-      {activeScreen === 'gym-channel' && <GymChannel gym={selectedData} onBack={handleBack} onNavigate={(screen, data) => handleNavigate(screen as Screen, data)} />}
-      {activeScreen === 'gym-detail' && <GymDetail gym={selectedData} onBack={handleBack} />}
-      {activeScreen === 'video-player' && <VideoPlayer video={selectedData} onBack={handleBack} onNavigate={(screen, data) => handleNavigate(screen as Screen, data)} />}
+      {activeScreen === 'gym-channel' && <GymChannel gym={selectedData as never} onBack={handleBack} onNavigate={(screen, data) => handleNavigate(screen as Screen, data)} />}
+      {activeScreen === 'gym-detail' && <GymDetail gym={selectedData as never} onBack={handleBack} />}
+      {activeScreen === 'video-player' && <VideoPlayer video={selectedData as never} onBack={handleBack} onNavigate={(screen, data) => handleNavigate(screen as Screen, data)} />}
       {activeScreen === 'yoga-studios' && <YogaStudios onNavigate={(screen, data) => handleNavigate(screen as Screen, data)} />}
-      {activeScreen === 'yoga-studio-detail' && <YogaStudioDetail studio={selectedData} onBack={handleBack} />}
+      {activeScreen === 'yoga-studio-detail' && <YogaStudioDetail studio={selectedData as never} onBack={handleBack} />}
       {activeScreen === 'personal-coach-flow' && <PersonalCoachFlow onBack={handleBack} />}
-      {activeScreen === 'activity-detail' && <ActivityDetail activity={selectedData} onBack={handleBack} />}
-      {activeScreen === 'community' && (
+      {activeScreen === 'activity-detail' && <ActivityDetail activity={selectedData as never} onBack={handleBack} />}
+    {activeScreen === 'community' && (
         <Community 
           onBack={() => setActiveScreen('home')} 
-          onNavigate={handleNavigate}
+          onNavigate={(screen, data) => handleNavigate(screen as Screen, data)}
         />
       )}
       {activeScreen === 'community-chat' && (
         <CommunityChat 
-          club={selectedData} 
+          club={selectedData as never} 
           onBack={() => setActiveScreen('community')} 
         />
       )}
       {activeScreen === 'planner' && <Planner onBack={() => setActiveScreen('profile')} />}
-      {activeScreen === 'hey-flow' && <HeyFlow onBack={() => setActiveScreen('home')} onNavigate={handleNavigate} />}
+      {activeScreen === 'hey-flow' && <HeyFlow onBack={() => setActiveScreen('home')} onNavigate={(screen) => handleNavigate(screen as Screen)} />}
       {activeScreen === 'landing' && <AdvancedLandingPage onNavigate={(screen, data) => handleNavigate(screen as Screen, data)} />}
       
       {/* Show main BottomNav only when NOT in Community section or Landing page */}
@@ -105,7 +107,7 @@ export default function App() {
           
           {/* 2. The Bottom Nav (Z-50 ensures it stays clickable above the blur) */}
           <div className="relative z-50">
-            <BottomNav active={activeScreen as any} onNavigate={(screen) => handleNavigate(screen as Screen)} />
+            <BottomNav active={activeScreen as BottomNavScreen} onNavigate={(screen) => handleNavigate(screen)} />
           </div>
         </>
       )}

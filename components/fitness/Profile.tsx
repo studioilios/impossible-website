@@ -122,7 +122,7 @@ const mapStyle = {
 };
 
 interface ProfileProps {
-  onNavigate: (screen: any, data?: any) => void;
+  onNavigate: (screen: string, data?: unknown) => void;
   initialTab?: ProfileTab;
 }
 

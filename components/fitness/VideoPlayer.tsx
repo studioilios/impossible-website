@@ -4,9 +4,9 @@ import { ImageWithFallback } from '../figma/ImageWithFallback';
 import { useState } from 'react';
 
 interface VideoPlayerProps {
-  video: any;
+  video: { thumbnail: string; title: string; gymLogo: string; gymName: string; views: string; timeAgo: string; id: number };
   onBack: () => void;
-  onNavigate: (screen: string, data?: any) => void;
+  onNavigate: (screen: string, data?: unknown) => void;
 }
 
 const recommendedVideos = [

@@ -137,7 +137,7 @@ const FAQS = [
 const NAV_LINKS = ['Features', 'Rewards', 'Athletes', 'Compare', 'Pricing'];
 
 interface AdvancedLandingPageProps {
-  onNavigate?: (screen: string, data?: any) => void;
+  onNavigate?: (screen: string, data?: unknown) => void;
 }
 
 export function AdvancedLandingPage({ onNavigate }: AdvancedLandingPageProps) {
@@ -439,7 +439,7 @@ export function AdvancedLandingPage({ onNavigate }: AdvancedLandingPageProps) {
         <div style={inner}>
           <div className="tag-lime">• CORE FEATURES</div>
           <h2 className="disp" style={{ fontSize: 'clamp(32px,6vw,68px)', fontWeight: 900, marginBottom: 56 }}>
-            Everything You Need.<br /><span style={{ color: C.lime }}>Nothing You Don't.</span>
+            Everything You Need.<br /><span style={{ color: C.lime }}>Nothing You Don&apos;t.</span>
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(min(100%,300px),1fr))', gap: 24 }}>
             {CORE_FEATURES.map((f) => (
@@ -555,7 +555,7 @@ export function AdvancedLandingPage({ onNavigate }: AdvancedLandingPageProps) {
         <div style={inner}>
           <div className="tag-saffron">• ATHLETE PLATFORM</div>
           <h2 className="disp" style={{ fontSize: 'clamp(32px,6vw,68px)', fontWeight: 900, marginBottom: 16 }}>
-            One Platform.<br /><span style={{ color: C.saffron }}>Every Athlete's Path.</span>
+            One Platform.<br /><span style={{ color: C.saffron }}>Every Athlete&apos;s Path.</span>
           </h2>
           <p style={{ color: C.muted, fontSize: 16, marginBottom: 56, maxWidth: 520, lineHeight: 1.7 }}>From creating your first profile to getting discovered by national scouts, the complete athlete journey in one platform.</p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(min(100%,180px),1fr))', gap: 20, marginBottom: 64 }}>
@@ -813,7 +813,7 @@ export function AdvancedLandingPage({ onNavigate }: AdvancedLandingPageProps) {
       {/* ── 15. COMPARISON ── */}
       <section id="compare" style={sec()}>
         <div style={inner}>
-          <div className="tag-lime">• WHY WE'RE DIFFERENT</div>
+          <div className="tag-lime">• WHY WE&apos;RE DIFFERENT</div>
           <h2 className="disp" style={{ fontSize: 'clamp(32px,6vw,68px)', fontWeight: 900, marginBottom: 56 }}>
             No One Else<br /><span style={{ color: C.lime }}>Does This</span>
           </h2>
@@ -853,7 +853,7 @@ export function AdvancedLandingPage({ onNavigate }: AdvancedLandingPageProps) {
       <section style={sec({ background: C.paper })}>
         <div style={inner}>
           <div className="tag-lime">• COMMUNITY BENEFITS</div>
-          <h2 className="disp" style={{ fontSize: 'clamp(32px,6vw,68px)', fontWeight: 900, marginBottom: 56 }}>The Numbers <span style={{ color: C.lime }}>Don't Lie</span></h2>
+          <h2 className="disp" style={{ fontSize: 'clamp(32px,6vw,68px)', fontWeight: 900, marginBottom: 56 }}>The Numbers <span style={{ color: C.lime }}>Don&apos;t Lie</span></h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(min(100%,240px),1fr))', gap: 24 }}>
             {[{ value: '3.4×', label: 'More Active', sub: 'Community users vs solo users' }, { value: '54%', label: 'Retention Rate', sub: 'vs only 6% for solo users' }, { value: '25.8×', label: 'LTV:CAC Ratio', sub: 'Exceptional unit economics' }].map((stat) => (
               <motion.div key={stat.value} initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }}
@@ -927,7 +927,7 @@ export function AdvancedLandingPage({ onNavigate }: AdvancedLandingPageProps) {
       <section style={sec()}>
         <div style={inner}>
           <div className="tag-lime">• PRODUCT ROADMAP</div>
-          <h2 className="disp" style={{ fontSize: 'clamp(32px,6vw,68px)', fontWeight: 900, marginBottom: 56 }}>Built &amp; <span style={{ color: C.lime }}>What's Next</span></h2>
+          <h2 className="disp" style={{ fontSize: 'clamp(32px,6vw,68px)', fontWeight: 900, marginBottom: 56 }}>Built &amp; <span style={{ color: C.lime }}>What&apos;s Next</span></h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(min(100%,260px),1fr))', gap: 24 }}>
             {ROADMAP.map((phase) => (
               <div key={phase.status} style={{ background: C.paper, border: `1px solid ${C.line}`, borderTop: `3px solid ${phase.color}`, borderRadius: 20, padding: 'clamp(20px,4vw,32px)', boxSizing: 'border-box' }}>
@@ -970,7 +970,7 @@ export function AdvancedLandingPage({ onNavigate }: AdvancedLandingPageProps) {
             <Brain style={{ width: 40, height: 40, color: C.lime, margin: '0 auto 16px' }} />
             <div className="disp" style={{ fontSize: 22, fontWeight: 700, marginBottom: 8 }}>Predictive Healthcare Powered by AI</div>
             <div style={{ fontSize: 15, color: C.muted, lineHeight: 1.7 }}>
-              We're building an intelligent health platform for people around the world, helping spot potential concerns early and personalize support before it's needed.
+              We&apos;re building an intelligent health platform for people around the world, helping spot potential concerns early and personalize support before it&apos;s needed.
             </div>
           </div>
         </div>

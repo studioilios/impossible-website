@@ -4,7 +4,7 @@ import { ImageWithFallback } from '../figma/ImageWithFallback';
 import { useState } from 'react';
 
 interface YogaStudiosProps {
-  onNavigate: (screen: string, data?: any) => void;
+  onNavigate: (screen: string, data?: unknown) => void;
 }
 
 const yogaStudios = [

@@ -4,7 +4,7 @@ import { ImageWithFallback } from '../figma/ImageWithFallback';
 import { useState } from 'react';
 
 interface YogaStudioDetailProps {
-  studio: any;
+  studio: { name: string; image: string; rating: number; location?: string; distance?: string; styles?: string; beginnerFriendly?: boolean; monthlyPrice?: number; yearlyPrice?: number; isOpen?: boolean; verified?: boolean };
   onBack: () => void;
 }
 
@@ -218,7 +218,7 @@ export function YogaStudioDetail({ studio, onBack }: YogaStudioDetailProps) {
         {/* Class Timetable */}
         <div className="bg-white/5 rounded-2xl p-5 border border-white/10">
           <div className="flex items-center justify-between mb-4">
-            <h2 className="text-lg">Today's Schedule</h2>
+            <h2 className="text-lg">Today&apos;s Schedule</h2>
             <Calendar className="w-5 h-5 text-teal-400" />
           </div>
           <div className="space-y-3">
