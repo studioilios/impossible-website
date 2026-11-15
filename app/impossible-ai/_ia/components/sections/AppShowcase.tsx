@@ -91,7 +91,7 @@ const AppShowcase = () => {
                     <div className="relative flex-shrink-0">
                         <PhoneVisual delay={0} align="left">
                             <Image
-                                src="/ProductTour1.jpeg?v=2"
+                                src="/ProductTour1.jpeg"
                                 alt="Impossible AI daily briefing screen"
                                 width={800}
                                 height={1600}
@@ -129,7 +129,7 @@ const AppShowcase = () => {
                     <div className="relative flex-shrink-0">
                         <PhoneVisual delay={0.12} align="right">
                             <Image
-                                src="/ProductTour2.jpeg?v=2"
+                                src="/ProductTour2.jpeg"
                                 alt="Impossible AI real time form feedback screen"
                                 width={800}
                                 height={1600}
