@@ -13,7 +13,7 @@ const columns = [
         items: [
             "Get discovered by national scouts",
             "Apply for government grants",
-            "Meet world-class coaches",
+            "Meet world class coaches",
             "Receive brand sponsorship",
             "Never miss trials & competitions",
         ],
@@ -21,7 +21,7 @@ const columns = [
     {
         title: "Vision",
         items: [
-            "Discover hidden talent across India",
+            "Discover talent around the world",
             "Reduce athlete dropout rates",
             "Build scientific development pathways",
             "Create an Olympic pipeline",
@@ -35,7 +35,7 @@ const AthleteNetwork = () => {
             <div className="relative mx-auto max-w-7xl">
                 <SectionHeading
                     eyebrow="Athlete Network"
-                    title="India's First Performance-Based"
+                    title="A Global Performance-Based"
                     accent="Athlete Network"
                     align="center"
                 />

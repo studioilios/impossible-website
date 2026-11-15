@@ -23,7 +23,7 @@ const AthletePlatform = () => {
                     eyebrow="Athlete Platform"
                     title="One Platform."
                     accent="Every Athlete's Path."
-                    description="From creating your first profile to getting discovered by national scouts — the complete athlete journey in one platform."
+                    description="From creating your first profile to getting discovered by national scouts, the complete athlete journey in one platform."
                 />
 
                 <div className="relative mt-16 sm:mt-20">

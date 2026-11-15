@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 import SectionHeading from "@ia/components/ui/SectionHeading";
 
 const streams = [
-    { title: "Subscription", detail: "₹99/month · ₹999/year" },
-    { title: "Corporate Wellness", detail: "₹60 per employee/month" },
-    { title: "Marketplace Commission", detail: "15–22% per transaction" },
+    { title: "Subscription", detail: "₹99 per month · ₹999 per year" },
+    { title: "Corporate Wellness", detail: "₹60 per employee per month" },
+    { title: "Marketplace Commission", detail: "15 to 22% per transaction" },
     { title: "Merchandise & Products", detail: "Fitness gear & token redemption" },
 ];
 

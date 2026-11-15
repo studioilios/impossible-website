@@ -62,14 +62,14 @@ export function Nutrition() {
       {/* Daily Target */}
       <div className="bg-gradient-to-br from-[#CCFF00]/10 to-transparent border border-[#CCFF00]/20 rounded-2xl p-5 mb-6">
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-lg">Today's Target</h2>
+          <h2 className="text-lg">Today&apos;s Target</h2>
           <span className="text-sm text-gray-400">Jan 5, 2026</span>
         </div>
         
         <div className="mb-4">
           <div className="flex items-end gap-2 mb-2">
             <span className="text-4xl text-[#CCFF00]">1,840</span>
-            <span className="text-lg text-gray-500 mb-1">/ 2,200</span>
+            <span className="text-lg text-gray-500 mb-1">of 2,200</span>
             <span className="text-sm text-gray-500 mb-1">kcal</span>
           </div>
           <div className="h-3 bg-white/5 rounded-full overflow-hidden">
@@ -84,17 +84,17 @@ export function Nutrition() {
           <div className="bg-white/5 rounded-xl p-3">
             <div className="text-xs text-gray-500 mb-1">Protein</div>
             <div className="text-xl text-[#CCFF00] mb-1">68g</div>
-            <div className="text-xs text-gray-500">/ 120g</div>
+            <div className="text-xs text-gray-500">of 120g</div>
           </div>
           <div className="bg-white/5 rounded-xl p-3">
             <div className="text-xs text-gray-500 mb-1">Carbs</div>
             <div className="text-xl text-[#DFFF00] mb-1">185g</div>
-            <div className="text-xs text-gray-500">/ 220g</div>
+            <div className="text-xs text-gray-500">of 220g</div>
           </div>
           <div className="bg-white/5 rounded-xl p-3">
             <div className="text-xs text-gray-500 mb-1">Fats</div>
             <div className="text-xl text-[#FFFF00] mb-1">52g</div>
-            <div className="text-xs text-gray-500">/ 70g</div>
+            <div className="text-xs text-gray-500">of 70g</div>
           </div>
         </div>
       </div>
@@ -105,7 +105,7 @@ export function Nutrition() {
           <div className="w-5 h-5 flex items-center justify-center">
             <UtensilsCrossed className="w-4 h-4 text-[#CCFF00]" />
           </div>
-          <h2 className="text-lg font-black tracking-tighter italic uppercase">Today's Food Plan</h2>
+          <h2 className="text-lg font-black tracking-tighter italic uppercase">Today&apos;s Food Plan</h2>
         </div>
         <p className="text-[10px] text-gray-500 font-bold uppercase tracking-widest mb-8 px-1">
           Eat Right. Order Instantly.
@@ -196,7 +196,7 @@ export function Nutrition() {
 
       {/* Meals */}
       <div>
-        <h3 className="text-sm text-gray-500 uppercase tracking-wider mb-4">Today's Meals</h3>
+        <h3 className="text-sm text-gray-500 uppercase tracking-wider mb-4">Today&apos;s Meals</h3>
         <div className="space-y-4">
           {meals.map((meal, index) => {
             const Icon = meal.icon;

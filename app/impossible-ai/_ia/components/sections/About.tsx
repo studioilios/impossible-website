@@ -5,10 +5,10 @@ import { useEffect, useRef } from "react";
 const RING_SIZES = [300, 420, 540, 660, 780];
 
 const stats = [
-    { value: "213M", label: "Indians trying to get fit" },
-    { value: "1.8B", label: "Global audience" },
-    { value: "94%", label: "Quit within 30 days" },
-    { value: "95K+", label: "Indian recipes tracked" },
+    { value: "AI", label: "Personal guidance" },
+    { value: "24/7", label: "Support when you need it" },
+    { value: "95K+", label: "Recipes tracked" },
+    { value: "One", label: "Connected health platform" },
 ];
 
 const cards = [
@@ -16,19 +16,19 @@ const cards = [
         icon: "🎯",
         title: "Mission",
         description:
-            "Make world-class, AI-personalized fitness genuinely accessible to every Indian — in their language, on their budget, around their life.",
+            "Make world class, AI personalized fitness accessible to everyone, in their language, on their budget, and around their life.",
     },
     {
-        icon: "🧬",
-        title: "Approach",
+        icon: "🔎",
+        title: "Proactive Guidance",
         description:
-            "Every model we train starts with Indian data — phenotype, food, climate, and culture — not a Western template we retrofit.",
+            "We turn everyday health signals into clear, personal guidance that helps people act early and build healthier lives.",
     },
     {
         icon: "🚀",
         title: "Vision",
         description:
-            "A predictive health layer for a billion people — catching problems before they happen, not after.",
+            "A predictive health layer for a billion people that catches problems before they happen, not after.",
     },
 ];
 
@@ -133,8 +133,8 @@ const About = () => {
                         About Us
                     </span>
                     <h2 className="mt-4 font-display text-3xl font-bold tracking-tight text-neutral-950">
-                        Built to Fix{" "}
-                        <span className="font-serif italic font-normal text-primary">India&apos;s Broken Fitness Story</span>
+                        Built for{" "}
+                        <span className="font-serif italic font-normal text-primary">A Healthier World</span>
                     </h2>
 
                     <div className="relative mt-6 h-48 w-full overflow-hidden rounded-2xl">
@@ -146,9 +146,9 @@ const About = () => {
                     </div>
 
                     <p className="mt-6 font-sans text-sm leading-6 text-neutral-700">
-                        Nearly a billion Indians are deficient in an essential nutrient. Diabetes is showing up in
-                        people barely out of their twenties. Global fitness apps were never built for Indian food,
-                        biology, or life — so we built the one that is.
+                        People everywhere face rising health challenges, from nutrition gaps to lifestyle diseases.
+                        Generic fitness apps can miss the foods, routines, and cultures that shape daily life, so we are
+                        building a more personal platform for everyone.
                     </p>
 
                     <div className="mt-6 grid w-full grid-cols-2 divide-x divide-y divide-black/10 overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm">
@@ -228,8 +228,8 @@ const About = () => {
                             About Us
                         </span>
                         <h2 className="mt-4 max-w-3xl font-display text-5xl font-bold tracking-tight text-neutral-950">
-                            Built to Fix{" "}
-                            <span className="font-serif italic font-normal text-primary">India&apos;s Broken Fitness Story</span>
+                            Built for{" "}
+                            <span className="font-serif italic font-normal text-primary">A Healthier World</span>
                         </h2>
                     </div>
 
@@ -240,9 +240,9 @@ const About = () => {
                             className="max-w-2xl text-center font-sans text-base leading-7 text-white opacity-0 drop-shadow-sm"
                             style={{ willChange: "transform, opacity" }}
                         >
-                            Nearly a billion Indians are deficient in an essential nutrient. Diabetes is showing up in
-                            people barely out of their twenties. Global fitness apps were never built for Indian food,
-                            biology, or life — so we built the one that is.
+                            People everywhere face rising health challenges, from nutrition gaps to lifestyle diseases.
+                            Generic fitness apps can miss the foods, routines, and cultures that shape daily life, so we
+                            are building a more personal platform for everyone.
                         </p>
 
                         <div

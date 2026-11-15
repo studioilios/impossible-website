@@ -34,7 +34,7 @@ export function RunningActivityCard({
   const shareOptions = [
     { name: 'Instagram Story', icon: <Instagram className="w-5 h-5" />, color: 'bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7]' },
     { name: 'WhatsApp', icon: <MessageCircle className="w-5 h-5" />, color: 'bg-[#25D366]' },
-    { name: 'X / Twitter', icon: <Twitter className="w-5 h-5" />, color: 'bg-black' },
+    { name: 'X and Twitter', icon: <Twitter className="w-5 h-5" />, color: 'bg-black' },
     { name: 'Download Image', icon: <Download className="w-5 h-5" />, color: 'bg-gray-600' },
   ];
 

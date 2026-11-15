@@ -173,7 +173,7 @@ const CLUBS = [
 
 interface CommunityProps {
   onBack: () => void;
-  onNavigate: (screen: any, data?: any) => void;
+  onNavigate: (screen: string, data?: unknown) => void;
 }
 
 export function Community({ onBack, onNavigate }: CommunityProps) {
@@ -378,7 +378,7 @@ export function Community({ onBack, onNavigate }: CommunityProps) {
                               },
                               { 
                                 id: 2, 
-                                title: '30 Day Push-up Challenge', 
+                                title: '30 Day Push up Challenge', 
                                 participants: 1850, 
                                 daysLeft: 8, 
                                 icon: '💪',
@@ -477,7 +477,7 @@ export function Community({ onBack, onNavigate }: CommunityProps) {
                         </div>
                       ) : (
                         <div className="bg-white/5 border border-white/10 rounded-[2rem] p-12 text-center">
-                           <p className="text-xs font-black uppercase tracking-widest text-white/20 mb-6 italic">You haven't joined any clubs yet.</p>
+                           <p className="text-xs font-black uppercase tracking-widest text-white/20 mb-6 italic">You haven&apos;t joined any clubs yet.</p>
                            <button 
                             onClick={() => setJoinedClubIds(['cl1'])}
                             className="px-8 py-4 bg-[#CCFF00] text-black rounded-2xl text-[10px] font-black uppercase tracking-widest"
@@ -570,7 +570,7 @@ function PostCard({ post, onAction }: { post: FeedPost, onAction: (t: string) =>
       <div className="px-6 pb-6">
         {post.content.text && (
           <p className="text-sm text-white/70 leading-relaxed mb-4 italic font-medium">
-            "{post.content.text}"
+            &quot;{post.content.text}&quot;
           </p>
         )}
         
@@ -662,7 +662,7 @@ function PostCard({ post, onAction }: { post: FeedPost, onAction: (t: string) =>
   );
 }
 
-function ChallengeCard({ challenge, onAction }: { challenge: any, onAction: (t: string) => void }) {
+function ChallengeCard({ challenge, onAction }: { challenge: (typeof CHALLENGES)[number], onAction: (t: string) => void }) {
   return (
     <div className="bg-white/[0.03] rounded-[2rem] border border-white/5 overflow-hidden group hover:border-[#CCFF00]/20 transition-all duration-500">
       <div className="relative h-48">
@@ -710,7 +710,7 @@ function ChallengeCard({ challenge, onAction }: { challenge: any, onAction: (t: 
   );
 }
 
-function ClubCard({ club, onAction }: { club: any, onAction: (t: string) => void }) {
+function ClubCard({ club, onAction }: { club: (typeof CLUBS)[number], onAction: (t: string) => void }) {
   return (
     <div 
       onClick={() => onAction('chat')}

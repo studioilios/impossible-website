@@ -201,7 +201,7 @@ export function TrackingHistory({ onBack }: TrackingHistoryProps) {
             <div className="bg-white/[0.03] backdrop-blur-2xl rounded-[2.5rem] border border-[#CCFF00]/30 p-6 shadow-xl shadow-[#CCFF00]/5">
               <div className="flex items-center justify-between mb-6">
                 <div>
-                  <h2 className="text-sm font-black uppercase tracking-[0.15em]">Week: Mar 10 – Mar 16</h2>
+                  <h2 className="text-sm font-black uppercase tracking-[0.15em]">Week: Mar 10 to Mar 16</h2>
                   <p className="text-[10px] text-white/40 font-bold mt-1">Weekly Summary</p>
                 </div>
                 <Target className="w-6 h-6 text-[#CCFF00]" />
@@ -431,7 +431,7 @@ export function TrackingHistory({ onBack }: TrackingHistoryProps) {
 
               {/* 12-Month Activity Chart */}
               <div className="mb-6">
-                <p className="text-[10px] font-black uppercase tracking-widest text-white/40 mb-4">12-Month Activity</p>
+                <p className="text-[10px] font-black uppercase tracking-widest text-white/40 mb-4">12 Month Activity</p>
                 <div className="h-40">
                   <ResponsiveContainer width="100%" height="100%">
                     <BarChart data={yearlyMonthlyData}>
@@ -544,7 +544,7 @@ export function TrackingHistory({ onBack }: TrackingHistoryProps) {
             <div className="flex-1">
               <h3 className="text-base font-black uppercase tracking-tight text-cyan-400 mb-2">AI Performance Insight</h3>
               <p className="text-sm text-white/80 leading-relaxed italic mb-4">
-                "You were most active in March. Your weekly workouts increased by 22% compared to February."
+                &quot;You were most active in March. Your weekly workouts increased by 22% compared to February.&quot;
               </p>
               <div className="flex items-center gap-2 flex-wrap">
                 <div className="px-3 py-1 bg-cyan-500/10 border border-cyan-500/20 rounded-full">

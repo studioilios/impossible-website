@@ -51,14 +51,15 @@ const Block = ({ block }: { block: LegalBlock }) => {
 const LegalDocument = ({ doc }: { doc: LegalDoc }) => {
     return (
         <>
-            <section className="relative overflow-hidden bg-black px-6 pb-16 pt-16 sm:px-8 sm:pb-20 sm:pt-24 lg:px-12 xl:px-16">
+            <section className="relative overflow-hidden border-t border-black/10 bg-[#f3f3f1] px-6 pb-16 pt-16 sm:px-8 sm:pb-20 sm:pt-24 lg:px-12 xl:px-16">
+                <div className="pointer-events-none absolute inset-0 bg-grid-light opacity-30" />
                 <div className="pointer-events-none absolute -right-40 top-10 aspect-square w-[520px] rounded-full border-2 border-primary/25" />
                 <div className="relative mx-auto max-w-7xl">
                     <motion.span
                         initial={{ opacity: 0, y: 12 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5 }}
-                        className="inline-block bg-white px-2 py-1 font-mono text-[11px] font-semibold uppercase tracking-widest text-black"
+                        className="inline-block bg-black px-2 py-1 font-mono text-[11px] font-semibold uppercase tracking-widest text-white"
                     >
                         {doc.eyebrow}
                     </motion.span>
@@ -66,7 +67,7 @@ const LegalDocument = ({ doc }: { doc: LegalDoc }) => {
                         initial={{ opacity: 0, y: 16 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.55, delay: 0.05 }}
-                        className="mt-5 font-display text-4xl font-bold tracking-tight text-white sm:text-6xl"
+                        className="mt-5 font-display text-4xl font-bold tracking-tight text-neutral-950 sm:text-6xl"
                     >
                         {doc.title} <span className="font-serif italic font-normal text-primary">{doc.accent}</span>
                     </motion.h1>
@@ -74,7 +75,7 @@ const LegalDocument = ({ doc }: { doc: LegalDoc }) => {
                         initial={{ opacity: 0, y: 16 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.55, delay: 0.1 }}
-                        className="mt-5 max-w-2xl font-sans text-sm leading-7 text-white/60 sm:text-base"
+                        className="mt-5 max-w-2xl font-sans text-sm leading-7 text-neutral-600 sm:text-base"
                     >
                         {doc.intro}
                     </motion.p>
@@ -82,7 +83,7 @@ const LegalDocument = ({ doc }: { doc: LegalDoc }) => {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.55, delay: 0.15 }}
-                        className="mt-6 font-mono text-[11px] uppercase tracking-widest text-white/40"
+                        className="mt-6 font-mono text-[11px] uppercase tracking-widest text-neutral-500"
                     >
                         Effective {site.effectiveDate}
                     </motion.p>

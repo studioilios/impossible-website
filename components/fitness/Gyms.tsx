@@ -19,7 +19,7 @@ interface Gym {
 }
 
 interface GymsProps {
-  onNavigate: (screen: string, data?: any) => void;
+  onNavigate: (screen: string, data?: unknown) => void;
 }
 
 // 2. Update the data array

@@ -95,7 +95,7 @@ const IntroLoader = () => {
                     <span className="h-px w-8 bg-primary/60 sm:w-12" />
                 </div>
                 <span className="mt-2 font-mono text-[10px] uppercase tracking-[0.3em] text-white/30 sm:text-[11px]">
-                    India&apos;s AI Fitness Platform
+                    Global AI Fitness Platform
                 </span>
             </div>
 

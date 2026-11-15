@@ -148,7 +148,7 @@ export function LandingPage() {
               className="inline-flex items-center gap-2 px-4 py-2 bg-[#CCFF00]/10 border border-[#CCFF00]/20 rounded-full mb-6"
             >
               <Sparkles className="w-4 h-4 text-[#CCFF00]" />
-              <span className="text-xs font-black uppercase tracking-widest text-[#CCFF00]">AI-Powered Fitness</span>
+              <span className="text-xs font-black uppercase tracking-widest text-[#CCFF00]">AI Powered Fitness</span>
             </motion.div>
 
             <h1 className="text-6xl lg:text-7xl font-black italic uppercase tracking-tighter mb-6 leading-[0.9]">
@@ -660,7 +660,7 @@ export function LandingPage() {
                 </div>
                 <span className="text-xl font-black italic uppercase tracking-tighter">Hey Flow</span>
               </div>
-              <p className="text-white/40 text-sm">Your AI-powered fitness companion for a healthier life.</p>
+              <p className="text-white/40 text-sm">Your AI powered fitness companion for a healthier life.</p>
             </div>
 
             {/* Product */}

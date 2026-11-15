@@ -7,12 +7,12 @@ import HowItWorks from "@ia/components/sections/HowItWorks";
 import Footer from "@ia/components/Footer";
 
 export const metadata: Metadata = {
-    description: "AI coaching, nutrition intelligence, and gamification built for Indian bodies and lifestyles.",
+    description: "AI coaching, nutrition intelligence, and gamification designed for people everywhere.",
 };
 
 export default function FeaturesPage() {
     return (
-        <main className="bg-black">
+        <main data-home-theme="true" className="bg-[#f3f3f1]">
             <SiteHeader />
             <WhyImpossible />
             <Features />

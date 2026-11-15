@@ -47,7 +47,7 @@ export function AICoach() {
         <div className="flex items-center gap-4 text-xs text-gray-500">
           <span>2,180 conversations</span>
           <span>•</span>
-          <span className="text-[#CCFF00]">GPT-6 Powered</span>
+          <span className="text-[#CCFF00]">GPT 6 Powered</span>
         </div>
       </div>
 
@@ -90,7 +90,7 @@ export function AICoach() {
           <p className="text-xs text-gray-500 mb-3">Suggested</p>
           <div className="flex flex-wrap gap-2">
             <button className="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm hover:bg-white/10 transition-colors">
-              Show today's plan
+              Show today&apos;s plan
             </button>
             <button className="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm hover:bg-white/10 transition-colors">
               Adjust calories

@@ -5,12 +5,12 @@ import SectionHeading from "@ia/components/ui/SectionHeading";
 import StatCard from "@ia/components/ui/StatCard";
 
 const stats = [
-    { value: "101M", label: "Diabetics in India" },
-    { value: "136M", label: "Pre-diabetics" },
-    { value: "52%", label: "Urban obesity growth" },
-    { value: "20–30 Yrs", label: "Younger disease onset" },
-    { value: "₹37K Cr", label: "Economic burden" },
-    { value: "820M", label: "Affected by pollution" },
+    { value: "Global", label: "metabolic health challenge" },
+    { value: "Every age", label: "nutrition needs matter" },
+    { value: "Daily", label: "movement supports health" },
+    { value: "Growing", label: "need for better habits" },
+    { value: "Preventable", label: "many lifestyle risks" },
+    { value: "Together", label: "small changes add up" },
 ];
 
 const causes = [
@@ -18,7 +18,7 @@ const causes = [
         icon: "🪑",
         title: "Sedentary Jobs",
         description:
-            "Long office hours and commuting reduce physical activity to near zero for millions of urban Indians.",
+            "Long office hours and commuting can reduce physical activity for people in cities around the world.",
     },
     {
         icon: "🍟",
@@ -36,7 +36,7 @@ const causes = [
 
 const facts = [
     "26% of adolescents have unhealthy cholesterol levels.",
-    "20–25% of young adults have hypertension.",
+    "20 to 25% of young adults have hypertension.",
     "Lifestyle diseases are mostly preventable through exercise, nutrition, and healthy habits.",
 ];
 
@@ -46,9 +46,9 @@ const Problem = () => {
             <div className="relative mx-auto max-w-7xl">
                 <SectionHeading
                     eyebrow="The Problem"
-                    title="India is Facing a Metabolic &"
-                    accent="Environmental Tsunami"
-                    description="Urban India's health crisis is accelerating. Lifestyle diseases are hitting younger and younger — and the numbers demand urgent action."
+                    title="The World Faces a Metabolic &"
+                    accent="Environmental Challenge"
+                    description="Across regions, lifestyle diseases are affecting people at younger ages. Better daily support can help people build healthier habits."
                 />
 
                 <div className="mt-12 grid grid-cols-2 gap-3 sm:mt-14 sm:grid-cols-3 sm:gap-4 lg:grid-cols-6">

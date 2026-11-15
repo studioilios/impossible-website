@@ -8,14 +8,14 @@ const competitors = ["Impossible AI", "Cult.Fit", "HealthifyMe", "Fittr", "Strav
 type Mark = "yes" | "no" | "partial";
 
 const rows: { feature: string; marks: Mark[] }[] = [
-    { feature: "95K Indian Foods", marks: ["yes", "no", "partial", "partial", "no"] },
-    { feature: "AI Real-time Coach", marks: ["yes", "no", "partial", "partial", "no"] },
+    { feature: "95K+ Global Recipes", marks: ["yes", "no", "partial", "partial", "no"] },
+    { feature: "AI Real time Coach", marks: ["yes", "no", "partial", "partial", "no"] },
     { feature: "Blood Test Integration", marks: ["yes", "no", "no", "no", "no"] },
     { feature: "Vernacular Coaching", marks: ["yes", "no", "no", "no", "no"] },
     { feature: "Festival Calendar", marks: ["yes", "no", "no", "no", "no"] },
-    { feature: "AQI-Aware Workouts", marks: ["yes", "no", "no", "no", "no"] },
+    { feature: "AQI Aware Workouts", marks: ["yes", "no", "no", "no", "no"] },
     { feature: "Token Rewards", marks: ["yes", "no", "no", "no", "no"] },
-    { feature: "Tier-2 City Pricing", marks: ["yes", "no", "no", "yes", "no"] },
+    { feature: "Tier 2 City Pricing", marks: ["yes", "no", "no", "yes", "no"] },
     { feature: "Community Feed", marks: ["yes", "yes", "no", "yes", "yes"] },
     { feature: "Corporate Wellness", marks: ["yes", "yes", "yes", "no", "no"] },
     { feature: "AI Suggestions", marks: ["yes", "partial", "yes", "yes", "no"] },

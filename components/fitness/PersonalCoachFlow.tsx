@@ -117,7 +117,7 @@ const ALL_COACHES: Coach[] = [
     experience: '8+ years',
     rating10: 9.8,
     totalReviews: 142,
-    tags: ['Certified', 'Online', 'In-Gym'],
+    tags: ['Certified', 'Online', 'In Gym'],
     about: 'Marcus is an expert in hypertrophy and functional strength. He has helped over 500 clients achieve their powerlifting goals.',
     certifications: ['NASM-CPT', 'CSCS', 'Precision Nutrition L1'],
     approach: 'I believe in technical precision and progressive overload as the foundation for any successful strength journey.',
@@ -133,7 +133,7 @@ const ALL_COACHES: Coach[] = [
     rating10: 8.4,
     totalReviews: 89,
     tags: ['Certified', 'Online'],
-    about: 'Sarah specializes in helping women build muscle and confidence. Her programs focus on long-term sustainability.',
+    about: 'Sarah specializes in helping women build muscle and confidence. Her programs focus on long term sustainability.',
     certifications: ['ACE-CPT', 'IKFF Level 1'],
     approach: 'Training should empower you. We focus on form, consistency, and celebrating every small victory.',
     isOnline: false,
@@ -147,7 +147,7 @@ const ALL_COACHES: Coach[] = [
     experience: '10+ years',
     rating10: 9.2,
     totalReviews: 215,
-    tags: ['Certified', 'In-Gym'],
+    tags: ['Certified', 'In Gym'],
     about: 'Anya brings a deep understanding of yogic philosophy and biomechanics to her teaching.',
     certifications: ['RYT-500', 'Yoga Alliance Certified'],
     approach: 'Breath is the bridge between body and mind. We move with intention and find stillness in motion.',
@@ -273,7 +273,7 @@ const PRICING_PLANS = [
     price: '₹29,999',
     period: '/ year',
     tag: 'Best Value',
-    description: 'Long-term commitment',
+    description: 'Long term commitment',
     features: ['Full access', 'Priority support', 'Free assessments'],
     cta: 'Start Yearly',
     glow: 'shadow-[0_0_20px_rgba(20,184,166,0.15)] group-hover:shadow-[0_0_30px_rgba(20,184,166,0.3)]',
@@ -574,7 +574,7 @@ export function PersonalCoachFlow({ onBack }: { onBack: () => void }) {
               <section className="pt-2">
                 <div className="mb-8">
                   <h2 className="text-3xl font-black italic uppercase tracking-tighter leading-none mb-2">Coaching Plans</h2>
-                  <p className="text-[10px] text-[#CCFF00] font-black uppercase tracking-[0.3em]">Direct access to {selectedCoach.name.split(' ')[0]}'s methodology</p>
+                  <p className="text-[10px] text-[#CCFF00] font-black uppercase tracking-[0.3em]">Direct access to {selectedCoach.name.split(' ')[0]}&apos;s methodology</p>
                 </div>
 
                 <div className="space-y-6">
@@ -640,7 +640,7 @@ export function PersonalCoachFlow({ onBack }: { onBack: () => void }) {
                     <h3 className="text-[11px] text-[#CCFF00] font-black uppercase tracking-[0.4em]">Coach Methodology</h3>
                   </div>
                   <p className="text-white/60 text-lg leading-relaxed font-medium italic">
-                    "{selectedCoach.about}"
+                    &quot;{selectedCoach.about}&quot;
                   </p>
                 </div>
 
@@ -653,7 +653,7 @@ export function PersonalCoachFlow({ onBack }: { onBack: () => void }) {
                     <h3 className="text-[11px] text-[#CCFF00] font-black uppercase tracking-[0.4em]">Core Philosophy</h3>
                   </div>
                   <p className="text-white text-2xl font-black italic uppercase leading-[1.1] tracking-tight relative z-10">
-                    "{selectedCoach.approach}"
+                    &quot;{selectedCoach.approach}&quot;
                   </p>
                 </div>
               </div>

@@ -4,7 +4,7 @@ import { ImageWithFallback } from '../figma/ImageWithFallback';
 import { useState } from 'react';
 
 interface GymDetailProps {
-  gym: any;
+  gym: { name: string; image: string; rating: number; distance: string; facilities?: string[]; hasCoach?: boolean; isOpen?: boolean; crowdLevel?: 'low' | 'medium' | 'high'; verified?: boolean; emergency?: boolean; thumbnail?: string };
   onBack: () => void;
 }
 

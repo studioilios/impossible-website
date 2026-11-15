@@ -8,19 +8,19 @@ const features = [
         tag: "AI Coach",
         title: "AI Health Coach",
         description: "Conversational AI coach that knows you personally.",
-        items: ["Under 3-second responses", "Permanent memory of your journey", "6 Indian languages supported", "Daily coaching conversations"],
+        items: ["Under 3-second responses", "Permanent memory of your journey", "Support in 6 languages", "Daily coaching conversations"],
     },
     {
         tag: "Nutrition AI",
         title: "AI Diet Intelligence",
-        description: "The most comprehensive Indian food database, powered by AI.",
-        items: ["95,000+ Indian recipes", "Full macro & micro tracking", "Regional food support", "Indian phenotype database"],
+        description: "A global food database, powered by AI.",
+        items: ["95,000+ recipes from around the world", "Full macro and micro tracking", "Cuisine support across regions", "Nutrition insights tailored to your body"],
     },
     {
         tag: "Personal AI",
         title: "AI Personal Agent",
         description: "Your own AI wellness companion, always adapting to you.",
-        items: ["AI wellness companion", "Daily coaching & check-ins", "Adaptive fitness plans", "Personalized guidance 24/7"],
+        items: ["AI wellness companion", "Daily coaching & check ins", "Adaptive fitness plans", "Personalized guidance all day and night"],
     },
     {
         tag: "Community",

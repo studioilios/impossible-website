@@ -4,16 +4,16 @@ import { motion } from "framer-motion";
 import SectionHeading from "@ia/components/ui/SectionHeading";
 
 const funnel = [
-    { label: "TAM", value: "$150B–250B+", desc: "Total Addressable Market — Global fitness & health", width: "100%" },
-    { label: "SAM", value: "$5B–15B", desc: "Serviceable Addressable Market — India digital fitness", width: "62%" },
-    { label: "SOM", value: "$100M–500M", desc: "Serviceable Obtainable Market — Near-term opportunity", width: "30%" },
+    { label: "TAM", value: "$150B to $250B+", desc: "Total Addressable Market, global fitness and health", width: "100%" },
+    { label: "SAM", value: "$5B to $15B", desc: "Serviceable Addressable Market, digital fitness across global regions", width: "62%" },
+    { label: "SOM", value: "$100M to $500M", desc: "Serviceable Obtainable Market, near term opportunity", width: "30%" },
 ];
 
 const stats = [
-    { value: "820M", label: "Smartphone users in India" },
-    { value: "0.8–2%", label: "Current gym penetration" },
-    { value: "67%", label: "Never use memberships" },
-    { value: "50%", label: "Quit gyms within 6 months" },
+    { value: "Global", label: "fitness and health audience" },
+    { value: "Digital", label: "coaching and wellness access" },
+    { value: "Local", label: "gyms and activity communities" },
+    { value: "Flexible", label: "ways to build healthy habits" },
 ];
 
 const MarketSize = () => {

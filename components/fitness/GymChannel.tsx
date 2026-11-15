@@ -4,9 +4,9 @@ import { ImageWithFallback } from '../figma/ImageWithFallback';
 import { useState } from 'react';
 
 interface GymChannelProps {
-  gym: any;
+  gym: { thumbnail: string; gymName: string; gymLogo: string; rating: number; distance: string };
   onBack: () => void;
-  onNavigate: (screen: string, data?: any) => void;
+  onNavigate: (screen: string, data?: unknown) => void;
 }
 
 const channelVideos = [
@@ -219,7 +219,7 @@ export function GymChannel({ gym, onBack, onNavigate }: GymChannelProps) {
             <div className="bg-white/5 rounded-2xl p-5 border border-white/10">
               <h3 className="text-lg mb-3">About</h3>
               <p className="text-sm text-gray-400 leading-relaxed">
-                Premier fitness facility offering world-class equipment, expert coaching, and a supportive community. 
+                Premier fitness facility offering world class equipment, expert coaching, and a supportive community.
                 We specialize in strength training, functional fitness, and personalized workout programs.
               </p>
             </div>

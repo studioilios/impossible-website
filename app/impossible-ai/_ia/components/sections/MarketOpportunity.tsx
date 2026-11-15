@@ -6,7 +6,7 @@ import StatCard from "@ia/components/ui/StatCard";
 
 const stats = [
     { value: "100M+", label: "Overweight adults" },
-    { value: "49–57%", label: "Physically inactive" },
+    { value: "49 to 57%", label: "Physically inactive" },
     { value: "1 in 4", label: "Adults have hypertension" },
     { value: "15%", label: "CAGR growth rate" },
 ];
@@ -15,7 +15,7 @@ const MarketOpportunity = () => {
     return (
         <section className="relative overflow-hidden border-t border-white/5 bg-black px-6 py-12 sm:px-8 sm:py-16 lg:px-12 xl:px-16">
             <div className="relative mx-auto max-w-7xl">
-                <SectionHeading eyebrow="Market Opportunity" title="India's Fitness" accent="Revolution" />
+                <SectionHeading eyebrow="Market Opportunity" title="Global Fitness" accent="Opportunity" />
 
                 <div className="mt-12 grid grid-cols-2 gap-4 sm:mt-14 lg:grid-cols-4">
                     {stats.map((s, i) => (

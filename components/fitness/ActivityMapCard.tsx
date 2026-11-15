@@ -83,7 +83,7 @@ const mapStyle = {
 };
 
 interface ActivityMapCardProps {
-  onNavigate?: (screen: any, data?: any) => void;
+  onNavigate?: (screen: string, data?: unknown) => void;
 }
 
 export function ActivityMapCard({ onNavigate }: ActivityMapCardProps) {

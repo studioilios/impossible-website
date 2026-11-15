@@ -17,9 +17,9 @@ const steps = [
 const rewards = [
     { icon: "🚶", label: "10,000 steps", tokens: "5 Tokens" },
     { icon: "💪", label: "300 kcal workout", tokens: "15 Tokens" },
-    { icon: "🏋️", label: "Gym check-in", tokens: "20 Tokens" },
-    { icon: "😴", label: "7–8 hours sleep", tokens: "10 Tokens" },
-    { icon: "🔥", label: "30-day streak", tokens: "200 Bonus Tokens" },
+    { icon: "🏋️", label: "Gym check in", tokens: "20 Tokens" },
+    { icon: "😴", label: "7 to 8 hours sleep", tokens: "10 Tokens" },
+    { icon: "🔥", label: "30 day streak", tokens: "200 Bonus Tokens" },
     { icon: "🏥", label: "Health checkup", tokens: "50 Tokens" },
 ];
 
@@ -33,7 +33,7 @@ const RewardSystem = () => {
                     eyebrow="AI Reward System"
                     title="Every Healthy Action"
                     accent="Pays"
-                    description="AI verifies your activities using GPS, phone sensors, and wearables — then credits tokens automatically. No cheating, no guessing."
+                    description="AI verifies your activities using GPS, phone sensors, and wearables, then credits tokens automatically. No cheating, no guessing."
                 />
 
                 <div className="relative mt-14 grid gap-6 sm:mt-16 sm:grid-cols-2 lg:grid-cols-[1fr_auto_1fr_auto_1fr_auto_1fr] lg:items-start lg:gap-3">

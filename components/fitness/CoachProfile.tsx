@@ -2,7 +2,7 @@ import { ArrowLeft, Star, Award, Calendar, CheckCircle, MapPin } from 'lucide-re
 import { ImageWithFallback } from '../figma/ImageWithFallback';
 
 interface CoachProfileProps {
-  coach: any;
+  coach: { image: string; name: string; specialty: string; rating: number; experience: number; certifications: string[] };
   onBack: () => void;
 }
 

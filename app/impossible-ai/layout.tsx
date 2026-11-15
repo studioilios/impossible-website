@@ -10,7 +10,7 @@ const rajdhani = Rajdhani({
 
 export const metadata: Metadata = {
   title: "Impossible AI",
-  description: "India's AI Multi-Agent Fitness Platform.",
+  description: "A global AI fitness and health platform.",
 };
 
 export default function ImpossibleAiLayout({
